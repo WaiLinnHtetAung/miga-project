@@ -12,22 +12,22 @@
 
 }
 
-:root {
-    --main-bg-color : #1d203e;
-    --text-color : #e5d552;
-}
-
 html {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body {
-    background-color: var(--main-bg-color);
     height: 100vh;
 
 }
 
-.sec-bg-color {
+.top-bg-color {
     background-color: #2b2e4d;
 }
+
+
+
+
+
+
 

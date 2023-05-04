@@ -1,5 +1,5 @@
 <template>
-    <div class="top-course-container container">
+    <div class="top-course-container main-bg">
         <div class="section-header">
             <h2>Explore Top Courses</h2>
         </div>
@@ -88,8 +88,8 @@
 
 <style scoped>
     .top-course-container {
-        margin-top: 50px;
         text-align: center;
+        padding: 50px 9% 40px;
     }
 
     .top-course-container .top-course {

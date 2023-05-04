@@ -1,38 +1,63 @@
 <template>
+  <Nav />
+  <ChatBot />
   <router-view/>
 </template>
 
+<script>
+  import Nav from './views/Nav.vue'
+  import ChatBot from './components/ChatBot.vue'
+
+  export default {
+    components: {Nav, ChatBot}
+  }
+</script>
+
 <style>
+:root {
+  --main-text-color : rgb(238,185,36);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dropdown-btn {
-  border: 0;
-  background-color: transparent;
+body {
+  position: relative;
 }
 
-.dropdown-menu {
-  background-color: aliceblue;
+.main-bg {
+    background-image: linear-gradient(to right top, #02084b, #1a1457, #2b2064, #3b2d70, #4b3a7d);
+}
+
+.sec-bg {
+    background-image: linear-gradient(to left, #02084b, #251d67, #413383, #5d4aa1, #7a62c0);
 }
 
 .section-header h2{
     text-align: center;
-    color: rgb(238,185,36);
-    color: radial-gradient(circle, rgba(238,185,36,1) 0%, rgba(227,194,21,1) 45%, rgba(105,98,19,1) 100%);
+    color: var(--main-text-color);
   }
 
   .btn {
-    background: rgb(238,185,36);
-    background: radial-gradient(circle, rgba(238,185,36,1) 0%, rgba(227,194,21,1) 45%);
+    background: var(--main-text-color);
     color: #1d203e;
-    border-radius: 12px;
+    border-radius: 6px;
   }
 
   .pointer {
     cursor: pointer;
+  }
+
+  .card-wrapper #my-swiper .swiper-button-next::after, .card-wrapper #my-swiper .swiper-button-prev::after{
+    font-size: 30px !important;
+    margin-bottom: 1.5rem;
+    color: var(--main-text-color);
+  }
+
+  span {
+    color: var(--main-text-color);
   }
 
 </style>

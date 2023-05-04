@@ -51,16 +51,13 @@
 </script>
 
 <style scoped>
-    .carousel-container {
-        margin-top: 5px;
-    }
 
     .carousel-item img {
         width: 100%;
         height: 550px;
         object-fit: cover;
         object-position: center;
-        opacity: .7;
+        opacity: .8;
     }
 
     .carousel-item .carousel-caption {
