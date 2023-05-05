@@ -50,7 +50,7 @@
 
     .chats {
         background: #bbb;
-        border: .1rem solid var(--main-text-color);
+        border: .1rem solid #3a2d7c;
         border-radius: 12px;
         padding: 5px 10px;
         transform: translateY(200px);

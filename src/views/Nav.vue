@@ -1,6 +1,6 @@
 <template>
     <nav class="nav1 top-bg-color">
-        <div class="container">
+        <div class="">
             <div class="d-flex me-3">
             <div class="email d-flex pt-2 me-3">
                 <i class='bx bx-envelope me-2 fs-6' ></i> 
@@ -18,7 +18,7 @@
         <div class="d-flex justify-content-center align-items-center pointer" @click="goHome">
             <router-link to="/"><img src="../assets/images/logo.svg" alt=""></router-link>
             <div class="mt-3">
-                <span>RIHEA</span>
+                <span class="fw-bold">RIHEA</span>
                 <p style="font-size:12px;">Education Center</p>
             </div>
         </div>
@@ -67,6 +67,7 @@
 <style scoped>
     .nav1 {
         height: 35px;
+        padding:0 9%;
     }
     .nav1 p {
         font-size: 12px;
@@ -76,10 +77,9 @@
     .header{
         position: sticky;
         top: 0;
-        left: 0;
         width: 100%;
         height: 55px;
-        padding: 2rem 9%;
+        padding: 2rem 7.8%;
         display: flex;
         justify-content: space-between;
         align-items: center;

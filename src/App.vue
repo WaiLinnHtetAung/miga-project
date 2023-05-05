@@ -25,6 +25,7 @@
 
 body {
   position: relative;
+  background-image: linear-gradient(to right top, #02084b, #1a1457, #2b2064, #3b2d70, #4b3a7d) !important;
 }
 
 .main-bg {
