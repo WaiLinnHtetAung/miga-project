@@ -25,23 +25,23 @@
         <i @click="isResponsive = !isResponsive" class='bx bx-menu' :class="{ 'bx-x' : isResponsive }" id="menu-icon"></i>
         <nav class="navbar" :class="{ 'active' : isResponsive }">
             <div class="menu pointer menu-parent">
-                <div>Home</div>
+                <div class="menu-text">Home</div>
                 <div class="menu-child">
                     <router-link to="/contact-us">About us</router-link>
                     <a href="#">Contact</a>
                     <a href="#">Our Services</a>
                 </div>
             </div>
-            <div class="menu pointer menu-parent">
+            <div class="menu menu-text pointer menu-parent">
                 Category
             </div>
-            <div class="menu pointer">
+            <div class="menu menu-text pointer">
                 Blog
             </div>
             <div class="menu pointer">
-                <router-link :to="{name: 'ContactUs'}">Contact</router-link>
+                <router-link :to="{name: 'ContactUs'}" class="menu-text">Contact</router-link>
             </div>
-            <div class="menu pointer">Test</div>
+            <div class="menu menu-text pointer">Test</div>
             
         </nav>
     </header>
@@ -89,7 +89,10 @@
     .navbar .menu {
         font-size: 1rem;
         margin-left: 2.5rem;
-        transition: .2s;
+    }
+
+    .navbar .menu-text {
+        transition: .5s ease;
     }
 
     .menu a {
@@ -97,9 +100,8 @@
         color: #fff;
     }
 
-    .navbar .menu:hover {
+    .navbar .menu-text:hover {
         color: rgb(238,185,36);
-        box-shadow: 0 0 1rem var(--main-bg-color);
         transform: scale(1.1);
     }
 
@@ -148,7 +150,7 @@
     @media (max-width:850px) {
         #menu-icon {
             display: block;
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
 
         .navbar {
@@ -160,17 +162,56 @@
             border-top: .1rem solid rgba(0,0,0,.2);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
             display: none;
+            background: #2b2e4d;
         }
 
         .navbar .menu {
             display: block;
             font-size: 1rem;
             margin: 2rem 0;
+            padding-left: 20px;
+        }
+
+        .navbar .menu-text:hover {
+            transform: none;
         }
 
         .navbar.active {
             display: block;
         }
+
+        .menu-parent {
+            position: relative;
+        }
+
+        .menu-child a {
+            text-decoration: none;
+            color: #fff;
+            line-height: 2rem;
+            display: block;
+            transition: .5s ease;
+            font-size: .9rem;
+        }
+
+        .menu-child a:hover {
+            border-bottom: solid 1px rgb(238,185,36);
+        }
+
+        .menu-child {
+            display: none;
+            position: absolute;
+            background-color: #3f415b;
+            padding: 5px 20px ;
+            margin-left: 20px;
+            border-radius: 10px;
+            min-width: 160px;
+            z-index: 999;
+        }
+
+        .menu-parent:hover .menu-child {
+            display: block;
+        }
+
 
     }
 </style>

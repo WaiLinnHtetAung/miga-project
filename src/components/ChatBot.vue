@@ -5,7 +5,7 @@
                 <a href="viber://chat/?number=%2B959425305939" target="_blank"><i class="fa-brands fa-viber"></i></a>
             </div>
             <div class="messenger chat">
-                <a href="http://m.me/Myanmar%20IGCSE%20and%20GED%20Academy%20-%20MIGA" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a href="http://m.me/100069139800062" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
             </div>
             <div class="telegram chat">
                 <a href="https://t.me/wailinnhtetaung"><i class="fa-brands fa-telegram" target="_blank"></i></a>

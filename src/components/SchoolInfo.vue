@@ -1,10 +1,10 @@
 <template>
     <div class=" info main-bg">
         <div class="row mt-5">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12 img-head ">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 img-head mb-5">
                 <img src="../assets/images/info.webp" alt="">
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12 ">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
                 <h2><span>RIHEA </span>Gives You Guaranteed Results</h2>
                 <div class="info-content">
                     <p><i class='bx bxs-bookmark'></i>Our method has helped millions of learners since 1972.</p>
@@ -96,4 +96,11 @@
         color: #fff;
     }
 
+
+    @media (max-width:850px) {
+        .info {
+            padding: 40px 9%;
+            height: auto;
+        }
+    }
 </style>

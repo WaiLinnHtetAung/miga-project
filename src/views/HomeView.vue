@@ -4,10 +4,14 @@
     <ExploreTopCourse></ExploreTopCourse>
     <SchoolHistory></SchoolHistory>
     <Slider></Slider>
+    <ImageShow></ImageShow>
+    <LatestNews></LatestNews>
     <Footer></Footer>
 </template>
 
 <script>
+import LatestNews from '../components/LatestNews'
+import ImageShow from '../components/ImageShow'
 import SchoolInfo from '../components/SchoolInfo'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
@@ -18,6 +22,8 @@ import Carousel from '../components/Carousel'
 export default {
   name: 'HomeView',
   components: {
+    LatestNews,
+    ImageShow,
     SchoolInfo,
     Slider,
     Footer,
