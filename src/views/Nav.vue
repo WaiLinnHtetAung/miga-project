@@ -24,24 +24,26 @@
         </div>
         <i @click="isResponsive = !isResponsive" class='bx bx-menu' :class="{ 'bx-x' : isResponsive }" id="menu-icon"></i>
         <nav class="navbar" :class="{ 'active' : isResponsive }">
-            <div class="menu pointer menu-parent">
-                <div class="menu-text">Home</div>
-                <div class="menu-child">
-                    <router-link to="/contact-us">About us</router-link>
-                    <a href="#">Contact</a>
-                    <a href="#">Our Services</a>
-                </div>
-            </div>
-            <div class="menu menu-text pointer menu-parent">
-                Category
-            </div>
-            <div class="menu menu-text pointer">
-                Blog
-            </div>
-            <div class="menu pointer">
-                <router-link :to="{name: 'ContactUs'}" class="menu-text">Contact</router-link>
-            </div>
-            <div class="menu menu-text pointer">Test</div>
+            <ul>
+                <li class="dropdown">
+                    <a href="">Home <i class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Our Services</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">Category <i class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li><a href="">Cat 1</a></li>
+                        <li><a href="">Cat 2</a></li>
+                        <li><a href="">Cat 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
             
         </nav>
     </header>
@@ -65,6 +67,79 @@
 </script>
 
 <style scoped>
+    .navbar ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+    }
+
+    .navbar li {
+        position: relative;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 10px 30px;
+        font-size: 16px;
+        color: #fff;
+        white-space: nowrap;
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .navbar a i, 
+    .navbar a:focus i {
+        font-size: 16px;
+        line-height: 0;
+        margin-left: 5px;
+    }
+
+    .navbar a:hover,
+    .navbar a:hover i {
+        color: #e9b313;
+    }
+
+    .navbar .dropdown ul {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        background: rgb(74, 39, 106);
+        border-bottom: 5px solid #e9b313;
+        box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
+    }
+
+    .navbar .dropdown ul li {
+        min-width: 200px;
+    }
+
+    .navbar .dropdown ul a {
+        padding: 10px 20px;
+        text-transform: none;
+    }
+
+    .navbar .dropdown ul a:hover {
+        color: #e9b313;
+    }
+
+    .navbar .dropdown:hover>ul {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+    }
+
     .nav1 {
         height: 35px;
         padding:0 9%;
@@ -86,54 +161,6 @@
         z-index: 100;
     }
 
-    .navbar .menu {
-        font-size: 1rem;
-        margin-left: 2.5rem;
-    }
-
-    .navbar .menu-text {
-        transition: .5s ease;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .navbar .menu-text:hover {
-        color: rgb(238,185,36);
-        transform: scale(1.1);
-    }
-
-    .menu-parent {
-        position: relative;
-    }
-
-    .menu-child a {
-        text-decoration: none;
-        color: #fff;
-        line-height: 2rem;
-        display: block;
-        transition: .5s ease;
-        font-size: .9rem;
-    }
-
-    .menu-child a:hover {
-        border-bottom: solid 1px rgb(238,185,36);
-    }
-
-    .menu-child {
-        display: none;
-        position: absolute;
-        background-color: #2b2e4d;
-        padding: 10px 30px ;
-        border-radius: 10px;
-        min-width: 160px;
-    }
-
-    .menu-parent:hover .menu-child {
-        display: block;
-    }
 
     .header img {
         width: 100%;
@@ -158,60 +185,44 @@
             top: 100%;
             left: 0;
             width: 100%;
-            padding: 10px 3%;
+            padding: 0 9% 0 3%;
             border-top: .1rem solid rgba(0,0,0,.2);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
             display: none;
             background: #2b2e4d;
         }
 
-        .navbar .menu {
+        .navbar.active {
+            display: block;
+        }
+
+        .navbar ul {
             display: block;
             font-size: 1rem;
             margin: 2rem 0;
             padding-left: 20px;
         }
 
-        .navbar .menu-text:hover {
-            transform: none;
-        }
-
-        .navbar.active {
+        .navbar .dropdown ul {
             display: block;
-        }
-
-        .menu-parent {
-            position: relative;
-        }
-
-        .menu-child a {
-            text-decoration: none;
-            color: #fff;
-            line-height: 2rem;
-            display: block;
-            transition: .5s ease;
-            font-size: .9rem;
-        }
-
-        .menu-child a:hover {
-            border-bottom: solid 1px rgb(238,185,36);
-        }
-
-        .menu-child {
-            display: none;
-            position: absolute;
-            background-color: #3f415b;
-            padding: 5px 20px ;
+            position: static;
+            left: 30;
+            top: calc(100% + 30px);
             margin-left: 20px;
-            border-radius: 10px;
-            min-width: 160px;
-            z-index: 999;
+            padding: 10px 0;
+            z-index: 99;
+            display: none;
+            background: rgb(74, 39, 106);
+            box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
         }
 
-        .menu-parent:hover .menu-child {
+        .navbar .dropdown ul li a:hover {
+            color: #e9b313;
+        }
+
+        .navbar .dropdown:hover>ul {
             display: block;
+            top: 100%;
         }
-
-
     }
 </style>
