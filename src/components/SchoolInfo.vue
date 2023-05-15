@@ -1,16 +1,17 @@
 <template>
-    <div class=" info main-bg">
+    <div class=" info">
         <div class="row mt-5">
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 img-head mb-5">
                 <img src="../assets/images/info.webp" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
-                <h2><span>RIHEA </span>Gives You Guaranteed Results</h2>
+                <h2><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
                 <div class="info-content">
-                    <p><i class='bx bxs-bookmark'></i>Our method has helped millions of learners since 1972.</p>
-                    <p><i class='bx bxs-bookmark'></i>Learn with Certified English Teachers in our Total English Environment.</p>
-                    <p><i class='bx bxs-bookmark'></i>The most unique and flexible way to learn English.</p>
-                    <p><i class='bx bxs-bookmark'></i>We have: Online, In-Center or Full Access (Online + In-Center).</p>
+                    <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>A Flexible schedule to fit your needs</p></div>
+                    <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Small class sizes for personalized attention</p></div>
+                    <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Experienced teachers dedicated to your success</p></div>
+                    <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>A comprehensive curriculum designed to prepare you for the IGCSE and GED tests</p></div>
+                    <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Support every step of the way as you work towards achieving your academic goals</p></div>
                 </div>
                 <hr>
                 <p class="info-text">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
@@ -36,6 +37,11 @@
     .info {
         padding: 50px 9%;
         height: 90vh;
+        margin-bottom: 25px;
+        /* background-image: linear-gradient(to bottom,rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("@/assets/images/bg1.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; */
     }
 
     .img-head  img{
@@ -47,9 +53,8 @@
         margin-top: 2.5rem;
     }
 
-    .info-content p i {
+    .info-content i {
         color: var(--main-text-color);
-        margin-right: 1rem;
     }
 
     .info-content p {
@@ -59,7 +64,7 @@
 
     .info-text {
         font-size: 14px;
-        color: #bdb8b8;
+        color: #5d3e89;
     }
 
     .contact-btn {

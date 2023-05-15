@@ -2,24 +2,23 @@
     <nav class="nav1 top-bg-color">
         <div class="">
             <div class="d-flex me-3">
-            <div class="email d-flex pt-2 me-3">
-                <i class='bx bx-envelope me-2 fs-6' ></i> 
-                <p class="">example.com</p>
-            </div>
+                <div class="email d-flex pt-2 me-3">
+                    <i class='bx bx-envelope me-2 fs-6' ></i> 
+                    <p class="">example.com</p>
+                </div>
 
-            <div class="phone d-flex pt-2">
-                <i class='bx bx-phone me-2 fs-6'></i>
-                <p>09-xxxxxxxxx</p>
+                <div class="phone d-flex pt-2">
+                    <i class='bx bx-phone me-2 fs-6'></i>
+                    <p>09-xxxxxxxxx</p>
+                </div>
             </div>
-        </div>
         </div>
     </nav>
     <header class="header main-bg">
         <div class="d-flex justify-content-center align-items-center pointer" @click="goHome">
-            <router-link to="/"><img src="../assets/images/logo.svg" alt=""></router-link>
-            <div class="mt-3">
-                <span class="fw-bold">RIHEA</span>
-                <p style="font-size:12px;">Education Center</p>
+            <router-link to="/"><img src="@/assets/images/logo.png" alt=""></router-link>
+            <div class="mt-3 ms-2">
+                <p style="font-size:11px;"><span style="font-weight: bold; font-size:12px;">RIHEA</span><br> Education Center</p>
             </div>
         </div>
         <i @click="isResponsive = !isResponsive" class='bx bx-menu' :class="{ 'bx-x' : isResponsive }" id="menu-icon"></i>
@@ -42,7 +41,7 @@
                     </ul>
                 </li>
                 <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
+                <li><router-link to="/contact-us">Contact</router-link></li>
             </ul>
             
         </nav>
@@ -85,8 +84,8 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 10px 30px;
-        font-size: 16px;
-        color: #fff;
+        font-size: 12px;
+        color: #403174;
         white-space: nowrap;
         transition: 0.3s;
         text-transform: uppercase;
@@ -96,7 +95,7 @@
 
     .navbar a i, 
     .navbar a:focus i {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 0;
         margin-left: 5px;
     }
@@ -116,22 +115,26 @@
         z-index: 99;
         opacity: 0;
         visibility: hidden;
-        background: rgb(74, 39, 106);
+        background: #23085a;
         border-bottom: 5px solid #e9b313;
         box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
     }
 
     .navbar .dropdown ul li {
-        min-width: 200px;
+        min-width: 150px;
     }
 
     .navbar .dropdown ul a {
-        padding: 10px 20px;
+        padding: 10px 15px 5px;
         text-transform: none;
     }
 
+    .navbar .dropdown ul a {
+        color: #fff;
+    }
+
     .navbar .dropdown ul a:hover {
-        color: #e9b313;
+        color:#e9b313;
     }
 
     .navbar .dropdown:hover>ul {
@@ -141,31 +144,39 @@
     }
 
     .nav1 {
-        height: 35px;
-        padding:0 9%;
+        height: 25px;
+        padding:10px 6.7% 0px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
     }
     .nav1 p {
         font-size: 12px;
-        color: #fff;
+        color: #f2ca2f;
+    }
+
+    .email i, .phone i {
+        color: #f2ca2f;
     }
 
     .header{
         position: sticky;
         top: 0;
         width: 100%;
-        height: 55px;
-        padding: 2rem 7.8%;
+        height: 45px;
+        padding: 1.5rem 7.8%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 100;
+        background-color: #eee !important;
     }
 
 
     .header img {
-        width: 100%;
-        height: 70px;
-        border-radius: 12px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
     }
 
     #menu-icon {

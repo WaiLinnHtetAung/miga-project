@@ -23,6 +23,12 @@ const routes = [
     component: () => import('../views/BlogDetail.vue')
   },
   {
+    path: '/course-detail/:slug',
+    name: 'CourseDetail',
+    component: () => import('@/views/CourseDetail.vue'),
+    props: true,
+  },
+  {
     path: '/:pathMatch(.*)*',
     component: () => import('../views/404Page.vue')
   }

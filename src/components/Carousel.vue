@@ -8,7 +8,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active w-100">
-                    <img src="../assets/images/carousel1.webp" class="w-100" alt="...">
+                    <img src="../assets/images/carousel1.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <h3>Let's Started</h3>
                         <p>Learning Skills & Upgrade Your Life</p>

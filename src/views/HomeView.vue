@@ -6,7 +6,7 @@
     <Slider></Slider>
     <ImageShow></ImageShow>
     <LatestNews></LatestNews>
-    <Footer></Footer>
+    
 </template>
 
 <script>

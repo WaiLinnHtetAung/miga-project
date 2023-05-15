@@ -1,10 +1,28 @@
 <template>
     <div class="images sec-bg">
-        <div class="img1">
-            <img src="../assets/images/edu1.png" alt="">
+        <div class="img">
+            <img src="../assets/images/miga/miga1.jpg" alt="">
         </div>
-        <div class="img2">
-            <img src="../assets/images/edu2.jpg" alt="">
+        <div class="img">
+            <img src="../assets/images/miga/miga2.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga3.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga4.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga5.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga6.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga7.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="../assets/images/miga/miga8.jpg" alt="">
         </div>
     </div>
 </template>
@@ -17,28 +35,23 @@
 
 <style scoped>
     .images {
-        padding: 50px 7%;
+        padding: 20px 3%;
         display: flex;justify-content: center;
         align-items: center;
-        gap: 1rem;
+        flex-wrap: wrap;
+        gap: .8rem;
     }
-    .img1 {
-        width: 600px;
+    .img {
+        overflow: hidden;
     }
-
-    .img1 img {
-        width: 100%;
+    .img img {
+        width: 300px;
+        height: 250px;
         object-fit: cover;
         object-position: center;
+        transition: .5s ease;
     }
-
-    .img2 {
-        width: 600px;
-    }
-
-    .img2 img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+    .img img:hover {
+        transform: scale(1.1);
     }
 </style>

@@ -2,14 +2,16 @@
   <Nav />
   <ChatBot />
   <router-view/>
+  <Footer></Footer>
 </template>
 
 <script>
   import Nav from './views/Nav.vue'
   import ChatBot from './components/ChatBot.vue'
+  import Footer from './components/Footer.vue'
 
   export default {
-    components: {Nav, ChatBot}
+    components: {Nav, ChatBot, Footer}
   }
 </script>
 
@@ -25,19 +27,13 @@
 
 body {
   position: relative;
-  background-image: linear-gradient(to right top, #02084b, #1a1457, #2b2064, #3b2d70, #4b3a7d) !important;
+  background: #eee;
 }
 
-.main-bg {
-    background-image: linear-gradient(to right top, #02084b, #1a1457, #2b2064, #3b2d70, #4b3a7d);
-}
-
-.sec-bg {
-    background-image: linear-gradient(to left, #02084b, #251d67, #413383, #5d4aa1, #7a62c0);
-}
 
 .section-header h2{
     text-align: center;
+    font-size: 1.8rem;
     color: var(--main-text-color);
   }
 

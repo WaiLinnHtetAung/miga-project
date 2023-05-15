@@ -1,80 +1,48 @@
 <template>
-    <div class="top-course-container main-bg">
+    <div class="top-course-container">
         <div class="section-header">
             <h2>Explore Top Courses</h2>
         </div>
         <div class="top-courses">
             <figure class="imghvr-shutter-out-diag-2">
                 <div class="top-course" style="background-color: #5e4ae3;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
+                    <div class="mb-2"><img src="@/assets/images/top-courses/top-course1.svg" alt=""></div>
+                    <h4>Pre GED Class</h4>
                 </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
+                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <router-link to="/course-detail/pre-ged"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
                 <div class="top-course" style="background-color: #bfaee3;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
+                    <div class="mb-2"><img src="@/assets/images/top-courses/top-course2.svg" alt=""></div>
+                    <h4>GED Class</h4>
                 </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
+                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <router-link to="/course-detail/ged"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
                 <div class="top-course" style="background-color: #0c5d7b;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
+                    <div class="mb-2"><img src="@/assets/images/top-courses/top-course3.svg" alt=""></div>
+                    <h4>O Level IGCSE</h4>
                 </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
+                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <router-link to="/course-detail/o-igcse"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
                 <div class="top-course" style="background-color: #f26ca7;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
+                    <div class="mb-2"><img src="@/assets/images/top-courses/top-course4.svg" alt=""></div>
+                    <h4>Pre IGCSE Class</h4>
                 </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
+                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <router-link to="/course-detail/pre-igcse"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
                 <div class="top-course" style="background-color: #407c87;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
+                    <div class="mb-2"><img src="@/assets/images/top-courses/top-course5.svg" alt=""></div>
+                    <h4>Academic Eng 4 Skills</h4>
                 </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
-            </figure>
-            <figure class="imghvr-shutter-out-diag-2">
-                <div class="top-course" style="background-color: #9ccd62;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
-                </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
-            </figure>
-            <figure class="imghvr-shutter-out-diag-2">
-                <div class="top-course" style="background-color: #947bd3;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
-                </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
-            </figure>
-            <figure class="imghvr-shutter-out-diag-2">
-                <div class="top-course" style="background-color: #d1114d;">
-                    <div class="mb-2"><i class='bx bx-happy-heart-eyes fs-3'></i></div>
-                    <h4>Top Course</h4>
-                    <p>Students - 50</p>
-                </div>
-                <figcaption><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
-                <a href="#"></a>
+                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <router-link to="/course-detail/eng-4-skills"></router-link>
             </figure>
         </div>
     </div>
@@ -90,11 +58,16 @@
     .top-course-container {
         text-align: center;
         padding: 50px 9% 40px;
+        /* background: #f9f8f8; */
+        background-image: linear-gradient(to top,rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("@/assets/images/bg1.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
 
     .top-course-container .top-course {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background-color: blueviolet;
     }
 
@@ -107,13 +80,23 @@
         padding: 0 20px;
     }
 
+    .top-course img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .top-course h4, figcaption i {
+        color: var(--main-text-color);
+    }
+
     .top-courses figure {
         border-radius: 12px;
     }
 
     figure figcaption {
-        margin-top: 3rem;
+        margin-top: 7rem;
         font-size: 12px !important;
+        font-size: 12px;
     }
 
     .top-course {

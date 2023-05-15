@@ -1,5 +1,5 @@
 <template>
-    <div class="history sec-bg">
+    <div class="history">
         <div class="row text-center">
             <div class="col-lg-3 col-md-4 col-sm-12 col-12 mt-5 p-4">
                 <i class='bx bxs-graduation'></i>

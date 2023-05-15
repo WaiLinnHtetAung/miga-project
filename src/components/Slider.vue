@@ -1,5 +1,5 @@
 <template>
-    <div class="slider main-bg">
+    <div class="slider">
         <div class="section-header">
             <h2>Voices from Our Students</h2>
         </div>
@@ -38,12 +38,13 @@
                             id="my-swiper"
                             >
                             <swiper-slide v-for="(data, index) in datas" :key="index">
-                                <div class="card-head shadow">
+                                <div class="card-head">
                                     <img :src="data.img" alt="">
                                     <div class="card-content">
-                                        <p class="text-dark">{{data.description}}</p>
-                                        <h4 class="text-dark">{{data.name}}</h4>
-                                        <p  class="text-dark">RIHEA Alumni</p>
+                                        <p class="">{{data.description}}</p>
+                                        <h4 class="">{{data.name}}</h4>
+                                        <p class="collage">({{data.collage}})</p>
+                                        <p style="font-size: 14px;">RIHEA Alumni</p>
                                     </div>
                                 </div>
                             </swiper-slide>
@@ -74,22 +75,23 @@ import { ref } from 'vue';
 
         setup() {
             const slider = ref(null);
-            console.log(slider.value);
             const datas = ref([
                 {
-                    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptatum cumque id aliquid sit modi dicta nihil expedita alias animi.",
+                    description: "I prefer teaching methods that keep me engaged and actively participating in the learning process. Lectures and traditional teaching methods can be monotonous and boring, so I appreciate activities that allow me to interact with the material and my peers.",
                     img: require( "../assets/images/profile1.webp"),
-                    name: 'Mr.Willian',
+                    name: 'Mr. Htun Aung Latt',
+                    collage: 'Master of Engineering - Edinburgh University'
                 },
                 {
-                    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptatum cumque id aliquid sit modi dicta nihil expedita alias animi.",
+                    description: "I appreciate feedback from my teachers about my progress and areas for improvement. Constructive criticism and specific guidance can help me improve my performance and build my confidence.",
                     img: require('../assets/images/profile2.jpeg'),
-                    name: 'Mr.Willian',
+                    name: 'Mr. Myint Myat Hein',
+                    collage: 'Master of Engineering - Edinburgh University'
                 },
                 {
-                    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptatum cumque id aliquid sit modi dicta nihil expedita alias animi.",
+                    description: "I appreciate the supportive and inclisive environment offered by the school. The admission team has a strong sense of community and provide students with individualized attention and support to help us succeed.",
                     img: 'https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg',
-                    name: 'Mr.Willian',
+                    name: 'Mr. Swan Pyae Hein',
 
                 },
                 {
@@ -108,6 +110,7 @@ import { ref } from 'vue';
 <style scoped>
     .slider {
         padding: 50px 9% 0;
+        background-image: linear-gradient(to right,rgba(206, 206, 40, 0.5), rgba(0, 0, 255, 0.5));
     }
     .slide-container {
         width: 100%;
@@ -127,7 +130,7 @@ import { ref } from 'vue';
         border-radius: 12px;
         text-align: center;
         padding-top: 10px;
-        height: 380px
+        height: 450px
     }
     .card-head img {
         width: 150px;
@@ -144,12 +147,13 @@ import { ref } from 'vue';
 
     .card-content p {
         color: #fff !important;
-        font-size: 14px;
+        font-size: 12px;
     }
+
 
     .card-content h4 {
         font-size: 16px;
-        color: rgb(238,185,36) !important;
+        color: #23085a !important;
         margin-bottom: 1rem;
     }
 
