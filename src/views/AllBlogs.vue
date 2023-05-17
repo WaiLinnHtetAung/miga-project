@@ -4,34 +4,33 @@
             <p class="m-0 p-0">RIHEA BLOGS</p>
             <h3 class="m-0 p-0">ALL RESOURCES TO HELP YOU INDEED</h3>
         </div>
-        <div class="first-blog shadow">
+        <div class="first-blog shadow my-5">
             <div class="blog-text">
                 <p class="mt-3" style="font-size:13px;">ARTICLE</p>
-                <h5 class="mb-4">ဒီနေ့ခေတ်မှာ IGCSE ဟာ နိုင်ငံတကာပညာရေးတံခါးပေါက်တွေကို ဖွင့်ပေးမယ့် သော့တစ်ခုဖြစ်လာပါပြီ 🔑 နိုင်ငံခြားတက္ကသိုလ်တွေမှာပညာသင်ချင်တဲ့ အိပ်မက်တွေကိုလည်း အကောင်အထည်ဖော်ချင်တယ်...  </h5>
-                <p class="mb-4" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> October 22, 2023</p>
-                <router-link to="/blog-detail" class="read">Read</router-link>
+                <h5 class="mb-4">{{ blogs[0] ? blogs[0].title : '' }}</h5>
+                <p class="mb-4" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{ blogs[0] ? blogs[0].date : '' }}</p>
+                <router-link :to="`/blog-detail/${blogs[0] ? blogs[0].id : ''}`" class="read">Read</router-link>
             </div>
             <div class="blog-image">
-                <img src="../assets/images/blog4.jpg" alt="">
+                <img :src="blogs[0] ? blogs[0].img : ''" alt="">
             </div>
         </div>
         <div class="all-blogs">
             <div class="row">
                 <div class="col-lg-8 col-md-6 col-sm-12 col-12">
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-3" v-for="(blog, index) in blogs" :key="index">
-                            <div class="img-card">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-4" v-for="(blog, index) in blogs" :key="index">
+                            <div class="img-card bg-info">
                                 <img :src="blog.img" alt="">
                                 <div class="news-content">
-                                    <p class="mt-2"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
+                                    <p class="mt-2"><i class="fa-solid fa-calendar-days"></i>{{ blog.date }}</p>
                                     <h4>{{blog.title.slice(0,90)}} ...</h4>
-                                    <hr>
-                                    <div class="read-more">
-                                        <!-- <div class="pointer" @click="readAll">
-                                            <i class="fa-solid fa-newspaper me-2"></i> Read All
-                                        </div> -->
-                                        <div class="pointer" @click="readMore">
-                                            Read More<i class="fa-solid fa-angle-right ms-2"></i>
+                                    <div class="news-read">
+                                        <hr>
+                                        <div class="read-more">
+                                            <div class="pointer" @click="readMore">
+                                                <router-link :to="`/blog-detail/${blog.id}`">Read More<i class="fa-solid fa-angle-right ms-2"></i></router-link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -40,29 +39,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="top-blogs">
-                        THE TOP FIVE BLOGS
-                    </div>
-                    <div class="top-blogs-list mb-3">
-                        <div><i class="fa-solid fa-newspaper"></i></div>
-                        <div class="">It is a long established fact that a reader will be distracted by the readable content of</div>
-                    </div>
-                    <div class="top-blogs-list mb-3">
-                        <div><i class="fa-solid fa-newspaper"></i></div>
-                        <div class="">It is a long established fact that a reader will be distracted by the readable content of</div>
-                    </div>
-                    <div class="top-blogs-list mb-3">
-                        <div><i class="fa-solid fa-newspaper"></i></div>
-                        <div class="">It is a long established fact that a reader will be distracted by the readable content of</div>
-                    </div>
-                    <div class="top-blogs-list mb-3">
-                        <div><i class="fa-solid fa-newspaper"></i></div>
-                        <div class="">It is a long established fact that a reader will be distracted by the readable content of</div>
-                    </div>
-                    <div class="top-blogs-list mb-3">
-                        <div><i class="fa-solid fa-newspaper"></i></div>
-                        <div class="">It is a long established fact that a reader will be distracted by the readable content of</div>
-                    </div>
+                    <TopBlogs :blogs="blogs" @seemore="goSeeMore"></TopBlogs>
                 </div>
             </div>
         </div>
@@ -70,32 +47,24 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'
+    import TopBlogs from '../components/TopBlogs'
+    import { onMounted, ref } from 'vue'
+    import {useStore} from 'vuex'
+    import {useRouter} from 'vue-router'
     export default {
+  components: { TopBlogs },
         setup() {
-            let blogs = ref([
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog1.jpg')
-                },
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog2.png')
-                },
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog3.jpg')
-                },
-            ]);
-
+            let store = useStore();
+            let router = useRouter();
+            let blogs = ref('');
             onMounted(() => {
-                window.scrollTo(0,0)
+                blogs.value = store.getters.getBlogs;
+                window.scrollTo(0,0);
             })
 
-            return {blogs}
+            let goSeeMore = (id) => router.push(`/blog-detail/${id}`)
+
+            return {blogs, goSeeMore}
         }
     }
 </script>
@@ -154,6 +123,9 @@ import { onMounted, ref } from 'vue'
         background: #eee;
         overflow: hidden;
         padding-bottom: 20px;
+        height: 430px;
+        position: relative;
+
     }
 
     .img-card img {
@@ -169,6 +141,14 @@ import { onMounted, ref } from 'vue'
     .news-content {
         padding: 10px 30px;
         background: #fff;
+        height: 100%;
+    }
+    .news-read {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        right: 5px;
+        padding: 0 30px;
     }
 
     .news-content p {
@@ -203,31 +183,14 @@ import { onMounted, ref } from 'vue'
     .read-more i {
         color: #403174;
     }
+    .read-more a {
+        text-decoration: none;
+        color: #707070;
+    }
 
     .read-more div {
         color: #707070;
         font-size: 14px;
     }
-    .top-blogs {
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        background: #23085a;
-        color: var(--main-text-color);
-        padding: 8px 0;
-        margin-bottom: 1rem;
-    }
-    .top-blogs-list {
-        display: flex;
-        gap: 1.3rem;
-        padding: 0 4px;
-        /* background: #f5f5f5; */
-    }
-    .top-blogs-list i {
-        font-size: 1.5rem;
-    }
-    .top-blogs-list>div {
-        font-size: 14px;
-        text-align: justify;
-    }
+    
 </style>

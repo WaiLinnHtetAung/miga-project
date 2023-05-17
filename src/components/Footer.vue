@@ -4,10 +4,10 @@
             <div class=" row">
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 school-info ">
                     <div class="logo ">
-                        <img src="../assets/images/footer.svg" alt="">
+                        <img src="../assets/images/logo.png" alt="">
                         <div  class="mt-3">
-                            <span style="color: #3a2d7c; font-weight: bold;">RIHEA</span>
-                            <p>Education Center</p>
+                            <span style="color: var(--main-text-color); font-weight: bold; font-size: 1.5rem;">RIHEA</span>
+                            <p class="text-white">Education Center</p>
                         </div>
                     </div>
                     <div class="school-content">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bar d-flex justify-content-between align-items-center top-bg-color">
+        <div class="footer-bar d-flex justify-content-between align-items-center">
             <p>Copyright 2023 MIGA. All Rights Reserved.</p>
             <p>Powered by itGateway</p>
         </div>
@@ -71,18 +71,19 @@
 <style scoped>
     .footer1 {
         padding: 50px 40px;
-        background: linear-gradient(90deg, hsla(42, 77%, 46%, 1) 10%, hsla(48, 75%, 37%, 1) 99%);
+        background: #23085a;
     }
 
     .footer-bar {
         height: 40px;
         padding: 0 9%;
+        background: var(--main-text-color);
     }
 
     .footer-bar p {
-        color: rgb(238,185,36);
-        color: radial-gradient(circle, rgba(238,185,36,1) 0%, rgba(227,194,21,1) 45%, rgba(105,98,19,1) 100%);
+        color: #23085a;
         padding-top: 15px;
+        font-weight: bold;
     }
 
     iframe {
@@ -103,12 +104,19 @@
     .logo {
         display: flex;
         align-items: center;
-        margin-left: -20px;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-right: 10px;
     }
 
     .school-content p{
         padding-left: 10px;
-        color: #3a2d7c;
+        color: #fff;
         font-size: 15px;
         text-align: justify;
     }
@@ -136,16 +144,20 @@
     }
 
     .address h4 {
-        color: #3a2d7c;
+        color: #fff;
     }
 
     .address .address-detail {
         margin-top: 50px;
     }
 
-    .address-detail div, .address div i {
-        color: #3a2d7c;
+    .address-detail div {
+        color: #fff;
         font-size: 15px;
+    } 
+    .address div i {
+        color: var(--main-text-color);
+        font-size: 17px;
     }
     
     .map {

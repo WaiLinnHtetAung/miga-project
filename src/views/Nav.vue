@@ -18,7 +18,7 @@
         <div class="d-flex justify-content-center align-items-center pointer" @click="goHome">
             <router-link to="/"><img src="@/assets/images/logo.png" alt=""></router-link>
             <div class="mt-3 ms-2">
-                <p style="font-size:11px;"><span style="font-weight: bold; font-size:12px;">RIHEA</span><br> Education Center</p>
+                <p style="font-size:12px;"><span style="font-weight: bold; font-size:12px;">RIHEA</span><br> Education Center</p>
             </div>
         </div>
         <i @click="isResponsive = !isResponsive" class='bx bx-menu' :class="{ 'bx-x' : isResponsive }" id="menu-icon"></i>
@@ -28,7 +28,7 @@
                     <a href="">Home <i class='bx bx-chevron-down'></i></a>
                     <ul>
                         <li><router-link to="/about-us">About Us</router-link></li>
-                        <li><a href="">Contact</a></li>
+                        <li><router-link to="/contact-us">Contact Us</router-link></li>
                         <li><a href="">Our Services</a></li>
                     </ul>
                 </li>
@@ -96,7 +96,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 10px 30px;
-        font-size: 12px;
+        font-size: 13px;
         color: #403174;
         white-space: nowrap;
         transition: 0.3s;
@@ -107,7 +107,7 @@
 
     .navbar a i, 
     .navbar a:focus i {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 0;
         margin-left: 5px;
     }
@@ -163,7 +163,7 @@
         align-items: center;
     }
     .nav1 p {
-        font-size: 12px;
+        font-size: 13px;
         color: #f2ca2f;
     }
 
@@ -176,7 +176,7 @@
         top: 0;
         width: 100%;
         height: 45px;
-        padding: 1.5rem 7.8%;
+        padding: 1.9rem 7.8%;
         display: flex;
         justify-content: space-between;
         align-items: center;

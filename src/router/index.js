@@ -18,9 +18,10 @@ const routes = [
     component: () => import('../views/AllBlogs.vue')
   },
   {
-    path: '/blog-detail',
+    path: '/blog-detail/:id',
     name: 'BlogDetail',
-    component: () => import('../views/BlogDetail.vue')
+    component: () => import('../views/BlogDetail.vue'),
+    props: true
   },
   {
     path: '/course-detail/:slug',

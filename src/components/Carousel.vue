@@ -8,27 +8,27 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active w-100">
-                    <img src="../assets/images/carousel1.jpg" class="w-100" alt="...">
+                    <img src="../assets/images/slider2.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
-                        <h3>Let's Started</h3>
                         <p>Learning Skills & Upgrade Your Life</p>
-                        <button class="btn">Explpore</button>
+                        <h3 class="mb-5">WELCOME TO RIHEA</h3>
+                        <button class="btn" @click="goContact">Contact Us</button>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/images/carousel2.webp" class="w-100" alt="...">
+                    <img src="../assets/images/slider1.jpeg" class="w-100" alt="...">
                     <div class="carousel-caption">
-                        <h3>Let's Started</h3>
                         <p>Learning Skills & Upgrade Your Life</p>
-                        <button class="btn">Explpore</button>
+                        <h3 class="mb-5">WELCOME TO RIHEA</h3>
+                        <button class="btn" @click="goContact">Contact Us</button>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="../assets/images/carousel3.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
-                        <h3>Let's Started</h3>
                         <p>Learning Skills & Upgrade Your Life</p>
-                        <button class="btn">Explpore</button>
+                        <h3 class="mb-5">WELCOME TO RIHEA</h3>
+                        <button class="btn" @click="goContact">Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -45,8 +45,14 @@
 </template>
 
 <script>
+    import {useRouter} from 'vue-router'
     export default {
-        
+        setup() {
+            let router = useRouter();
+            let goContact = () => router.push('/contact-us');
+
+            return {goContact}
+        }
     }
 </script>
 
@@ -61,8 +67,18 @@
     }
 
     .carousel-item .carousel-caption {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 
-    
+    .carousel-caption h3 {
+        color: #fff;
+        font-weight: bolder;
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--main-text-color);
+    }
 </style>

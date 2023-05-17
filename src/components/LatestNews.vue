@@ -13,13 +13,15 @@
                         <div class="news-content">
                             <p class="mt-2"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
                             <h4>{{blog.title.slice(0,90)}} ...</h4>
-                            <hr>
-                            <div class="read-more">
-                                <div class="pointer" @click="readAll">
-                                    <i class="fa-solid fa-newspaper me-2"></i> Read All
-                                </div>
-                                <div class="pointer" @click="readMore">
-                                    Read More<i class="fa-solid fa-angle-right ms-2"></i>
+                            <div class="news-read">
+                                <hr>
+                                <div class="read-more">
+                                    <div class="pointer" @click="readAll">
+                                        <i class="fa-solid fa-newspaper me-2"></i> Read All
+                                    </div>
+                                    <div class="pointer" @click="readMore(blog.id)">
+                                        Read More<i class="fa-solid fa-angle-right ms-2"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -32,32 +34,21 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import {useRouter} from 'vue-router'
+import {useStore} from 'vuex'
     export default {
         setup() {
+            let store = useStore();
             let router = useRouter();
-            let blogs = ref([
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog1.jpg')
-                },
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog2.png')
-                },
-                {
-                    date : 'August 20, 2022',
-                    title: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                    img: require('../assets/images/blog3.jpg')
-                },
-              
-            ]);
+            let blogs = ref('');
 
             let readAll = () => router.push('/all-blogs');
-            let readMore = () => router.push('/blog-detail');
+            let readMore = (id) => router.push(`blog-detail/${id}`);
+
+            onMounted(() => {
+                blogs.value = store.getters.getBlogs;
+            })
 
             return {blogs, readAll, readMore}
         }
@@ -77,7 +68,9 @@ import {useRouter} from 'vue-router'
     .img-card {
         background: #eee;
         overflow: hidden;
+        height: 430px;
         padding-bottom: 20px;
+        position: relative;
     }
 
     .img-card img {
@@ -92,20 +85,29 @@ import {useRouter} from 'vue-router'
 
     .news-content {
         padding: 10px 30px;
+        height: 100%;
+        background: #23085a;
+    }
+    .news-read {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        right: 5px;
+        padding: 0 40px;
     }
 
     .news-content p {
-        color: #707070;
+        color: var(--main-text-color);
         font-size: 14px;
     }
 
     .news-content p i {
-        color: #403174;
+        color: var(--main-text-color);
         margin-right: 10px;
     }
 
     .news-content h4 {
-        color: rgb(12, 11, 11);
+        color: var(--main-text-color);
         margin-top: 20px;
         padding-bottom: 10px;
         text-align: start;
@@ -114,7 +116,7 @@ import {useRouter} from 'vue-router'
 
     .news-content hr {
         height: 2px;
-        color: #151837;
+        color: var(--main-text-color);
     }
 
     .read-more {
@@ -124,11 +126,11 @@ import {useRouter} from 'vue-router'
     }
 
     .read-more i {
-        color: #403174;
+        color: var(--main-text-color);
     }
 
     .read-more div {
-        color: #707070;
+        color: var(--main-text-color);
         font-size: 14px;
     }
 </style>

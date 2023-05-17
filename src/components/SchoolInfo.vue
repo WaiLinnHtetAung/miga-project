@@ -16,7 +16,7 @@
                 <hr>
                 <p class="info-text">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
 
-                <div class="contact-btn">
+                <div class="contact-btn" @click="goContact">
                     <button>Contact Us </button>
                     <i class='bx bx-envelope' ></i>
                 </div>
@@ -28,8 +28,14 @@
 </template>
 
 <script>
+    import {useRouter} from 'vue-router'
     export default {
-        
+        setup() {
+            let router = useRouter();
+            let goContact = () => router.push('/contact-us');
+
+            return {goContact}
+        }
     }
 </script>
 

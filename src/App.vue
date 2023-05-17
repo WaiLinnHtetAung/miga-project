@@ -39,11 +39,17 @@ body {
   }
 
   .btn {
-    background: var(--main-text-color);
-    color: #1d203e;
+    background: #23085a;
+    color: var(--main-text-color);
     border-radius: 6px;
+    font-weight: bold;
+    transition: .5s ease;
   }
-
+  .btn:hover {
+    color: var(--main-text-color);
+    box-shadow: 0 0 1.4rem var(--main-text-color);
+    transform: scale(1.03);
+  }
   .pointer {
     cursor: pointer;
   }
