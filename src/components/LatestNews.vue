@@ -1,7 +1,7 @@
 <template>
-    <div class="main-bg latest-news-container">
+    <div class=" latest-news-container">
         <div class="section-header">
-            <p>New Updates</p>
+            <p>News Updates</p>
             <h2>Latest News & Updates</h2>
         </div>
 

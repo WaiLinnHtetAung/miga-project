@@ -8,7 +8,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
         </div>
-        <img src="../assets/images/usa-flag.svg.png" alt="">
+        <img src="../assets/images/usa-flag-american.gif" alt="">
         <div class="d-flex justify-content-center align-items-center gap-5" >
             <div class="class-info"><i class="fa-solid fa-clock me-2"></i>10 months</div>
             <div class="class-info"><i class="fa-solid fa-users"></i> 500 students enrolled</div>

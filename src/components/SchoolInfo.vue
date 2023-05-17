@@ -46,7 +46,7 @@
 
     .img-head  img{
         width: 100%;
-        height: 400px;
+        height: 450px;
     }
 
     .info-content {
@@ -59,7 +59,7 @@
 
     .info-content p {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 15px;
     }
 
     .info-text {

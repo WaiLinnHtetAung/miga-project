@@ -34,7 +34,8 @@ body {
 .section-header h2{
     text-align: center;
     font-size: 1.8rem;
-    color: var(--main-text-color);
+    color: #23085a;
+    font-weight: bolder;
   }
 
   .btn {

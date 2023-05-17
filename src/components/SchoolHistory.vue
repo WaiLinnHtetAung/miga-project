@@ -33,7 +33,7 @@
 
 <style scoped>
     .history {
-        padding: 30px 0 20px;
+        padding: 0px 0 20px;
     }
 
     i {

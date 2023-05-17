@@ -78,25 +78,25 @@ import { ref } from 'vue';
             const datas = ref([
                 {
                     description: "I prefer teaching methods that keep me engaged and actively participating in the learning process. Lectures and traditional teaching methods can be monotonous and boring, so I appreciate activities that allow me to interact with the material and my peers.",
-                    img: require( "../assets/images/profile1.webp"),
+                    img: require( "../assets/images/miga/miga11.jpg"),
                     name: 'Mr. Htun Aung Latt',
                     collage: 'Master of Engineering - Edinburgh University'
                 },
                 {
                     description: "I appreciate feedback from my teachers about my progress and areas for improvement. Constructive criticism and specific guidance can help me improve my performance and build my confidence.",
-                    img: require('../assets/images/profile2.jpeg'),
+                    img: require('../assets/images/miga/miga12.jpg'),
                     name: 'Mr. Myint Myat Hein',
                     collage: 'Master of Engineering - Edinburgh University'
                 },
                 {
                     description: "I appreciate the supportive and inclisive environment offered by the school. The admission team has a strong sense of community and provide students with individualized attention and support to help us succeed.",
-                    img: 'https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg',
+                    img: require('../assets/images/miga/miga13.jpg'),
                     name: 'Mr. Swan Pyae Hein',
 
                 },
                 {
                     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptatum cumque id aliquid sit modi dicta nihil expedita alias animi.",
-                    img: 'https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg',
+                    img: require('../assets/images/miga/miga14.jpg'),
                     name: 'Mr.Willian',
 
                 }
@@ -111,6 +111,7 @@ import { ref } from 'vue';
     .slider {
         padding: 50px 9% 0;
         background-image: linear-gradient(to right,rgba(206, 206, 40, 0.5), rgba(0, 0, 255, 0.5));
+        height: 100vh;
     }
     .slide-container {
         width: 100%;
@@ -133,9 +134,10 @@ import { ref } from 'vue';
         height: 450px
     }
     .card-head img {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
     .card-content {

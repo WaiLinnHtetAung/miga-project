@@ -9,7 +9,7 @@
                     <div class="mb-2"><img src="@/assets/images/top-courses/top-course1.svg" alt=""></div>
                     <h4>Pre GED Class</h4>
                 </div>
-                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <figcaption> <div><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></div> </figcaption>
                 <router-link to="/course-detail/pre-ged"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
@@ -17,7 +17,7 @@
                     <div class="mb-2"><img src="@/assets/images/top-courses/top-course2.svg" alt=""></div>
                     <h4>GED Class</h4>
                 </div>
-                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <figcaption> <div><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></div> </figcaption>
                 <router-link to="/course-detail/ged"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
@@ -25,7 +25,7 @@
                     <div class="mb-2"><img src="@/assets/images/top-courses/top-course3.svg" alt=""></div>
                     <h4>O Level IGCSE</h4>
                 </div>
-                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <figcaption> <div><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></div> </figcaption>
                 <router-link to="/course-detail/o-igcse"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
@@ -33,7 +33,7 @@
                     <div class="mb-2"><img src="@/assets/images/top-courses/top-course4.svg" alt=""></div>
                     <h4>Pre IGCSE Class</h4>
                 </div>
-                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <figcaption> <div><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></div> </figcaption>
                 <router-link to="/course-detail/pre-igcse"></router-link>
             </figure>
             <figure class="imghvr-shutter-out-diag-2">
@@ -41,7 +41,7 @@
                     <div class="mb-2"><img src="@/assets/images/top-courses/top-course5.svg" alt=""></div>
                     <h4>Academic Eng 4 Skills</h4>
                 </div>
-                <figcaption><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></figcaption>
+                <figcaption> <div><i class="fa-solid fa-eye fs-5"></i><br><span>Click to see detail</span> <i class='bx bx-chevrons-right'></i></div> </figcaption>
                 <router-link to="/course-detail/eng-4-skills"></router-link>
             </figure>
         </div>
@@ -57,7 +57,7 @@
 <style scoped>
     .top-course-container {
         text-align: center;
-        padding: 50px 9% 40px;
+        padding: 50px 10% 40px;
         /* background: #f9f8f8; */
         background-image: linear-gradient(to top,rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("@/assets/images/bg1.jpg");
         background-repeat: no-repeat;
@@ -66,8 +66,8 @@
     }
 
     .top-course-container .top-course {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 270px;
         background-color: blueviolet;
     }
 
@@ -94,7 +94,10 @@
     }
 
     figure figcaption {
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 12px !important;
         font-size: 12px;
     }

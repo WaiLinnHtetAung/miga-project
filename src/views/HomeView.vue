@@ -5,11 +5,13 @@
     <SchoolHistory></SchoolHistory>
     <Slider></Slider>
     <ImageShow></ImageShow>
+    <OurCampus></OurCampus>
     <LatestNews></LatestNews>
     
 </template>
 
 <script>
+import OurCampus from '../components/OurCampus'
 import LatestNews from '../components/LatestNews'
 import ImageShow from '../components/ImageShow'
 import SchoolInfo from '../components/SchoolInfo'
@@ -22,6 +24,7 @@ import Carousel from '../components/Carousel'
 export default {
   name: 'HomeView',
   components: {
+    OurCampus,
     LatestNews,
     ImageShow,
     SchoolInfo,

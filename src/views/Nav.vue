@@ -14,7 +14,7 @@
             </div>
         </div>
     </nav>
-    <header class="header main-bg">
+    <header class="header main-bg shadow">
         <div class="d-flex justify-content-center align-items-center pointer" @click="goHome">
             <router-link to="/"><img src="@/assets/images/logo.png" alt=""></router-link>
             <div class="mt-3 ms-2">
@@ -27,21 +27,33 @@
                 <li class="dropdown">
                     <a href="">Home <i class='bx bx-chevron-down'></i></a>
                     <ul>
-                        <li><a href="">About Us</a></li>
+                        <li><router-link to="/about-us">About Us</router-link></li>
                         <li><a href="">Contact</a></li>
                         <li><a href="">Our Services</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="">Category <i class='bx bx-chevron-down'></i></a>
+                    <a href="">Courses <i class='bx bx-chevron-down'></i></a>
                     <ul>
-                        <li><a href="">Cat 1</a></li>
-                        <li><a href="">Cat 2</a></li>
-                        <li><a href="">Cat 3</a></li>
+                        <li><router-link :to="{name: 'CourseDetail', params: {slug: 'pre-ged'}}">Pre GED</router-link></li>
+                        <li><router-link to="/course-detail/ged">GED</router-link></li>
+                        <li><router-link to="/course-detail/pre-igcse">Pre IGCSE</router-link></li>
+                        <li><router-link to="/course-detail/o-igcse">O Level IGCSE</router-link></li>
+                        <li><router-link to="/course-detail/eng-4-skills">Eng 4 Skills</router-link></li>
                     </ul>
                 </li>
-                <li><a href="">Blog</a></li>
-                <li><router-link to="/contact-us">Contact</router-link></li>
+                <li class="dropdown">
+                    <a href="">Campuses <i class='bx bx-chevron-down'></i></a>
+                    <ul>
+                        <li><router-link to="/campus/campus1">Campus 1</router-link></li>
+                        <li><router-link to="/campus/campus2">Campus 2</router-link></li>
+                        <li><router-link to="/campus/campus3">Campus 3</router-link></li>
+                        <li><router-link to="/campus/campus4">Campus 4</router-link></li>
+                        <li><router-link to="/campus/campus5">Campus 5</router-link></li>
+                        <li><router-link to="/campus/campus6">Campus 6</router-link></li>
+                    </ul>
+                </li>
+                <li><router-link to="/all-blogs">Blog</router-link></li>
             </ul>
             
         </nav>
@@ -177,6 +189,9 @@
         width: 35px;
         height: 35px;
         border-radius: 50%;
+    }
+    .router-link-active {
+        color: rgb(238,185,36) !important;
     }
 
     #menu-icon {

@@ -26,7 +26,23 @@ const routes = [
     path: '/course-detail/:slug',
     name: 'CourseDetail',
     component: () => import('@/views/CourseDetail.vue'),
-    props: true,
+    props: true
+  },
+  {
+    path: '/campus/:name',
+    name: 'CampusPage',
+    component: () => import('../views/Campus.vue'),
+    props: true
+  },
+  {
+    path: '/students-activities',
+    name: 'StudentsActivities',
+    component: () => import('../views/StudentsActivities.vue')
+  },
+  {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: () => import('../views/AboutUs.vue')
   },
   {
     path: '/:pathMatch(.*)*',
