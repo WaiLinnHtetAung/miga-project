@@ -1,5 +1,5 @@
 <template>
-    <footer class="">
+    <footer class="bg-transparent">
         <div class="footer1 ">
             <div class=" row">
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 school-info ">
@@ -72,6 +72,7 @@
     .footer1 {
         padding: 50px 40px;
         background: #23085a;
+        border-radius: 0px 100px 0 0;
     }
 
     .footer-bar {

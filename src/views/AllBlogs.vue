@@ -1,14 +1,14 @@
 <template>
-    <div class="container blogs">
+    <div class=" blogs">
         <div class="blog-header mb-3">
             <p class="m-0 p-0">RIHEA BLOGS</p>
             <h3 class="m-0 p-0">ALL RESOURCES TO HELP YOU INDEED</h3>
         </div>
-        <div class="first-blog shadow my-5">
+        <div class="first-blog shadow my-5 bg-white">
             <div class="blog-text">
                 <p class="mt-3" style="font-size:13px;">ARTICLE</p>
                 <h5 class="mb-4">{{ blogs[0] ? blogs[0].title : '' }}</h5>
-                <p class="mb-4" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{ blogs[0] ? blogs[0].date : '' }}</p>
+                <p class="mb-5" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{ blogs[0] ? blogs[0].date : '' }}</p>
                 <router-link :to="`/blog-detail/${blogs[0] ? blogs[0].id : ''}`" class="read">Read</router-link>
             </div>
             <div class="blog-image">
@@ -71,7 +71,8 @@
 
 <style scoped>
     .blogs {
-        padding: 40px 0;
+        padding: 40px 9%;
+        background: linear-gradient(#fff 50vh, #eee 50vh);
     }
     .blog-header {
         text-align: center;

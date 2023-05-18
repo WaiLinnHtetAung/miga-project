@@ -20,6 +20,7 @@ import Footer from '../components/Footer'
 import SchoolHistory from '../components/SchoolHistory'
 import ExploreTopCourse from '../components/ExploreTopCourse'
 import Carousel from '../components/Carousel'
+import { onMounted } from 'vue'
 
 export default {
   name: 'HomeView',
@@ -32,6 +33,12 @@ export default {
     Footer,
     SchoolHistory,
     ExploreTopCourse, Carousel },
+
+    setup() {
+      onMounted(() => {
+        window.scrollTo(0,0)
+      })
+    }
   
 }
 </script>

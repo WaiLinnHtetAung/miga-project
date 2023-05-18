@@ -241,6 +241,9 @@
             background: rgb(74, 39, 106);
             box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
         }
+        .navbar a{
+            color: #fff !important;
+        }
 
         .navbar .dropdown ul li a:hover {
             color: #e9b313;

@@ -50,7 +50,7 @@
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7638.821402996337!2d96.13080074293123!3d16.805969506573742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb46890098cb%3A0x705a0ebc0e973dbc!2sMyaynigone%2C%20Yangon!5e0!3m2!1sen!2smm!4v1684245520341!5m2!1sen!2smm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="campus-experience">
+        <div class="campus-experience mt-5">
             <div class="section-header">
                 <h2>Campus Experience</h2>
             </div>

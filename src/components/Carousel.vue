@@ -8,7 +8,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active w-100">
-                    <img src="../assets/images/slider2.jpg" class="w-100" alt="...">
+                    <img src="../assets/images/slider1.jpeg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p>Learning Skills & Upgrade Your Life</p>
                         <h3 class="mb-5">WELCOME TO RIHEA</h3>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/images/slider1.jpeg" class="w-100" alt="...">
+                    <img src="../assets/images/slider2.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p>Learning Skills & Upgrade Your Life</p>
                         <h3 class="mb-5">WELCOME TO RIHEA</h3>
@@ -64,6 +64,7 @@
         object-fit: cover;
         object-position: center;
         opacity: .8;
+        filter: brightness(.8);
     }
 
     .carousel-item .carousel-caption {

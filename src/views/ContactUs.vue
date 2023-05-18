@@ -47,7 +47,15 @@
                     </div>
                     <div class="input-box mb-3">
                         <input type="text" placeholder="Mobile Number">
-                        <input type="text" placeholder="Email Subject">
+                        <!-- <input type="text" placeholder="Class You Want to Know"> -->
+                        <select class="form-select" name="" id="">
+                            <option value="">Calss You Want to Know </option>
+                            <option value="">PRE GED</option>
+                            <option value="">GED</option>
+                            <option value="">PRE IGCSE</option>
+                            <option value="">O LEVEL IGCSE</option>
+                            <option value="">ENG 4 SKILLS</option>
+                        </select>
                     </div>
                     <textarea name="" id="" cols="30" rows="5" placeholder="Your Message"></textarea>
                     <input type="submit" value="Send Message" class="btn">
@@ -156,7 +164,7 @@ import { onMounted } from 'vue'
         flex-wrap: wrap;
     }
 
-    form .input-box input, 
+    form .input-box input, form select,
     form textarea {
         width: 100%;
         padding: 10px 10px;
@@ -173,10 +181,9 @@ import { onMounted } from 'vue'
     .input-box input::placeholder, form textarea::placeholder {
         font-size: 15px;
     }
-    form .input-box input {
+    form .input-box input, form select {
         width: 49%;
     }
-
     form textarea {
         resize: none;
     }

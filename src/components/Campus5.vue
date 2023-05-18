@@ -50,7 +50,7 @@
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6881.297612834571!2d94.01131766279104!3d23.20097140027625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374b73764cf8f215%3A0x5ca9751b199b995d!2z4YCA4YCc4YCx4YC44YCZ4YC84YCt4YCv4YC3!5e0!3m2!1sen!2smm!4v1684246685158!5m2!1sen!2smm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="campus-experience">
+        <div class="campus-experience mt-5">
             <div class="section-header">
                 <h2>Campus Experience</h2>
             </div>

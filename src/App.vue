@@ -36,6 +36,7 @@ body {
     font-size: 1.8rem;
     color: #23085a;
     font-weight: bolder;
+    text-transform: uppercase;
   }
 
   .btn {

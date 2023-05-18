@@ -50,7 +50,7 @@
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7640.095991721634!2d96.1562880429291!3d16.774287558394025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec87973cb12b%3A0xe16b702dae6bba2b!2sKyauktada%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1684243688941!5m2!1sen!2smm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="campus-experience">
+        <div class="campus-experience mt-5">
             <div class="section-header">
                 <h2>Campus Experience</h2>
             </div>
