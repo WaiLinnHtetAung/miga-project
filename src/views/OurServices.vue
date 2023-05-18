@@ -95,7 +95,7 @@ import { onMounted } from 'vue';
     import {useRouter} from 'vue-router'
     export default {
         setup() {
-            let router = useRouter();
+            let router = useRouter(); 
             let goService = (name) => router.push(`/course-detail/${name}`);
 
             onMounted(() => {
