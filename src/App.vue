@@ -11,7 +11,7 @@
   import Footer from './components/Footer.vue'
 
   export default {
-    components: {Nav, ChatBot, Footer}
+    components: {Nav, ChatBot, Footer},
   }
 </script>
 
