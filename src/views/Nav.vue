@@ -25,16 +25,16 @@
         <nav class="navbar" :class="{ 'active' : isResponsive }">
             <ul>
                 <li class="dropdown">
-                    <a href="">Home <i class='bx bx-chevron-down'></i></a>
-                    <ul>
+                    <a class="pointer" @click="isHome = !isHome">Home<i class='bx bx-chevron-down'></i></a>
+                    <ul v-if="isHome">
                         <li><router-link to="/about-us">About Us</router-link></li>
                         <li><router-link to="/contact-us">Contact Us</router-link></li>
                         <li><router-link to="/our-services">Our Services</router-link></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="">Courses <i class='bx bx-chevron-down'></i></a>
-                    <ul>
+                    <a class="pointer" @click="isCourse = !isCourse">Courses <i class='bx bx-chevron-down'></i></a>
+                    <ul v-if="isCourse">
                         <li><router-link :to="{name: 'CourseDetail', params: {slug: 'pre-ged'}}">Pre GED</router-link></li>
                         <li><router-link to="/course-detail/ged">GED</router-link></li>
                         <li><router-link to="/course-detail/pre-igcse">Pre IGCSE</router-link></li>
@@ -43,8 +43,8 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="">Campuses <i class='bx bx-chevron-down'></i></a>
-                    <ul>
+                    <a class="pointer" @click="isCampus = !isCampus">Campuses <i class='bx bx-chevron-down'></i></a>
+                    <ul v-if="isCampus">
                         <li><router-link to="/campus/campus1">Campus 1</router-link></li>
                         <li><router-link to="/campus/campus2">Campus 2</router-link></li>
                         <li><router-link to="/campus/campus3">Campus 3</router-link></li>
@@ -69,10 +69,13 @@
         setup() {
             let router = useRouter();
             let isResponsive = ref(false);
+            let isHome = ref(false);
+            let isCourse = ref(false);
+            let isCampus = ref(false);
             let goHome = () => router.push('/');
             
 
-            return {isResponsive, goHome}
+            return {isResponsive, goHome, isHome, isCourse, isCampus}
         }
     }
 </script>
@@ -201,6 +204,9 @@
     }
 
     @media (max-width:850px) {
+        .nav1 {
+            display: none;
+        }
         #menu-icon {
             display: block;
             font-size: 1.5rem;
@@ -223,7 +229,7 @@
         }
 
         .navbar ul {
-            display: block;
+            display: inline-block;
             font-size: 1rem;
             margin: 2rem 0;
             padding-left: 20px;
@@ -237,21 +243,46 @@
             margin-left: 20px;
             padding: 10px 0;
             z-index: 99;
-            display: none;
+            opacity: 2;
+            visibility: visible;
+            top: 100%;
             background: rgb(74, 39, 106);
             box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
         }
+
         .navbar a{
-            color: #fff !important;
+            color: #fff;
         }
 
         .navbar .dropdown ul li a:hover {
             color: #e9b313;
         }
+        .navbar .dropdown i {
+            color: #fff;
+        }
 
         .navbar .dropdown:hover>ul {
             display: block;
             top: 100%;
+        }
+        .navbar a, .navbar a:focus {
+            display: block;
+        }
+    }
+
+    @media (max-width:450px) {
+        .nav1 {
+            display: none;
+        }
+        .header {
+            padding: 1.5rem 7.8%;
+        }
+        .navbar, .navbar ul{
+            padding: 0;
+
+        }
+        .navbar a {
+            padding: 10px 0 10px 10px;
         }
     }
 </style>

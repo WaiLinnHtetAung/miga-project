@@ -1,31 +1,31 @@
 <template >
     <div style="padding-bottom: 30px;">
-        <div class="section-header mt-5">
-            <h2>Our Activities</h2>
+        <div data-aos="zoom-in" class="section-header mt-5">
+            <h2>SCHOOL ACTIVITIES</h2>
         </div>
         <div class="images">
-            <div class="img">
+            <div data-aos="zoom-in" class="img">
                 <img src="../assets/images/miga/miga1.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-up" class="img">
                 <img src="../assets/images/miga/miga2.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-up" class="img">
                 <img src="../assets/images/miga/miga3.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="zoom-in" class="img">
                 <img src="../assets/images/miga/miga4.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-right" class="img">
                 <img src="../assets/images/miga/miga5.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-up" class="img">
                 <img src="../assets/images/miga/miga6.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-up" class="img">
                 <img src="../assets/images/miga/miga7.jpg" alt="">
             </div>
-            <div class="img">
+            <div data-aos="fade-left" class="img">
                 <img src="../assets/images/miga/miga8.jpg" alt="">
             </div>
         </div>
@@ -52,7 +52,7 @@
 
 <style scoped>
     .images {
-        padding: 40px 3% 30px;
+        padding: 40px 5% 30px;
         display: flex;justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -107,5 +107,15 @@
 
     .activities-btn:hover button, .activities-btn:hover i {
         color: #fff;
+    }
+
+    @media (max-width:850px) {
+        .section-header h2 {
+            font-size: 1,5rem;
+        }
+        .img img {
+            width: 280px;
+            height: 230px;
+        }
     }
 </style>

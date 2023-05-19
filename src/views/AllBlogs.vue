@@ -124,14 +124,14 @@
         background: #eee;
         overflow: hidden;
         padding-bottom: 20px;
-        height: 430px;
+        height: 400px;
         position: relative;
 
     }
 
     .img-card img {
         width: 100%;
-        height: 230px;
+        height: 200px;
         transition: .5s ease;
     }
 

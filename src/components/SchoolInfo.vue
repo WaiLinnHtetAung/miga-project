@@ -1,12 +1,12 @@
 <template>
     <div class=" info">
         <div class="row mt-5">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 img-head mb-5">
-                <img src="../assets/images/info.webp" alt="">
+            <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 col-12 img-head mb-5">
+                <img src="../assets/images/miga/miga15.jpg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
-                <h2><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
-                <div class="info-content">
+                <h2 data-aos="fade-left"><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
+                <div data-aos="zoom-in-left" class="info-content">
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>A Flexible schedule to fit your needs</p></div>
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Small class sizes for personalized attention</p></div>
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Experienced teachers dedicated to your success</p></div>
@@ -14,7 +14,7 @@
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Support every step of the way as you work towards achieving your academic goals</p></div>
                 </div>
                 <hr>
-                <p class="info-text">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
+                <p data-aos="zoom-in-left" class="info-text">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
 
                 <div class="contact-btn" @click="goContact">
                     <button>Contact Us </button>
@@ -110,8 +110,40 @@
 
     @media (max-width:850px) {
         .info {
-            padding: 40px 9%;
+            padding: 40px 10%;
             height: auto;
+        }
+
+        .img-head img {
+            height: 400px;
+        }
+        .info h2 {
+            font-size: 20px;
+        }
+        .info-content i, .info-content p, .info-text  {
+            font-size: 12px;
+        }
+        .contact-btn {
+            font-size: 12px;
+            width: 130px;
+        }
+        .contact-btn i {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width:450px) {
+        .row {
+            margin-top: 0 !important;
+        }
+        .img-head img {
+            height: 230px;
+        }
+        .info h2 {
+            font-size: 17px;
+        }
+        .info-content{
+            margin-top: 1.2rem;
         }
     }
 </style>

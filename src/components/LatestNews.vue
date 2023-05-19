@@ -1,13 +1,13 @@
 <template>
     <div class=" latest-news-container">
         <div class="section-header">
-            <p>News Updates</p>
-            <h2>Latest News & Updates</h2>
+            <p data-aos="fade-down">News Updates</p>
+            <h2 data-aos="fade-up">Latest News & Updates</h2>
         </div>
 
         <div class="news-section mt-5">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3" v-for="(blog, index) in blogs" :key="index">
+                <div data-aos="zoom-out" class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3" v-for="(blog, index) in blogs" :key="index">
                     <div class="img-card">
                         <img :src="blog.img" alt="">
                         <div class="news-content">
@@ -16,10 +16,10 @@
                             <div class="news-read">
                                 <hr>
                                 <div class="read-more">
-                                    <div class="pointer" @click="readAll">
+                                    <div class="pointer read" @click="readAll">
                                         <i class="fa-solid fa-newspaper me-2"></i> Read All
                                     </div>
-                                    <div class="pointer" @click="readMore(blog.id)">
+                                    <div class="pointer read" @click="readMore(blog.id)">
                                         Read More<i class="fa-solid fa-angle-right ms-2"></i>
                                     </div>
                                 </div>
@@ -132,5 +132,26 @@ import {useStore} from 'vuex'
     .read-more div {
         color: var(--main-text-color);
         font-size: 14px;
+    }
+
+    @media (max-width:850px) {
+        .section-header p {
+            font-size: 16px;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        .img-card {
+            height: 320px;
+        }
+        .img-card img {
+            height: 150px;
+        }
+        .news-content p,  .read-more .read{
+            font-size: 12px;
+        }
+        .news-content h4 {
+            font-size: 16px;
+        }
     }
 </style>

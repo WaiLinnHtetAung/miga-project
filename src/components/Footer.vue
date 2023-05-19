@@ -132,7 +132,7 @@
 
     .social-media i {
         transition: .5s ease;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .social-media a:hover i{
@@ -163,5 +163,20 @@
     
     .map {
         margin-left: -27px;
+    }
+
+    @media (max-width:850px) {
+        .address h4{
+            padding-top: 30px;
+            font-size: 25px;
+        }
+        .map {
+            margin-top: 20px;
+            width: 100%;
+            margin: 20px auto 0;
+        }
+        .social-media i {
+            font-size: 1.5rem;
+        }
     }
 </style>

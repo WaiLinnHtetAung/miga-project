@@ -10,16 +10,16 @@
                 <div class="carousel-item active w-100">
                     <img src="../assets/images/slider1.jpeg" class="w-100" alt="...">
                     <div class="carousel-caption">
-                        <p>Learning Skills & Upgrade Your Life</p>
-                        <h3 class="mb-5">WELCOME TO RIHEA</h3>
-                        <button class="btn" @click="goContact">Contact Us</button>
+                        <p data-aos="zoom-out">Learning Skills & Upgrade Your Life</p>
+                        <h3 data-aos="fade-down" class="mb-5">WELCOME TO RIHEA</h3>
+                        <button data-aos="fade-up" class="btn" @click="goContact">Contact Us</button>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="../assets/images/slider2.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p>Learning Skills & Upgrade Your Life</p>
-                        <h3 class="mb-5">WELCOME TO RIHEA</h3>
+                        <h3 data-aos="fade-down" class="mb-5">WELCOME TO RIHEA</h3>
                         <button class="btn" @click="goContact">Contact Us</button>
                     </div>
                 </div>
@@ -45,6 +45,8 @@
 </template>
 
 <script>
+
+
     import {useRouter} from 'vue-router'
     export default {
         setup() {
@@ -81,5 +83,43 @@
         font-size: 1.1rem;
         font-weight: bold;
         color: var(--main-text-color);
+    }
+
+    @media (max-width: 850px) {
+        .carousel-item img {
+            height: 430px;
+        }
+        .carousel-item .carousel-caption {
+            margin-bottom: 40px;
+        }
+        .carousel-caption h3 {
+            font-size: 1.7rem;
+        }
+        .carousel-caption p {
+            font-size: .9rem;
+        }
+        .carousel-caption button {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .carousel-item img {
+            height: 230px;
+        }
+        .carousel-item .carousel-caption {
+            margin-bottom: 20px;
+        }
+        .carousel-caption h3 {
+            font-size: 1rem;
+            margin-bottom: 8px !important;
+        }
+        .carousel-caption p {
+            font-size: .6rem;
+        }
+        .carousel-caption button {
+            font-size: 8px;
+            padding: 5px;
+        }
     }
 </style>

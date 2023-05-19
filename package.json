@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.8.3",
     "firebase": "^9.21.0",
+    "motion": "^10.16.2",
     "swiper": "^9.2.4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",

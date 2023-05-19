@@ -1,6 +1,6 @@
 <template>
     <div class="slider">
-        <div class="section-header">
+        <div data-aos="zoom-in" class="section-header">
             <h2>Voices from Our Students</h2>
         </div>
         <div class="d-flex justify-content-center align-items-cente">
@@ -163,6 +163,13 @@ import { ref } from 'vue';
         padding-bottom: 50px;
     }
 
- 
+    @media (max-width:850px) {
+        .section-header {
+            font-size: 1.5rem;
+        }
+        .slider{
+            height: auto;
+        }
+    }
 
 </style>

@@ -1,11 +1,11 @@
 <template>
     <div class="campus-section">
         <div class="section-header text-center mb-5">
-            <h2>RIHEA CAMPUSES IN MYANMAR</h2>
-            <p class="mt-4">Currently <span style="color: rgb(238,185,36); font-weight: bold;">6 Campuses in Myanmar</span> including Yangon, Sagaing and Mon</p>
+            <h2 data-aos="zoom-in">RIHEA CAMPUSES IN MYANMAR</h2>
+            <p data-aos="fade-left" class="mt-4">Currently <span style="color: rgb(238,185,36); font-weight: bold;">6 Campuses in Myanmar</span> including Yangon, Sagaing and Mon</p>
         </div>
         <div class="campus-location">
-            <div class="campus-card mb-3" v-for="(data, index) in datas" :key="index">
+            <div data-aos="zoom-in-right" class="campus-card mb-3" v-for="(data, index) in datas" :key="index">
                 <img :src="data.img" alt="">
                 <div class="location" @click="campusDetail(data.campus)">
                     <h5 class=" mb-1 p-0">{{ data.name }}</h5>
@@ -126,5 +126,14 @@
     .campus-state, .campus-state i {
         color: #bcc26c;
         font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        .section-header p {
+            font-size: 14px;
+        }
     }
 </style>
