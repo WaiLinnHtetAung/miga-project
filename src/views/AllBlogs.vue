@@ -6,10 +6,10 @@
         </div>
         <div class="first-blog shadow my-5 bg-white">
             <div class="blog-text">
-                <p class="mt-3" style="font-size:13px;">ARTICLE</p>
+                <p class="mt-3 article" style="font-size:13px;">ARTICLE</p>
                 <h5 class="mb-4">{{ blogs[0] ? blogs[0].title : '' }}</h5>
-                <p class="mb-5" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{ blogs[0] ? blogs[0].date : '' }}</p>
-                <router-link :to="`/blog-detail/${blogs[0] ? blogs[0].id : ''}`" class="read">Read</router-link>
+                <p class="mb-5 date" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{ blogs[0] ? blogs[0].date : '' }}</p>
+                <router-link :to="`/blog-detail/${blogs[0] ? blogs[0].id : ''}`" class="read btn">Read</router-link>
             </div>
             <div class="blog-image">
                 <img :src="blogs[0] ? blogs[0].img : ''" alt="">
@@ -104,19 +104,6 @@
         width: 75%;
         height: 250px;
     }
-    .read {
-        text-decoration: none;
-        background: #23085a;
-        color: var(--main-text-color);
-        padding: 7px 20px;
-        border-radius: 10px;
-        font-weight: bold;
-        transition: .5s ease;
-    }
-    .read:hover {
-        box-shadow: 0 0 1.6rem var(--main-text-color);
-        font-size: 1.1rem;
-    }
     .all-blogs {
         padding: 40px 0;
     }
@@ -187,11 +174,162 @@
     .read-more a {
         text-decoration: none;
         color: #707070;
+        font-size: 13px;
     }
 
-    .read-more div {
-        color: #707070;
-        font-size: 14px;
+    @media (max-width:990px) {
+        .blogs {
+            padding: 20px 9%;
+            background: linear-gradient(#fff 25vh, #eee 25vh);
+        }
+        .blog-header p {
+            font-size: 14px;
+        }
+        .blog-header h3 {
+            font-size: 1.2rem;
+        }
+        .first-blog {
+            display: flex;
+            height: 220px;
+            margin: 50px 0 10px !important;
+        }
+        .blog-text {
+            width: 50%;
+            padding: 30px 0px 0 40px;
+        }
+        .blog-text h5 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .blog-text .article {
+            font-size: 11px !important;
+            margin: 0 0 5px !important;
+        }
+        .blog-text .date {
+            margin-bottom: 20px !important;
+            font-size: 11px !important;
+        }
+        .blog-text a {
+            font-size: 11px;
+            padding: 5px 10px;
+        }
+        .blog-image {
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blog-image img {
+            width: 75%;
+            height: 200px;
+            object-position: center;
+        }
+
+        .all-blogs {
+            padding: 40px 0;
+        }
+        .img-card {
+            background: #eee;
+            overflow: hidden;
+            padding-bottom: 20px;
+            height: 320px;
+            position: relative;
+
+        }
+
+        .img-card img {
+            width: 100%;
+            height: 140px;
+            transition: .5s ease;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .img-card img:hover {
+            transform: scale(1.07);
+        }
+
+        .news-content {
+            padding: 10px 20px;
+        }
+
+        .news-content p {
+            color: #707070;
+            font-size: 12px;
+        }
+
+        .news-content h4 {
+            color: rgb(12, 11, 11);
+            margin-top: 13px;
+            padding-bottom: 10px;
+            text-align: start;
+            font-size: 14px;
+        }
+
+        .news-content hr {
+            height: 1px;
+            color: #151837;
+        }
+
+        .read-more {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .read-more i {
+            color: #403174;
+        }
+        .read-more a {
+            text-decoration: none;
+            color: #707070;
+            font-size: 12px;
+        }
+
+    }
+
+    @media (max-width:450px) {
+        .blogs {
+            padding: 20px 9%;
+            background: linear-gradient(#fff 35vh, #eee 25vh);
+        }
+        .blog-header p {
+            font-size: 12px;
+        }
+        .blog-header h3 {
+            font-size: 1rem;
+        }
+        .first-blog {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            margin: 0 !important;
+            padding-top: 0 !important;
+        }
+        .blog-text {
+            width: 100%;
+            padding: 30px 0px 0 30px;
+            text-align: left;
+        }
+        .blog-text h5 {
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        .blog-text .article {
+            font-size: 11px !important;
+            margin: 0 0 5px !important;
+        }
+        .blog-text .date {
+            margin-bottom: 20px !important;
+            font-size: 11px !important;
+        }
+        .blog-text a {
+            font-size: 11px;
+            padding: 5px 10px;
+        }
+        .blog-image {
+            margin-top: 3rem;
+        }
     }
     
 </style>

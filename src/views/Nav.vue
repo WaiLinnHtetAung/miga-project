@@ -62,7 +62,8 @@
 </template>
 
 <script>
-    import { ref } from 'vue';
+    import { is } from '@babel/types';
+import { onMounted, ref, watch } from 'vue';
     import {useRouter} from 'vue-router'
 
     export default {
@@ -73,7 +74,24 @@
             let isCourse = ref(false);
             let isCampus = ref(false);
             let goHome = () => router.push('/');
-            
+            let browserWidth = ref(window.innerWidth);
+
+            let resize = () => {
+                browserWidth.value = window.innerWidth;
+                if(browserWidth.value > 850) {
+                    isHome.value = isCourse.value = isCampus.value = true;
+                } else {
+                    isHome.value = isCourse.value = isCampus.value = false;
+                }
+            }
+
+            window.onresize = resize;
+
+            onMounted(() => {
+                if(browserWidth.value > 850) {
+                    isHome.value = isCourse.value = isCampus.value = true;
+                }
+            })
 
             return {isResponsive, goHome, isHome, isCourse, isCampus}
         }
@@ -283,6 +301,9 @@
         }
         .navbar a {
             padding: 10px 0 10px 10px;
+        }
+        .navbar .dropdown a {
+            font-size: 12px;
         }
     }
 </style>

@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="footer-bar d-flex justify-content-between align-items-center">
-            <p>Copyright 2023 MIGA. All Rights Reserved.</p>
+            <p class="copy">Copyright 2023 MIGA. All Rights Reserved.</p>
             <p>Powered by itGateway</p>
         </div>
     </footer>
@@ -165,7 +165,7 @@
         margin-left: -27px;
     }
 
-    @media (max-width:850px) {
+    @media (max-width:990px) {
         .address h4{
             padding-top: 30px;
             font-size: 25px;
@@ -177,6 +177,21 @@
         }
         .social-media i {
             font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width:450px) {
+        .footer-bar {
+            height: auto;
+            gap: 0;
+        }
+        .footer-bar p {
+            font-size: 12px;
+            font-weight: 400;
+            padding: 0;
+        }
+        .footer-bar .copy {
+            padding-top: 10px;
         }
     }
 </style>

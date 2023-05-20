@@ -59,19 +59,19 @@ import { onMounted, ref } from 'vue'
             const startFunction = () => {
                 setTimeout(() => {
                     animate(
-                        (progress) => year.value.innerText = Math.round(progress * 15),
+                        (progress) => year.value ? year.value.innerText = Math.round(progress * 15) : '',
                         { duration: 1, easing: "ease-out" }
                     ),
                     animate(
-                        (progress) => students.value.innerText = Math.round(progress * 3000),
+                        (progress) => students.value ? students.value.innerText = Math.round(progress * 3000) : '',
                         { duration: 1, easing: "ease-out" }
                     ),
                     animate(
-                        (progress) => awards.value.innerText = Math.round(progress * 50),
+                        (progress) => awards.value ? awards.value.innerText = Math.round(progress * 50) : '',
                         { duration: 1, easing: "ease-out" }
                     ),
                     animate(
-                        (progress) => partners.value.innerText = Math.round(progress * 100),
+                        (progress) => partners.value ? partners.value.innerText = Math.round(progress * 100) : '',
                         { duration: 1, easing: "ease-out" }
                     )
                 }, 1000)

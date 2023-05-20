@@ -41,6 +41,7 @@ import {useRouter} from 'vue-router'
             onUpdated(() => {
                 store.dispatch('getBlog', props.id);
                 blog.value = store.state.blogs.blog;
+                window.scrollTo(0,0)
             })
 
             let goSeeMore = (id) => router.push(`/blog-detail/${id}`)
@@ -60,5 +61,41 @@ import {useRouter} from 'vue-router'
     .blog-header h4 {
         font-weight: bold;
         margin: 15px 0;
+    }
+
+    @media (max-width:990px) {
+        .blog-detail-section {
+            padding: 40px 12%;
+        }
+        .blog-detail img {
+            width: 100%;
+            height: 350px;
+        }
+        .blog-header h4 {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .blog-header p {
+            font-size: 12px;
+        }
+        .blog-content div {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .blog-detail img {
+            width: 100%;
+            height: 300px;
+        }
+        .blog-header h4 {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        .blog-header p {
+            font-size: 11px !important;
+        }
     }
 </style>

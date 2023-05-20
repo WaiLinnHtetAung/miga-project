@@ -17,7 +17,7 @@
     <hr>
     <div class="course-detail-section">
         <div class="row">
-            <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-sm-0">
                 <div class="course-description">
                     <h6>Description</h6>
                     <p>
@@ -42,7 +42,7 @@
                     </ol>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 col-12  ps-5">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12  ps-5 table-header">
                 <h6 class="text-center my-4">TUTION FEES & FINANCIAL AIDS</h6>
                 <div class="table-responsive">
                     <table class="table table-sm table-striped">
@@ -84,8 +84,13 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
     export default {
-        
+        setup() {
+            onMounted(() => {
+                window.scrollTo(0,0)
+            })
+        }
     }
 </script>
 
@@ -126,5 +131,21 @@
     table td {
         text-align: left;
         line-height: 30px;
+    }
+
+    @media (max-width:990px) {
+        .table-header {
+            padding: 0 !important;
+        }
+    }
+    @media (max-width:450px) {
+        .eng-skills-section h3 {
+            font-size: 1.3rem;
+        }
+        .eng-skills-section img {
+            width: 300px;
+            height: 200px;
+            margin: 15px auto;
+        }
     }
 </style>

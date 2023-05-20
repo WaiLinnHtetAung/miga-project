@@ -2,6 +2,7 @@
     <Carousel></Carousel>
     <SchoolInfo></SchoolInfo>
     <ExploreTopCourse></ExploreTopCourse>
+    <WhatIsGED></WhatIsGED>
     <SchoolHistory></SchoolHistory>
     <Slider></Slider>
     <ImageShow></ImageShow>
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import WhatIsGED from '../components/WhatIsGED'
 import OurCampus from '../components/OurCampus'
 import LatestNews from '../components/LatestNews'
 import ImageShow from '../components/ImageShow'
@@ -25,6 +27,7 @@ import { onMounted } from 'vue'
 export default {
   name: 'HomeView',
   components: {
+    WhatIsGED,
     OurCampus,
     LatestNews,
     ImageShow,
@@ -34,11 +37,6 @@ export default {
     SchoolHistory,
     ExploreTopCourse, Carousel },
 
-    setup() {
-      onMounted(() => {
-        window.scrollTo(0,0)
-      })
-    }
   
 }
 </script>
@@ -46,5 +44,8 @@ export default {
 <style scoped>
   p {
     margin-top: 130px;
+  }
+  #app {
+    overflow-x: hidden;
   }
 </style>

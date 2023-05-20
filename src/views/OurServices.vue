@@ -152,4 +152,82 @@ import { onMounted } from 'vue';
     .service-card {
         margin-bottom: 70px;
     }
+
+    @media (max-width:990px) {
+        .ourservice-img {
+            width: 100%;
+            height: 400px;
+        }
+        .service-header h4 {
+            font-size: 1.4rem;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        .services img {
+            width: 70%;
+            height: 140px;
+        }
+        .services h4 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .services p {
+            font-size: 12px;
+        }
+        .services button {
+            padding: 5px 30px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        .service-card {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .ourservice-img {
+            width: 100%;
+            padding-bottom: 20px;
+            height: 230px;
+        }
+        .service-header {
+            position: absolute;
+            top: 60%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+        .service-header h4 {
+            font-size: 1rem;
+        }
+        .service-header p {
+            font-size: 12px;
+        }
+        .section-header {
+            margin-top: 20px !important;
+        }
+        .section-header h2 {
+            font-size: 1.3rem;
+        }
+        .services img {
+            width: 70%;
+            height: 160px;
+            object-position: center;
+        }
+        .services h4 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .services p {
+            font-size: 12px;
+        }
+        .services button {
+            padding: 5px 30px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        .service-card {
+            margin-bottom: 50px;
+        }
+    }
 </style>

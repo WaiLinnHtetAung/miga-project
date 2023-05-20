@@ -8,10 +8,10 @@
         </div>
         <div class="our-history-content d-flex justify-content-center">
             <div class="row mt-3 m-0 p-0">
-                <div class="col">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-3 history-content">
                     The school was established in 2019 with the aim of helping Myanmar Students who are delayed in their dreaming education in our country. In the beginning, our founder wanted to contribute her teaching experience with the connection of Scholarship in Asian countries. Therefore, she started to welcome qualified teachers who are enriched in knowledge related to their specialization and good attitude. They organized small campus with early birds 20 students with the best results. As it gradually becomes successful in urban areas, she started planning to expand campus in rural areas in which the education is nowhere
                 </div>
-                <div class="col">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-3 history-content">
                     Unlike the others, our school is also represented for the future precious students who are stacking in the financial problem. By this time, we have currently 200 students in the classroom to step a better future not only in local but also in abroad. Our strength is having strong teamwork spirits in the triangle of students/ parents, teachers and admission team. Our teaching style are going with strong curriculum which is created by our qualified teachers with the supportive of academic team. In the future, we have a plan to have a better communication with students and parents community to showcase the transparency.
                 </div>
             </div>
@@ -40,7 +40,7 @@
         <div class="row mission mt-5">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center align-items-center">
                 <div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end hr-head">
                         <hr>
                     </div>
                     <h3>MISSION</h3>
@@ -108,7 +108,7 @@ import { onMounted } from 'vue'
     .our-history-content .row {
         width: 77%;
     }
-    .our-history-content .row .col {
+    .our-history-content .row .history-content {
         text-align: justify;
         font-size: 14px;
         color: #3a2d7c;
@@ -170,5 +170,86 @@ import { onMounted } from 'vue'
         list-style: decimal;
         margin-bottom: 1rem;
         font-size: 15px;
+    }
+
+    @media (max-width: 990px) {
+        .history-section {
+            padding: 35px 6%;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        .our-history-image img {
+            height: 350px;
+            width: 90%;
+        }
+        .our-history-content .row {
+        width: 92%;
+    }
+        .our-history-content .row .history-content {
+            font-size: 12px;
+            line-height: 1.1rem;
+        }
+        .vision .v-img, .mission .m-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .vision h3 , .mission h3 {
+            font-size: 1.3rem;
+        }
+        .vision p , .mission p {
+            font-size: 12px;
+        }
+        .about-us-img img {
+            width: 75%;
+            height: 300px;
+        }
+        .about-us-content ul li{
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .section-header h2 {
+            font-size: 1.2rem;
+        }
+        .our-history-image img {
+            width: 85%;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+        .our-history-content .row {
+            width: 90%;
+        }
+        .mission {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .mission h3, .mission p {
+            text-align: left;
+        }
+        .mission .hr-head {
+            justify-content: start !important;
+        }
+        .about-us-section h2 {
+            font-size: 1.1rem;
+        }
+        .about-us-section .section-header {
+            margin-top: .5rem !important;
+        }
+        .about-us-img img {
+            width: 80%;
+            height: 200px;
+        }
+        .about-us-content {
+            padding: 0 4% 40px;        
+        }
+        .about-us-content ul li {
+            list-style: decimal;
+            margin-bottom: 1rem;
+            font-size: 12px;
+        }
     }
 </style>

@@ -9,7 +9,7 @@
     </div>
     <div class="contact-info">
         <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3 ">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-3 phone-section">
                 <div class="phone mb-3">
                     <div class="phone-icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="phone-number py-3">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb ">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-12 form-section">
                 <form action="#">
                     <div class="input-box mb-3">
                         <input type="text" placeholder="Full Name">
@@ -207,13 +207,84 @@ import { onMounted } from 'vue'
         font-size: 14px;
     }
 
+    @media (max-width:990px) {
+        .contact-info .phone{
+            margin: 0 auto;
+        }
+        .contact-info form {
+            margin-top: 2rem;
+        }
+        .contact-info .form-section {
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+    }
+
     @media (max-width:450px) {
     html {
         font-size: 50%;
     }
+    .contact-us-section {
+        height: 230px;
+    }
 
-     form .input-box input {
+     form .input-box input, form select {
         width: 100%;
+    }
+    .contact-us p, .contact-us h4 {
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .contact-us h4 {
+        font-size: 1.1rem;
+        background-color: #23085a;
+    }
+    .contact-info .phone {
+        display: static !important;
+        background: #f5f5f5;
+        padding: 0px 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: auto;
+    }
+    .phone .phone-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .phone-icon i {
+        font-size: 17px;
+    }
+    .phone-number p{
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+     form {
+        width: auto;
+        margin: 0rem auto 1rem;
+        margin-bottom: 1rem;
+        background-color: #f5f5f5;
+        padding: 10px 15px 15px;
+        border-radius: 10px;
+    }
+
+    form .input-box input, form select,
+    form textarea {
+        font-size: 13px;
+    }
+    .map {
+        padding: 30px 10%;
+    }
+    .map h5 {
+        font-size: 1.3rem;
+    }
+    .map p {
+        font-size: 12px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 300px;
     }
 }
 </style>

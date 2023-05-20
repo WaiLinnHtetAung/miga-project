@@ -83,8 +83,13 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
     export default {
-        
+        setup() {
+            onMounted(() => {
+                window.scrollTo(0,0)
+            })
+        }
     }
 </script>
 
@@ -163,5 +168,142 @@
     .campus-images img {
         width: 100%;
         height: 300px;
+    }
+
+    @media (max-width:990px) {
+        .row img {
+            width: 100%;
+            height: 300px;
+        }
+        .img-caption {
+            position: absolute;
+            top: 28%;
+            left: 65%;
+            transform: translate(-40%, -40%);
+            width: 380px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        .section-header h2 {
+            font-size: 1.2rem;
+        }
+        .campus-quo p {
+            font-size: 12px;
+        }
+        .school-animate img {
+            width: 430px;
+        }
+        .contact-us {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3%;
+        }
+        .contact-card {
+            width: 200px;
+            height: 250px;
+            text-align: center;
+        }
+        .contact-card p {
+            font-size: 12px;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            background: #23085a;
+            margin: 10px auto;
+        }
+        .contact-icon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            color: #f2ca2f;
+        }
+        .contact-head {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px auto;
+        }
+        .contact-header {
+            background-image: linear-gradient(to bottom,#f2ca2f, rgba(0, 0, 255, 0.5));
+            padding: 20px 0 0px;
+        }
+
+        .map iframe {
+            height: 300px;
+        }
+        .campus-experience {
+            padding: 10px 9%;
+        }
+        .campus-experience p {
+            font-size: 13px;
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+        .campus-images img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    @media (max-width:450px) {
+        .row img {
+            width: 100%;
+            height: 200px;
+        }
+        .img-caption {
+            position: absolute;
+            top: 22%;
+            left: 59%;
+            transform: translate(-40%, -40%);
+            width: 270px;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .section-header {
+            margin-top: 2rem !important;
+        }
+        .section-header h2 {
+            font-size: 1.1rem;
+        }
+        .campus-quo {
+            padding: 0 9%;
+        }
+        .campus-quo p {
+            font-size: 12px;
+        }
+        .school-animate img {
+            width: 300px;
+        }
+        .contact-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 3%;
+        }
+        .contact-card {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+        .campus-experience {
+            padding: 2px 9%;
+        }
+        .campus-experience {
+            margin-top: 10px !important;
+        }
+        .campus-experience p {
+            font-size: 11px;
+        }
+        .campus-images img {
+            width: 100%;
+            height: 230px;
+        }
     }
 </style>

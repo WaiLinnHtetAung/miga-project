@@ -120,6 +120,18 @@ export default {
                 🏫Campus 4: အမှတ် ၁၁၈၊ ၃လွှာ၊ အခန်းနံပါတ် ၁၉၊ ဆူးလေဘုရားလမ်း၊ ၁ ရပ်ကွက်၊ ကျောက်တံတားမြို့နယ်၊ ရန်ကုန်မြို့။ (Black Canyon အပေါ်ထပ်)
                 🏫Campus 5: အမှတ် ၁၂၅/၁ ၊ တောင်ဇလပ်ရပ်ကွက်၊ တာဟန်း၊ ကလေးမြို့၊ စစ်ကိုင်းတိုင်း။
                 🏫Campus 6: အမှတ် ၃၉၉၊ အောက်လမ်းမကြီး၊ မော်လမြိုင်၊ မွန်ပြည်နယ်။ `,
+            }, 
+            {
+                id: 4, 
+                img: require('../../assets/images/whatisged.png'),
+                title: "WHAT IS GED?",
+                date: 'February 21, 2023',
+                body: `GED
+                stands for General
+                Educational
+                Development. It is a high school equivalency test that measures the skills and knowledge equivalent to that of a high school graduate in the United States and Canada. The GED test consists of four subject areas: Reasoning Through Language Arts (RLA), Mathematical Reasoning, Science, and Social Studies. The GED program is designed for individuals who did not complete high school or who earned a high school diploma from a non-accredited school. The test is available to anyone who is 16 years of age or older and meets the
+                eligibility requirements in their state or province.
+                The GED test is administered at official testing centers, and the cost is $80 per subject. The test is computer-based, and it takes approximately seven and a half hours to complete all four subject areas. Test-takers can take the four subjects separately or all at once. The GED test is scored on a scale of 100 to 200, with a minimum passing score of 145 for each subject area. A GED credential is awarded to individuals who pass all four subject areas, and it is widely accepted by employers, colleges, and universities as equivalent to a high school diploma.`,
             }
         ],
         blog: null,

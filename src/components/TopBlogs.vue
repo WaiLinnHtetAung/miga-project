@@ -58,4 +58,33 @@
         margin-top: 10px;
         color: blue;
     }
+
+    @media (max-width:990px) {
+        .top-blogs {
+            font-size: 14px;
+        }
+        .top-blogs-list {
+            display: flex;
+            gap: 1.2rem;
+            padding: 7px 4px;
+            background-image: linear-gradient(to left,rgba(197, 197, 110, 0.5), rgba(102, 102, 226, 0.5));
+            border-radius: 10px;
+            transition: .5s ease;
+        }
+        .top-blogs-list:hover {
+            transform: scale(1.08);
+        }
+        .top-blogs-list img {
+            width: 65px;
+            height: 60px;
+            padding: 5px 3px;
+        }
+    
+        .top-blogs-list>div {
+            font-size: 12px;
+            text-align: justify;
+            line-height: 1rem;
+            padding: 0 5px 0 0;
+        }
+    }
 </style>

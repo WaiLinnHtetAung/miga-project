@@ -28,6 +28,7 @@
 body {
   position: relative;
   background: #eee;
+  overflow-x: hidden;
 }
 
 
