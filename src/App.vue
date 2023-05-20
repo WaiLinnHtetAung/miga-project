@@ -28,7 +28,7 @@
 body {
   position: relative;
   background: #eee;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 
