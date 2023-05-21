@@ -1,4 +1,5 @@
 <template>
+  <div class="home-page">
     <Carousel></Carousel>
     <SchoolInfo></SchoolInfo>
     <ExploreTopCourse></ExploreTopCourse>
@@ -8,6 +9,7 @@
     <ImageShow></ImageShow>
     <OurCampus></OurCampus>
     <LatestNews></LatestNews>
+  </div>
     
 </template>
 
@@ -42,10 +44,11 @@ export default {
 </script>
 
 <style scoped>
+  .home-page {
+    overflow-x: hidden;
+  }
   p {
     margin-top: 130px;
   }
-  #app {
-    overflow-x: hidden;
-  }
+  
 </style>
