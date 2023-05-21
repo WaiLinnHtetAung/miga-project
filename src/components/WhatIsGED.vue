@@ -62,7 +62,7 @@
     }
 
     .img1, .img2 {
-        width: 200px;
+        width: 230px;
         height: 250px;
     }
     .img1 img, .img2 img {

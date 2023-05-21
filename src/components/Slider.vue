@@ -171,5 +171,14 @@ import { ref } from 'vue';
             height: auto;
         }
     }
+    @media (max-width:450px) {
+        .section-header h2 {
+            font-size: 1.2rem;
+        }
+        .slide-content {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
 
 </style>

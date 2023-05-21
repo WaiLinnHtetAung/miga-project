@@ -136,4 +136,13 @@
             font-size: 14px;
         }
     }
+
+    @media (max-width:450px) {
+        .section-header h2 {
+            font-size: 1.1rem;
+        }
+        .section-header p {
+            font-size: 12px;
+        }
+    }
 </style>

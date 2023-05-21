@@ -111,11 +111,17 @@
 
     @media (max-width:850px) {
         .section-header h2 {
-            font-size: 1,5rem;
+            font-size: 1.5rem !important;
         }
         .img img {
             width: 280px;
             height: 230px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .section-header h2 {
+            font-size: 1rem;
         }
     }
 </style>

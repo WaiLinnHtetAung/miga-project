@@ -57,6 +57,8 @@ import {useRouter} from 'vue-router'
     .blog-detail img {
         width: 100%;
         height: 500px;
+        object-fit: cover;
+        object-position: center;
     }
     .blog-header h4 {
         font-weight: bold;
@@ -65,11 +67,12 @@ import {useRouter} from 'vue-router'
 
     @media (max-width:990px) {
         .blog-detail-section {
-            padding: 40px 12%;
+            padding: 40px 4%;
         }
         .blog-detail img {
             width: 100%;
             height: 350px;
+            padding: 0 4%;
         }
         .blog-header h4 {
             font-weight: bold;

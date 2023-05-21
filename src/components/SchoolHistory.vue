@@ -103,6 +103,8 @@ import { onMounted, ref } from 'vue'
     }
 
     @media(max-width:450px) {
-      
+      .history p {
+        font-size: 16px;
+      }
     }
 </style>

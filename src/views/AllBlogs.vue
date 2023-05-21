@@ -329,7 +329,9 @@
         }
         .blog-image {
             margin-top: 3rem;
+            width: 100%;
         }
+   
     }
     
 </style>

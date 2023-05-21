@@ -134,7 +134,7 @@ import {useStore} from 'vuex'
         font-size: 14px;
     }
 
-    @media (max-width:850px) {
+    @media (max-width:990px) {
         .section-header p {
             font-size: 16px;
         }
@@ -152,6 +152,20 @@ import {useStore} from 'vuex'
         }
         .news-content h4 {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width:450px) {
+        .section-header h2 {
+            font-size: 1.1rem;
+        }
+        .section-header p {
+            font-size: 12px;
+        }
+        .img-card img {
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
         }
     }
 </style>

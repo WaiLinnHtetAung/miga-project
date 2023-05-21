@@ -23,13 +23,14 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
 }
 
 body {
   position: relative;
   background: #eee;
-  /* overflow-x: hidden; */
-}
+} 
 
 
 .section-header h2{
