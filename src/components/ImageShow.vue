@@ -121,7 +121,18 @@
 
     @media (max-width:450px) {
         .section-header h2 {
-            font-size: 1rem;
+            font-size: 1.1rem !important;
+        }
+        .activities-btn {
+            width: 170px;
+        }
+
+        button {
+            font-size: 12px;
+        }
+
+        .activities-btn i{
+            font-size: 18px;
         }
     }
 </style>
