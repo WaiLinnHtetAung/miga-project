@@ -25,7 +25,7 @@
         <nav class="navbar" :class="{ 'active' : isResponsive }">
             <ul>
                 <li class="dropdown">
-                    <a class="pointer" @click="isHome = !isHome">Home<i class='bx bx-chevron-down'></i></a>
+                    <a class="pointer" @click="isHome = !isHome" :class="{active: isActiveRoute}">Home<i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isHome">
                         <li><router-link to="/about-us">About Us</router-link></li>
                         <li><router-link to="/contact-us">Contact Us</router-link></li>
@@ -33,7 +33,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="pointer" @click="isCourse = !isCourse">Courses <i class='bx bx-chevron-down'></i></a>
+                    <a class="pointer" @click="isCourse = !isCourse" :class="{active: currentRoute.substring(0,14) == '/course-detail'}">Courses <i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isCourse">
                         <li><router-link :to="{name: 'CourseDetail', params: {slug: 'pre-ged'}}">Pre GED</router-link></li>
                         <li><router-link to="/course-detail/ged">GED</router-link></li>
@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="pointer" @click="isCampus = !isCampus">Campuses <i class='bx bx-chevron-down'></i></a>
+                    <a class="pointer" @click="isCampus = !isCampus" :class="{active: currentRoute.substring(0,7) == '/campus'}">Campases <i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isCampus">
                         <li><router-link to="/campus/campus1">Campus 1</router-link></li>
                         <li><router-link to="/campus/campus2">Campus 2</router-link></li>
@@ -62,8 +62,7 @@
 </template>
 
 <script>
-    import { is } from '@babel/types';
-import { onMounted, ref, watch } from 'vue';
+    import { computed, onMounted, ref } from 'vue';
     import {useRouter} from 'vue-router'
 
     export default {
@@ -75,6 +74,7 @@ import { onMounted, ref, watch } from 'vue';
             let isCampus = ref(false);
             let goHome = () => router.push('/');
             let browserWidth = ref(window.innerWidth);
+            let currentRoute = ref('');
 
             let resize = () => {
                 browserWidth.value = window.innerWidth;
@@ -93,7 +93,17 @@ import { onMounted, ref, watch } from 'vue';
                 }
             })
 
-            return {isResponsive, goHome, isHome, isCourse, isCampus}
+            //for route active
+            router.afterEach((to) => {
+                currentRoute.value = to.path;
+            })
+
+            let isActiveRoute = computed(() => {
+                let routes = ['/about-us', '/contact-us', '/our-services'];
+                return routes.includes(currentRoute.value)
+            })
+
+            return {isResponsive, goHome, isHome, isCourse, isCampus, currentRoute, isActiveRoute}
         }
     }
 </script>
@@ -212,6 +222,10 @@ import { onMounted, ref, watch } from 'vue';
         border-radius: 50%;
     }
     .router-link-active {
+        color: rgb(238,185,36) !important;
+    }
+
+    .active {
         color: rgb(238,185,36) !important;
     }
 

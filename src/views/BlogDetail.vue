@@ -2,7 +2,7 @@
     <div class="blog-detail-section container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb-3 blog-detail">
-                <img :src="blog.img" alt="">
+                    <img :src="blog.img" alt="">
                 <div class="blog-header p-3">
                     <h4>{{blog.title}}</h4>
                     <p class="mb-2" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
@@ -55,10 +55,11 @@ import {useRouter} from 'vue-router'
         padding: 40px 0;
     }
     .blog-detail img {
-        width: 100%;
+        width: 80%;
         height: 500px;
         object-fit: cover;
         object-position: center;
+        margin-left: 15px;
     }
     .blog-header h4 {
         font-weight: bold;
