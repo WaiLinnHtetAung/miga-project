@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
   .home-page {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   p {
     margin-top: 130px;

@@ -2,7 +2,7 @@
     <div class="blog-detail-section container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb-3 blog-detail">
-                    <img :src="blog.photo" alt="">
+                <img :src="blog.photo" alt="">
                 <div class="blog-header p-3">
                     <h4>{{blog.title}}</h4>
                     <p class="mb-2" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
@@ -65,6 +65,7 @@ import getBlogs from '@/composables/getBlogs'
         object-fit: cover;
         object-position: center;
         margin-left: 15px;
+
     }
     .blog-header h4 {
         font-weight: bold;
@@ -101,6 +102,8 @@ import getBlogs from '@/composables/getBlogs'
         .blog-detail img {
             width: 100%;
             height: 300px;
+            margin-left: 0px;
+
         }
         .blog-header h4 {
             font-weight: bold;
