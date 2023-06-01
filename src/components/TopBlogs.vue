@@ -3,18 +3,22 @@
         THE TOP BLOGS
     </div>
     <div class="top-blogs-list mb-3 pointer" v-for="(blog, index) in blogs" :key="index" @click="seemore(blog.id)">
-        <div><img :src="blog.img" alt=""></div>
+        <div><img :src="blog.photo" alt=""></div>
         <div class="">{{ blog.title }} <p>See More...</p></div>
     </div>
 </template>
 
 <script>
+    import getBlogs from '@/composables/getBlogs';
     export default {
         props: ['blogs'],
         setup(props, context) {
             let seemore = (id) => context.emit('seemore', id);
 
-            return {seemore}
+            let {blogs,error, load} = getBlogs();
+            load();
+
+            return {seemore, blogs, error}
         }
     }
 </script>
@@ -48,7 +52,7 @@
     }
   
     .top-blogs-list>div {
-        font-size: 14px;
+        font-size: 12px;
         text-align: justify;
         line-height: 1rem;
         padding: 0 5px 0 0;

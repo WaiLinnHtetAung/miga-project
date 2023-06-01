@@ -2,7 +2,7 @@
     <div class="blog-detail-section container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb-3 blog-detail">
-                    <img :src="blog.img" alt="">
+                    <img :src="blog.photo" alt="">
                 <div class="blog-header p-3">
                     <h4>{{blog.title}}</h4>
                     <p class="mb-2" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
@@ -20,32 +20,37 @@
 
 <script>
 import TopBlogs from '../components/TopBlogs'
-import { computed, onMounted, onUpdated, ref } from 'vue'
-import {useStore} from 'vuex'
+import { onMounted, onUpdated, watch} from 'vue'
 import {useRouter} from 'vue-router'
+import getBlog from '@/composables/getBlog'
+import getBlogs from '@/composables/getBlogs'
     export default {
   components: { TopBlogs },
         props: ['id'],
         setup(props) {
-            let store = useStore();
             let router = useRouter();
-            let blog = ref('');
-            let blogs = ref('');
+
+            let {blog, error, load} = getBlog();
+            let {blogs, error: blogs_error, load: blogs_load} = getBlogs();
+
+            load(props.id);
+            blogs_load();
+
+            watch(() => props.id, (newId) => {
+               load(newId);
+            })
+      
             onMounted(() => {
-                store.dispatch('getBlog', props.id);
-                blog.value = store.state.blogs.blog;
-                blogs.value = store.getters.getBlogs;
                 window.scrollTo(0,0)
             })
 
             onUpdated(() => {
-                store.dispatch('getBlog', props.id);
-                blog.value = store.state.blogs.blog;
+                
                 window.scrollTo(0,0)
             })
 
             let goSeeMore = (id) => router.push(`/blog-detail/${id}`)
-            return {blog, blogs, goSeeMore}
+            return {blog,error, blogs, goSeeMore}
         }
     }
 </script>
@@ -56,7 +61,7 @@ import {useRouter} from 'vue-router'
     }
     .blog-detail img {
         width: 80%;
-        height: 500px;
+        height: 350px;
         object-fit: cover;
         object-position: center;
         margin-left: 15px;
@@ -64,6 +69,10 @@ import {useRouter} from 'vue-router'
     .blog-header h4 {
         font-weight: bold;
         margin: 15px 0;
+        font-size: 18px;
+    }
+    .blog-content div {
+        font-size: 14px;
     }
 
     @media (max-width:990px) {

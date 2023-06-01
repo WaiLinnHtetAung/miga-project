@@ -12,7 +12,7 @@
                 <router-link :to="`/blog-detail/${blogs[0] ? blogs[0].id : ''}`" class="read btn">Read</router-link>
             </div>
             <div class="blog-image">
-                <img :src="blogs[0] ? blogs[0].img : ''" alt="">
+                <img :src="blogs[0] ? blogs[0].photo : ''" alt="">
             </div>
         </div>
         <div class="all-blogs">
@@ -21,10 +21,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-4" v-for="(blog, index) in blogs" :key="index">
                             <div class="img-card bg-info">
-                                <img :src="blog.img" alt="">
+                                <img :src="blog.photo" alt="">
                                 <div class="news-content">
                                     <p class="mt-2"><i class="fa-solid fa-calendar-days"></i>{{ blog.date }}</p>
-                                    <h4>{{blog.title.slice(0,90)}} ...</h4>
+                                    <h4>{{blog.title.slice(0,70)}} ...</h4>
                                     <div class="news-read">
                                         <hr>
                                         <div class="read-more">
@@ -48,23 +48,23 @@
 
 <script>
     import TopBlogs from '../components/TopBlogs'
-    import { onMounted, ref } from 'vue'
-    import {useStore} from 'vuex'
+    import { onMounted } from 'vue'
     import {useRouter} from 'vue-router'
+    import getBlogs from '@/composables/getBlogs'
     export default {
   components: { TopBlogs },
         setup() {
-            let store = useStore();
             let router = useRouter();
-            let blogs = ref('');
+            let {blogs, error, load} = getBlogs();
+            load();
+            
             onMounted(() => {
-                blogs.value = store.getters.getBlogs;
                 window.scrollTo(0,0);
             })
 
             let goSeeMore = (id) => router.push(`/blog-detail/${id}`)
 
-            return {blogs, goSeeMore}
+            return {blogs, error, goSeeMore}
         }
     }
 </script>
@@ -103,6 +103,8 @@
     .blog-image img {
         width: 75%;
         height: 250px;
+        object-position: center;
+        object-fit: cover;
     }
     .all-blogs {
         padding: 40px 0;
@@ -120,6 +122,8 @@
         width: 100%;
         height: 200px;
         transition: .5s ease;
+        object-fit: cover;
+        object-position: center;
     }
 
     .img-card img:hover {
@@ -141,7 +145,7 @@
 
     .news-content p {
         color: #707070;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .news-content p i {
@@ -154,7 +158,7 @@
         margin-top: 20px;
         padding-bottom: 10px;
         text-align: start;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .news-content hr {
