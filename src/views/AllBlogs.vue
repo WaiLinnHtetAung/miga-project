@@ -115,6 +115,7 @@
         padding-bottom: 20px;
         height: 400px;
         position: relative;
+        border-radius: 8px;
 
     }
 

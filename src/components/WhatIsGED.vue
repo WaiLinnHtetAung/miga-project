@@ -2,8 +2,8 @@
     <div class="whatGed">
         <div data-aos="fade-right" class="ged-card">
             <div class="ged" >
-                <h2 style="color:var(--main-text-color);">What is GED?</h2>
-                <p class="text-white">GED ဆိုတာ ဘာလဲ၊ GED ပြီးရင် ဘာတွေဆက်တက်လို့ ရမလဲ။ ဘာတွေ ပြင်ဆင်ရမလဲ</p>
+                <h2 style="color:var(--main-text-color);">{{ blogs[0] ? blogs[0].title : '' }}</h2>
+                <p class="text-white my-4">GED ဆိုတာ ဘာလဲ၊ GED ပြီးရင် ဘာတွေဆက်တက်လို့ ရမလဲ။ ဘာတွေ ပြင်ဆင်ရမလဲ</p>
                 <button class="btn" @click="goGED">Read More</button>
             </div>
             <div class="cross-line"></div>
@@ -21,12 +21,16 @@
 
 <script>
     import {useRouter} from 'vue-router'
+    import getTopBlogs from '@/composables/getTopBlogs';
     export default {
         setup() {
             let router = useRouter();
-            let goGED = () => router.push('/blog-detail/4');
+            let {blogs, error, load} = getTopBlogs();
+            load();
 
-            return {goGED}
+            let goGED = () => router.push('/blog-detail/1');
+
+            return {blogs, goGED}
         }
     }
 </script>
@@ -36,6 +40,7 @@
         padding: 40px 9%;
         background: #fff;
     }
+
     .ged-card {
         display: flex;
         justify-content: space-between;

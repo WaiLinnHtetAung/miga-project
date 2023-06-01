@@ -9,10 +9,10 @@
             <div class="row">
                 <div data-aos="zoom-out" class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3" v-for="(blog, index) in blogs" :key="index">
                     <div class="img-card">
-                        <img :src="blog.img" alt="">
+                        <img :src="blog.photo" alt="">
                         <div class="news-content">
                             <p class="mt-2"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
-                            <h4>{{blog.title.slice(0,90)}} ...</h4>
+                            <h4>{{blog.title.slice(0,150)}} ...</h4>
                             <div class="news-read">
                                 <hr>
                                 <div class="read-more">
@@ -36,19 +36,16 @@
 <script>
 import { onMounted, ref } from 'vue'
 import {useRouter} from 'vue-router'
-import {useStore} from 'vuex'
+import getTopBlogs from '@/composables/getTopBlogs';
     export default {
         setup() {
-            let store = useStore();
             let router = useRouter();
-            let blogs = ref('');
 
             let readAll = () => router.push('/all-blogs');
             let readMore = (id) => router.push(`blog-detail/${id}`);
 
-            onMounted(() => {
-                blogs.value = store.getters.getBlogs;
-            })
+            let {blogs, error, load} = getTopBlogs();
+            load();
 
             return {blogs, readAll, readMore}
         }
@@ -71,12 +68,15 @@ import {useStore} from 'vuex'
         height: 430px;
         padding-bottom: 20px;
         position: relative;
+        border-radius: 8px;
     }
 
     .img-card img {
         width: 100%;
         height: 230px;
         transition: .5s ease;
+        object-fit: cover;
+        object-position: center;
     }
 
     .img-card img:hover {
