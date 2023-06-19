@@ -1,5 +1,5 @@
 <template>
-    <div class=" blogs">
+    <div v-if="blogs.length > 0" class=" blogs">
         <div class="blog-header mb-3">
             <p class="m-0 p-0">RIHEA BLOGS</p>
             <h3 class="m-0 p-0">ALL RESOURCES TO HELP YOU INDEED</h3>
@@ -44,15 +44,20 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        <Loading></Loading>
+    </div>
 </template>
 
 <script>
-    import TopBlogs from '../components/TopBlogs'
+    import Loading from '../components/Loading'
+import TopBlogs from '../components/TopBlogs'
     import { onMounted } from 'vue'
     import {useRouter} from 'vue-router'
     import getBlogs from '@/composables/getBlogs'
     export default {
-  components: { TopBlogs },
+  components: {
+    Loading, TopBlogs },
         setup() {
             let router = useRouter();
             let {blogs, error, load} = getBlogs();

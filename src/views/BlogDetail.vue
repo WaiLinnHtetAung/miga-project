@@ -1,5 +1,5 @@
 <template>
-    <div class="blog-detail-section container">
+    <div v-if="blog && status" class="blog-detail-section container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb-3 blog-detail">
                 <img :src="blog.photo" alt="">
@@ -16,19 +16,25 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        <Loading></Loading>
+    </div>
 </template>
 
 <script>
+import Loading from '../components/Loading'
 import TopBlogs from '../components/TopBlogs'
-import { onMounted, onUpdated, watch} from 'vue'
+import { onMounted, onUpdated, ref, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import getBlog from '@/composables/getBlog'
 import getBlogs from '@/composables/getBlogs'
     export default {
-  components: { TopBlogs },
+  components: {
+    Loading, TopBlogs },
         props: ['id'],
         setup(props) {
             let router = useRouter();
+            let status = ref(true);
 
             let {blog, error, load} = getBlog();
             let {blogs, error: blogs_error, load: blogs_load} = getBlogs();
@@ -49,8 +55,14 @@ import getBlogs from '@/composables/getBlogs'
                 window.scrollTo(0,0)
             })
 
-            let goSeeMore = (id) => router.push(`/blog-detail/${id}`)
-            return {blog,error, blogs, goSeeMore}
+            let goSeeMore = (id) => {
+                status.value = false;
+                setTimeout(() => {
+                    router.push(`/blog-detail/${id}`);
+                    status.value = true;
+                }, 300)
+            }
+            return {blog,error, blogs, goSeeMore, status}
         }
     }
 </script>
