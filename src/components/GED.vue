@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 col-12  ps-5 table-header">
-                    <h6 class="text-center my-4">TUTION FEES & FINANCIAL AIDS</h6>
+                    <h6 class="text-center">TUTION FEES & FINANCIAL AIDS</h6>
                     <div class="table-responsive">
                         <table class="table table-sm table-striped">
                             <tbody>
@@ -148,17 +148,22 @@ import { onMounted } from 'vue'
         margin: 15px auto;
     }
     .class-info {
-        font-size: 12px;
+        font-size: 14px;
         color: rgb(69, 69, 119);
     }
     .rating i {
         color: #f2ca2f;
     }
     .course-detail-section {
-        padding: 10px 9%;
+        padding: 40px 15%;
+    }
+
+    .course-description h6 {
+        margin: 40px auto 10px;
     }
     .course-description p {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 30px;
         color: rgb(69, 69, 119);
         text-align: justify;
     }
@@ -166,18 +171,56 @@ import { onMounted } from 'vue'
         list-style: decimal;
         color: rgb(69, 69, 119);
         font-size: 14px;
+        line-height: 30px;
     }
     .what-will-learn ul>li {
         list-style: circle;
         color: rgb(69, 69, 119);
-        font-size: 12px;
+        font-size: 14px;
     }
     table td, table ol>li, .table-responsive p {
-        font-size: 12px;
+        font-size: 14px;
     }
     table td {
         line-height: 30px;
         text-align: left;
+        padding-left: 30px;
+    }
+
+    .table-header h6 {
+        margin: 30px auto;
+    }
+
+    @media (max-width: 1500px) {
+        .class-info {
+            font-size: 12px;
+            color: rgb(69, 69, 119);
+        }
+
+        .course-detail-section {
+            padding: 10px 9%;
+        }
+    
+        .course-description p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .what-will-learn ol>li, table ol>li{
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .what-will-learn ul>li {
+            font-size: 12px;
+        }
+        table td, table ol>li, .table-responsive p {
+            font-size: 12px;
+        }
+        table td {
+            line-height: 20px;
+            text-align: left;
+            padding: 10px 0px 10px 30px;
+        }
     }
 
     @media (max-width:990px) {

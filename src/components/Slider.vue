@@ -18,7 +18,11 @@
                             enabled: true,
                             }"
                             :breakpoints="{
-                                '450': {
+                                '350': {
+                                    slidesPerView:1,
+                                    slidesPerGroup:1,
+                                    },
+                                '580': {
                                 slidesPerView:2,
                                 slidesPerGroup:2,
                                 },
@@ -109,17 +113,15 @@ import { ref } from 'vue';
 
 <style scoped>
     .slider {
-        padding: 50px 9% 0;
-        background-image: linear-gradient(to right,rgba(206, 206, 40, 0.5), rgba(0, 0, 255, 0.5));
-        height: 100vh;
+        padding: 50px 15% 10px;
+        background: #E8EAF6;
     }
     .slide-container {
         width: 100%;
-        max-width: 1120px;
         padding: 20px 0;
     }
     .slide-content {
-        margin: 0 50px;
+        margin: 10px 20px ;
         overflow: hidden;
     }
 
@@ -131,11 +133,11 @@ import { ref } from 'vue';
         border-radius: 12px;
         text-align: center;
         padding-top: 10px;
-        height: 450px
+        height: 500px
     }
     .card-head img {
-        width: 170px;
-        height: 170px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         object-fit: cover;
     }
@@ -148,19 +150,49 @@ import { ref } from 'vue';
     }
 
     .card-content p {
-        color: #fff !important;
-        font-size: 12px;
+        color: #353232 !important;
+        font-size: 16px;
     }
 
 
     .card-content h4 {
-        font-size: 16px;
+        font-size: 19px;
         color: #23085a !important;
         margin-bottom: 1rem;
     }
 
     .swiper {
         padding-bottom: 50px;
+    }
+
+    @media (max-width: 1600px) {
+        .slider {
+            padding: 50px 6% 10px;
+        }
+
+        .slide-content {
+            margin: 10px 50px ;
+            overflow: hidden;
+        }
+
+        .card-head {
+            height: 450px
+        }
+        .card-head img {
+            width: 170px;
+            height: 170px;
+        }
+
+        .card-content p {
+            font-size: 12px;
+        }
+    
+    
+        .card-content h4 {
+            font-size: 16px;
+            color: #23085a !important;
+            margin-bottom: 1rem;
+        }
     }
 
     @media (max-width:850px) {

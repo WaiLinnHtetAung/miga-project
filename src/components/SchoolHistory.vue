@@ -84,7 +84,8 @@ import { onMounted, ref } from 'vue'
 
 <style scoped>
     .history {
-        padding: 0px 0 20px;
+        padding: 30px 10%;
+        margin-bottom: 10px;
     }
 
     i {
@@ -94,6 +95,17 @@ import { onMounted, ref } from 'vue'
 
     div>p {
         font-size: 1.2rem;
+    }
+
+    @media (max-width: 1600px) {
+        .history {
+            padding: 0px 3% 20px;
+            margin-bottom: 10px;
+        }
+
+        div>p {
+            font-size: 1rem;
+        }
     }
 
     @media (max-width:850px) {

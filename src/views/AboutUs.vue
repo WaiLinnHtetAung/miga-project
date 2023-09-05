@@ -4,7 +4,7 @@
             <h2>OUR HISTORY</h2>
         </div>
         <div class="our-history-image text-center mt-5">
-            <img src="../assets/images/miga/miga20.jpg" alt="">
+            <img src="../assets/images/aboutus.jpg" alt="">
         </div>
         <div class="our-history-content d-flex justify-content-center">
             <div class="row mt-3 m-0 p-0">
@@ -102,8 +102,9 @@ import { onMounted } from 'vue'
         padding: 40px 10%;
     }
     .our-history-image img {
-        width: 75%;
-        height: 450px;
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
     }
     .our-history-content .row {
         width: 77%;
@@ -113,10 +114,12 @@ import { onMounted } from 'vue'
         font-size: 14px;
         color: #3a2d7c;
         line-height: 1.4rem;
+        margin: 30px auto;
     }
     .vision-mission {
-        padding: 60px 9% 20px;
-        background: rgb(204, 240, 240);
+        padding: 60px 15% 20px;
+        object-fit: contain;
+        background: #fefefe;
     }
     .vision .v-img, .mission .m-img {
         width: 250px;
@@ -157,19 +160,20 @@ import { onMounted } from 'vue'
         margin-bottom: -.2px;
     }
     .about-us-section {
-        padding: 50px 9% 30px;
+        padding: 50px 10% 30px;
     }
     .about-us-img img {
-        width: 75%;
+        width: 100%;
         height: 500px;
+        object-fit: contain;
     }
     .about-us-content {
-        padding: 0 12% 40px;        
+        padding: 0 11% 40px;        
     }
     .about-us-content ul li {
         list-style: decimal;
         margin-bottom: 1rem;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     @media (max-width: 990px) {

@@ -18,7 +18,6 @@
                         <img src="../assets/images/usa-flag.svg.png" alt="">
                         <button class="btn my-4">Service 01</button>
                         <h4 class="my-3">PRE GED (ONLINE, CAMPUS)</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('ged')">
@@ -26,7 +25,6 @@
                         <img src="../assets/images/usa-flag.svg.png" alt="">
                         <button class="btn my-4">Service 02</button>
                         <h4 class="my-3">GED (ONLINE, CAMPUS)</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('pre-igcse')">
@@ -34,7 +32,6 @@
                         <img src="../assets/images/uk-flag.svg.png" alt="">
                         <button class="btn my-4">Service 03</button>
                         <h4 class="my-3">PRE IGCSE (ONLINE, CAMPUS)</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('o-igcse')">
@@ -42,7 +39,6 @@
                         <img src="../assets/images/uk-flag.svg.png" alt="">
                         <button class="btn my-4">Service 04</button>
                         <h4 class="my-3">O LEVEL IGCSE (ONLINE, CAMPUS)</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('eng-4-skills')">
@@ -50,7 +46,6 @@
                         <img src="../assets/images/eng-skills.svg" alt="">
                         <button class="btn my-4">Service 05</button>
                         <h4 class="my-3">ACADEMIC ENGLISH 4 SKILLS</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
@@ -58,7 +53,6 @@
                         <img src="../assets/images/counselling.png" alt="">
                         <button class="btn my-4">Service 06</button>
                         <h4 class="my-3">ADMISSION COUNSELING</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
@@ -66,7 +60,6 @@
                         <img src="../assets/images/visa.png" alt="">
                         <button class="btn my-4">Service 07</button>
                         <h4 class="my-3">VISA ASSISTANCE</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
@@ -74,7 +67,6 @@
                         <img src="../assets/images/notary.png" alt="">
                         <button class="btn my-4">Service 07</button>
                         <h4 class="my-3">NOTARY SERVICES</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
@@ -82,7 +74,6 @@
                         <img src="../assets/images/scholarship.png" alt="">
                         <button class="btn my-4">Service 08</button>
                         <h4 class="my-3">SCHOLARSHIP APPLICATION ASSESSMENT</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis!</p>
                     </div>
                 </div>
             </div>
@@ -110,7 +101,7 @@ import { onMounted } from 'vue';
 <style scoped>
     .ourservice-img {
         width: 100%;
-        height: 75vh;
+        height: 500px;
         position: relative;
         padding-bottom: 30px;
     }
@@ -118,6 +109,7 @@ import { onMounted } from 'vue';
         width: 100%;
         height: 100%;
         filter: brightness(.8);
+        object-fit: cover;
     }
     .service-header {
         position: absolute;
@@ -137,6 +129,7 @@ import { onMounted } from 'vue';
     .services img {
         width: 80%;
         height: 168px;
+        object-fit: contain;
     }
     .services h4 {
         font-size: 18px;

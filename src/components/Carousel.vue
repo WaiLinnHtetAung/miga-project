@@ -8,7 +8,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active w-100">
-                    <img src="../assets/images/slider1.jpeg" class="w-100" alt="...">
+                    <img src="../assets/images/miga/5.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p data-aos="zoom-out">Learning Skills & Upgrade Your Life</p>
                         <h3 data-aos="fade-down" class="mb-5">WELCOME TO RIHEA</h3>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/images/slider2.jpg" class="w-100" alt="...">
+                    <img src="../assets/images/miga/2.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p>Learning Skills & Upgrade Your Life</p>
                         <h3 data-aos="fade-down" class="mb-5">WELCOME TO RIHEA</h3>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/images/carousel3.jpg" class="w-100" alt="...">
+                    <img src="../assets/images/miga/7.jpg" class="w-100" alt="...">
                     <div class="carousel-caption">
                         <p>Learning Skills & Upgrade Your Life</p>
                         <h3 class="mb-5">WELCOME TO RIHEA</h3>
@@ -62,27 +62,45 @@
 
     .carousel-item img {
         width: 100%;
-        height: 550px;
+        height: 650px;
         object-fit: cover;
         object-position: center;
-        opacity: .8;
         filter: brightness(.8);
     }
 
     .carousel-item .carousel-caption {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
     .carousel-caption h3 {
         color: #fff;
         font-weight: bolder;
-        font-size: 2.5rem;
+        font-size: 58px;
     }
 
     .carousel-caption p {
-        font-size: 1.1rem;
+        font-size: 38px;
         font-weight: bold;
-        color: var(--main-text-color);
+        color: rgb(231, 174, 16);
+    }
+
+    @media (max-width: 1600px) {
+        .carousel-item img {
+            width: 100%;
+            height: 450px;
+        }
+
+        .carousel-item .carousel-caption {
+            margin-bottom: 60px;
+        }
+    
+        .carousel-caption h3 {
+            font-size: 40px;
+        }
+    
+        .carousel-caption p {
+            font-size: 28px;
+        }
     }
 
     @media (max-width: 850px) {

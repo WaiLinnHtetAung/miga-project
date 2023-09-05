@@ -1,5 +1,5 @@
 <template >
-    <div style="padding-bottom: 30px;">
+    <div class="activities">
         <div data-aos="zoom-in" class="section-header mt-5">
             <h2>SCHOOL ACTIVITIES</h2>
         </div>
@@ -51,6 +51,10 @@
 </script>
 
 <style scoped>
+    .activities {
+        padding: 30px 10% 40px;
+        background: #fff;
+    }
     .images {
         padding: 40px 5% 30px;
         display: flex;justify-content: center;
@@ -109,6 +113,18 @@
         color: #fff;
     }
 
+    @media (max-width:1500px) {
+        .activities {
+            padding: 30px 5% 30px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .activities {
+            padding: 30px 2% 30px;
+        }
+    }
+
     @media (max-width:850px) {
         .section-header h2 {
             font-size: 1.5rem !important;
@@ -119,9 +135,20 @@
         }
     }
 
-    @media (max-width:450px) {
+    @media (max-width: 768px) {
+        .activities {
+            padding: 30px 1% 30px;
+        }
+
+        .img img {
+            width: 200px;
+            height: 230px;
+        }
+    }
+
+    @media (max-width:470px) {
         .section-header h2 {
-            font-size: 1.1rem !important;
+            font-size: 1.5rem !important;
         }
         .activities-btn {
             width: 170px;
@@ -133,6 +160,11 @@
 
         .activities-btn i{
             font-size: 18px;
+        }
+
+        .img img {
+            width: 350px;
+            height: 230px;
         }
     }
 </style>

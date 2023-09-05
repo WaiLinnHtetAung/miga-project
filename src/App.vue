@@ -17,13 +17,16 @@
 
 <style>
 :root {
-  --main-text-color : rgb(238,185,36);
+  --main-text-color : #e79f19;
+  --main-color: #23085a;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 body {

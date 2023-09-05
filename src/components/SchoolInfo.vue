@@ -2,7 +2,7 @@
     <div class=" info">
         <div class="row mt-5">
             <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 col-12 img-head mb-5">
-                <img src="../assets/images/miga/miga15.jpg" alt="">
+                <img src="../assets/images/miga/7.jpg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
                 <h2 data-aos="fade-left"><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
@@ -14,7 +14,7 @@
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Support every step of the way as you work towards achieving your academic goals</p></div>
                 </div>
                 <hr>
-                <p data-aos="zoom-in-left" class="info-text">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
+                <p data-aos="zoom-in-left" class="info-text mb-5">At RIHEA we’ve helped more than three million students achieve their goals. Whether you are a beginner or a more advanced level, our unique and proven method will help you learn, progress and improve.</p>
 
                 <div class="contact-btn" @click="goContact">
                     <button>Contact Us </button>
@@ -41,9 +41,7 @@
 
 <style scoped>
     .info {
-        padding: 50px 9%;
-        height: 90vh;
-        margin-bottom: 25px;
+        padding: 40px 15% ;
         /* background-image: linear-gradient(to bottom,rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("@/assets/images/bg1.jpg");
         background-repeat: no-repeat;
         background-position: center center;
@@ -52,7 +50,8 @@
 
     .img-head  img{
         width: 100%;
-        height: 450px;
+        height: 550px;
+        object-fit: cover;
     }
 
     .info-content {
@@ -61,15 +60,16 @@
 
     .info-content i {
         color: var(--main-text-color);
+        padding-top: 3px;
     }
 
-    .info-content p {
-        font-size: 14px;
-        line-height: 15px;
+    .info-content div p {
+        font-size: 17px;
+        line-height: 28px;
     }
 
     .info-text {
-        font-size: 14px;
+        font-size: 16px;
         color: #5d3e89;
     }
 
@@ -107,14 +107,71 @@
         color: #fff;
     }
 
-
-    @media (max-width:850px) {
+    @media (max-width: 1600px) {
         .info {
-            padding: 40px 10%;
+            padding: 10px 9%;
+          
+        }
+        .img-head  img{
+            width: 100%;
+            height: 400px;
+        }
+
+        .info h2 {
+            font-size: 22px;
+        }
+
+        .info-content i {
+            color: var(--main-text-color);
+            padding-top: 5px;
+        }
+    
+        .info-content div p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    
+        .info-text {
+            font-size: 13px;
+            color: #5d3e89;
+            margin-bottom: 15px !important;
+        }
+
+        .contact-btn {
+            width: 120px;
+            display: flex ;
+            background: var(--main-text-color);
+            border-radius: 12px;
+            transition: .5s ease;
+        }
+
+        button {
+            display: inline-block;
+            color: #3a2d7c;
+            padding: 2px 7px;
+            border: none;
+            font-size: 12px;
+            border-radius: 20px 0 0 20px;
+            background: none;
+        }
+
+        .contact-btn i{
+            font-size: 1rem;
+            color: #3a2d7c;
+            padding: .3rem 10px 0 5px;
+    
+        }
+    }
+
+
+    @media (max-width:990px) {
+        .info {
+            padding: 40px 20%;
             height: auto;
         }
 
         .img-head img {
+            width: 100%;
             height: 400px;
         }
         .info h2 {
@@ -128,11 +185,17 @@
             width: 130px;
         }
         .contact-btn i {
+            padding: .1rem 10px 0 5px;
             font-size: 1.2rem;
         }
     }
 
-    @media (max-width:450px) {
+    @media (max-width:480px) {
+        .info {
+            padding: 40px 9%;
+            height: auto;
+        }
+
         .row {
             margin-top: 0 !important;
         }
@@ -140,10 +203,14 @@
             height: 230px;
         }
         .info h2 {
-            font-size: 17px;
+            font-size: 16px;
         }
         .info-content{
             margin-top: 1.2rem;
+        }
+
+        .info-content p {
+            font-size: 11px;
         }
     }
 </style>

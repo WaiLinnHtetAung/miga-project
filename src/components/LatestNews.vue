@@ -9,7 +9,7 @@
             <div class="row">
                 <div data-aos="zoom-out" class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3" v-for="(blog, index) in blogs" :key="index">
                     <div class="img-card">
-                        <img :src="blog.photo" alt="">
+                        <img :src="api.photo_url+blog.blog_images[0].image" alt="">
                         <div class="news-content">
                             <p class="mt-2"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
                             <h4>{{blog.title.slice(0,150)}} ...</h4>
@@ -37,6 +37,7 @@
 import { onMounted, ref } from 'vue'
 import {useRouter} from 'vue-router'
 import getTopBlogs from '@/composables/getTopBlogs';
+import api from '@/api/api'
     export default {
         setup() {
             let router = useRouter();
@@ -47,7 +48,7 @@ import getTopBlogs from '@/composables/getTopBlogs';
             let {blogs, error, load} = getTopBlogs();
             load();
 
-            return {blogs, readAll, readMore}
+            return {blogs, readAll, readMore, api}
         }
     }
 </script>
@@ -55,6 +56,7 @@ import getTopBlogs from '@/composables/getTopBlogs';
 <style scoped>
     .latest-news-container {
         padding: 50px 9%;
+        background: #fff;
     }
 
     .section-header {
@@ -69,6 +71,7 @@ import getTopBlogs from '@/composables/getTopBlogs';
         padding-bottom: 20px;
         position: relative;
         border-radius: 8px;
+        width: 90%;
     }
 
     .img-card img {

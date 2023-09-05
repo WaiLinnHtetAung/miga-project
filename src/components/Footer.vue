@@ -11,12 +11,17 @@
                         </div>
                     </div>
                     <div class="school-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quae nobis fuga quasi dolor eaque nemo officiis harum ut culpa?</p>
+                        <p>မြန်မာနိုင်ငံရှိ ကျောင်းသား၊ ကျောင်းသူများ၏ ပညာရေး ခရီးလမ်းကြောင်းကို မြတ်နိုးတန်ဖိုးထားသောကြောင့် စေတနာအရင်းခံဖြင့် လမ်းညွှန်သင်ကြားပေးခြင်း။</p>
+                        <p>အတွေ့အကြုံရှိ အရည်အချင်းရှိသော ဆရာ၊ဆရာမများမှ စာတွေ့အပြင် လက်တွေ့များပါ သင်ကြားပေးနိုင်ခြင်း။</p>
+                        <p>ကျောင်းစာသင်ခန်းအတွင်း ကျောင်းစာအပြင် ပြင်ပလောက အကြောင်းအရာများကိုပါ လေ့လာစေနိုင်ရန်အတွက် Classroom Atmosphere ကိုကောင်းမွန်အောင် ဖန်တီးပေးထားခြင်း။</p>
+                        <p>ကျောင်းသားများကျောင်းပြီးသည်နှင့် တစ်ပြိုင်နက် ရည်မှန်းထားသောလမ်းကြောင်းပေါ် ရောက်ရှိစေရန်၊ စိတ်ကူးအိပ်မက်ထဲရှိ အလုပ်အကိုင် အခွင့်အလမ်းများနှင့် ထပ်တူကျစေရန်အတွက် တာဝန်ယူဆောင်ရွက်ပေးခြင်း။</p>
+                        <p>Founder ၏ တန်ဖိုးရှိလှသော နိုင်ငံခြားပညာတော်သင် အတွေ့အကြုံများနှင့် ကျွမ်းကျင်သော ပညာရေးအကြံပေးဝန်ထမ်းများမှ ကျောင်းသား၊သူများ၏ ဘဝပန်းခင်းလမ်းကို တာဝန်ယူပုံဖော်ပေးခြင်း။</p>
                     </div>
                     <div class="social-media">
-                        <a href="https://www.facebook.com/profile.php?id=100069139800062"><i class="fa-brands fa-facebook" style="color: #0165E1;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100069139800062" target="_blink"><i class="fa-brands fa-facebook" style="color: #0165E1;"></i></a>
                         <a href=""><i class="fa-brands fa-instagram" style="color: #F56040 ;"></i></a>
                         <a href=""><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok" style="color: #ff0050;"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12">
@@ -28,7 +33,7 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="col-9">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ullam modi earum aperiam sit? 
+                                    No. 96, ground floor, 39th street, lower block, kyauktada township, Yangon
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -36,7 +41,8 @@
                                     <i class="fa-solid fa-phone-volume"></i>
                                 </div>
                                 <div class="col-9">
-                                    09 425305939
+                                    <div>09 - 942 000 120</div>
+                                    <div>09 - 942 000 130</div>
                                 </div>
                             </div>
                             <div class="row">
@@ -51,12 +57,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 pt-4 map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3817.865168043599!2d96.10528907525472!3d16.882563117151637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDUyJzU3LjIiTiA5NsKwMDYnMjguMyJF!5e0!3m2!1sen!2sus!4v1683046590240!5m2!1sen!2sus" width="600" height="270px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1872312583487!2d96.1619540583956!3d16.77079498200347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec7d2b4d4e83%3A0x2c80ab6f60748e6f!2s36%2039th%20St%2C%20Yangon!5e0!3m2!1sen!2smm!4v1693194992110!5m2!1sen!2smm" width="600" height="270px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
         <div class="footer-bar d-flex justify-content-between align-items-center">
-            <p class="copy">Copyright 2023 MIGA. All Rights Reserved.</p>
+            <p class="copy">&copy; Copyright 2023 MIGA</p>
+            <p>All Rights Reserved</p>
             <p>Powered by itGateway</p>
         </div>
     </footer>
@@ -76,7 +83,7 @@
     }
 
     .footer-bar {
-        height: 40px;
+        height: 35px;
         padding: 0 9%;
         background: var(--main-text-color);
     }
@@ -85,6 +92,7 @@
         color: #23085a;
         padding-top: 15px;
         font-weight: bold;
+        font-size: 14px;
     }
 
     iframe {
@@ -118,7 +126,8 @@
     .school-content p{
         padding-left: 10px;
         color: #fff;
-        font-size: 15px;
+        font-size: 12px;
+        margin-bottom: 8px;
         text-align: justify;
     }
 

@@ -2,7 +2,13 @@
     <div v-if="blog && status" class="blog-detail-section container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-12 mb-3 blog-detail">
-                <img :src="blog.photo" alt="">
+                <div v-if="blog.blog_images.length == 1" class="img-single">
+                    <img v-for="(img, i) in blog.blog_images" :key="i" :src="api.photo_url+img.image" alt="">
+                </div>
+                <div v-if="blog.blog_images.length > 1" class="img-multi">
+                    <img v-for="(img, i) in blog.blog_images" :key="i" :src="api.photo_url+img.image" alt="">
+                </div>
+
                 <div class="blog-header p-3">
                     <h4>{{blog.title}}</h4>
                     <p class="mb-2" style="font-size:13px;"><i class="fa-solid fa-calendar-days"></i> {{blog.date}}</p>
@@ -28,6 +34,7 @@ import { onMounted, onUpdated, ref, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import getBlog from '@/composables/getBlog'
 import getBlogs from '@/composables/getBlogs'
+import api from '@/api/api'
     export default {
   components: {
     Loading, TopBlogs },
@@ -62,7 +69,7 @@ import getBlogs from '@/composables/getBlogs'
                     status.value = true;
                 }, 300)
             }
-            return {blog,error, blogs, goSeeMore, status}
+            return {blog,error, blogs, goSeeMore, status, api}
         }
     }
 </script>
@@ -73,11 +80,21 @@ import getBlogs from '@/composables/getBlogs'
     }
     .blog-detail img {
         width: 80%;
-        height: 350px;
-        object-fit: cover;
+        height: 450px;
+        object-fit: fill;
         object-position: center;
         margin-left: 15px;
+    }
 
+    .img-multi {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .img-multi img {
+        width:250px;
+        height: 300px;
+        object-fit: contain;
     }
     .blog-header h4 {
         font-weight: bold;
@@ -85,7 +102,7 @@ import getBlogs from '@/composables/getBlogs'
         font-size: 18px;
     }
     .blog-content div {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     @media (max-width:990px) {

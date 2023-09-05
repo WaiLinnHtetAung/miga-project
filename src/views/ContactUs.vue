@@ -70,7 +70,7 @@
             <p class="mb-2">Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="text-center mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7640.095991721634!2d96.1562880429291!3d16.774287558394025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec87973cb12b%3A0xe16b702dae6bba2b!2sKyauktada%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1684348882646!5m2!1sen!2smm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1872312583487!2d96.1619540583956!3d16.77079498200347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec7d2b4d4e83%3A0x2c80ab6f60748e6f!2s36%2039th%20St%2C%20Yangon!5e0!3m2!1sen!2smm!4v1693194992110!5m2!1sen!2smm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </template>
@@ -90,7 +90,7 @@ import { onMounted } from 'vue'
     .contact-us-section {
         position: relative;
         width: 100%;
-        height: 400px;
+        height: 450px;
     }
     .contact-us-section img {
         width: 100%;
@@ -112,7 +112,7 @@ import { onMounted } from 'vue'
         background-color: #23085a;
     }
     .contact-info {
-        padding: 50px 10%;
+        padding: 50px 15%;
         background-color: #eee;
         margin-top: 2rem;
     }

@@ -3,22 +3,23 @@
         THE TOP BLOGS
     </div>
     <div class="top-blogs-list mb-3 pointer" v-for="(blog, index) in blogs" :key="index" @click="seemore(blog.id)">
-        <div><img :src="blog.photo" alt=""></div>
-        <div class="">{{ blog.title }} <p>See More...</p></div>
+        <div><img :src="api.photo_url+blog.blog_images[0].image" alt=""></div>
+        <div class="title">{{ blog.title }} <p>See More...</p></div>
     </div>
 </template>
 
 <script>
-    import getBlogs from '@/composables/getBlogs';
+    import getTopBlogs from '@/composables/getTopBlogs'
+    import api from '@/api/api';
     export default {
         props: ['blogs'],
         setup(props, context) {
             let seemore = (id) => context.emit('seemore', id);
 
-            let {blogs,error, load} = getBlogs();
+            let {blogs,error, load} = getTopBlogs();
             load();
 
-            return {seemore, blogs, error}
+            return {seemore, blogs, error, api}
         }
     }
 </script>
@@ -49,6 +50,7 @@
         width: 70px;
         height: 65px;
         padding: 5px 3px;
+        object-fit: contain;
     }
   
     .top-blogs-list>div {
@@ -70,7 +72,7 @@
         .top-blogs-list {
             display: flex;
             gap: 1.2rem;
-            padding: 7px 4px;
+            padding: 10px 4px;
             background-image: linear-gradient(to left,rgba(197, 197, 110, 0.5), rgba(102, 102, 226, 0.5));
             border-radius: 10px;
             transition: .5s ease;
@@ -79,8 +81,8 @@
             transform: scale(1.08);
         }
         .top-blogs-list img {
-            width: 65px;
-            height: 60px;
+            width: 75px;
+            height: 65px;
             padding: 5px 3px;
         }
     
@@ -89,6 +91,10 @@
             text-align: justify;
             line-height: 1rem;
             padding: 0 5px 0 0;
+        }
+
+        .top-blogs-list .title {
+            font-size: 18px;
         }
     }
 </style>

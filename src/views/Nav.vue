@@ -3,32 +3,32 @@
         <div class="">
             <div class="d-flex me-3">
                 <div class="email d-flex pt-2 me-3">
-                    <i class='bx bx-envelope me-2 fs-6' ></i> 
-                    <p class="">example.com</p>
+                    <i class='bx bx-envelope me-2 fs-5' ></i> 
+                    <p class="">www.rihea.education</p>
                 </div>
 
                 <div class="phone d-flex pt-2">
-                    <i class='bx bx-phone me-2 fs-6'></i>
-                    <p>09-xxxxxxxxx</p>
+                    <i class='bx bx-phone me-2 fs-5'></i>
+                    <p>09 - 942 000 120</p>
                 </div>
             </div>
         </div>
     </nav>
-    <header class="header main-bg shadow">
-        <div class="d-flex justify-content-center align-items-center pointer" @click="goHome">
+    <header class="header main-bg shadow" ref="header" :class="{'stick': isTop >= 35}">
+        <div class="brand pointer" @click="goHome">
             <router-link to="/"><img src="@/assets/images/logo.png" alt=""></router-link>
             <div class="mt-3 ms-2">
-                <p style="font-size:12px;"><span style="font-weight: bold; font-size:12px;">RIHEA</span><br> Education Center</p>
+                <p><span >RIHEA</span><br> Education Center </p>
             </div>
         </div>
         <i @click="isResponsive = !isResponsive" class='bx bx-menu' :class="{ 'bx-x' : isResponsive }" id="menu-icon"></i>
-        <nav class="navbar" :class="{ 'active' : isResponsive }">
+        <nav class="navbar "  :class="{ 'active_mobile' : isResponsive }">
             <ul>
                 <li class="dropdown">
                     <a class="pointer" @click="isHome = !isHome" :class="{active: isActiveRoute}">Home<i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isHome">
                         <li><router-link to="/about-us">About Us</router-link></li>
-                        <li><router-link to="/contact-us">Contact Us</router-link></li>
+                        <!-- <li><router-link to="/contact-us">Contact Us</router-link></li> -->
                         <li><router-link to="/our-services">Our Services</router-link></li>
                     </ul>
                 </li>
@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="pointer" @click="isCampus = !isCampus" :class="{active: currentRoute.substring(0,7) == '/campus'}">Campases <i class='bx bx-chevron-down'></i></a>
+                    <a class="pointer" @click="isCampus = !isCampus" :class="{active: currentRoute.substring(0,7) == '/campus'}">Campuses <i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isCampus">
                         <li><router-link to="/campus/campus1">Campus 1</router-link></li>
                         <li><router-link to="/campus/campus2">Campus 2</router-link></li>
@@ -54,6 +54,8 @@
                     </ul>
                 </li>
                 <li><router-link to="/all-blogs">Blog</router-link></li>
+                <li><router-link to="/videos">Video</router-link></li>
+                <li class="contact"><a href="/contact-us">Contact Us</a></li>
             </ul>
             
         </nav>
@@ -62,7 +64,7 @@
 </template>
 
 <script>
-    import { computed, onMounted, ref } from 'vue';
+    import { computed, onMounted, ref, watch } from 'vue';
     import {useRouter} from 'vue-router'
 
     export default {
@@ -75,7 +77,15 @@
             let goHome = () => router.push('/');
             let browserWidth = ref(window.innerWidth);
             let currentRoute = ref('');
+            let header = ref('');
+            let isTop = ref(false);
 
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const headerTop = header.value ? header.value.offsetTop : 0;
+                isTop.value = scrollTop > headerTop ? scrollTop - headerTop : 0;
+            })
+ 
             let resize = () => {
                 browserWidth.value = window.innerWidth;
                 if(browserWidth.value > 850) {
@@ -84,7 +94,7 @@
                     isHome.value = isCourse.value = isCampus.value = false;
                 }
             }
-
+ 
             window.onresize = resize;
 
             onMounted(() => {
@@ -103,7 +113,7 @@
                 return routes.includes(currentRoute.value)
             })
 
-            return {isResponsive, goHome, isHome, isCourse, isCampus, currentRoute, isActiveRoute}
+            return {isResponsive, goHome, isHome, isCourse, isCampus, currentRoute, isActiveRoute, header, isTop}
         }
     }
 </script>
@@ -117,6 +127,22 @@
         align-items: center;
     }
 
+    .nav1 {
+        height: 35px;
+        padding:10px 14% 0px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .nav1 p {
+        font-size: 15px;
+        color: #d1ac18;
+    }
+
+    .email i, .phone i {
+        color: #d1ac18;
+    }
+
     .navbar li {
         position: relative;
     }
@@ -127,13 +153,27 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 10px 30px;
-        font-size: 13px;
+        font-size: 15px;
         color: #403174;
         white-space: nowrap;
         transition: 0.3s;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         text-decoration: none;
+    }
+
+    .navbar .contact a {
+        background: var(--main-text-color);
+        text-align: center;
+        padding: 8px 10px;
+        margin-left: 20px;
+        border-radius: 7px;
+        color: var(--main-color);
+        font-size: 13px;
+    }
+
+    .navbar .contact a:hover {
+        color: #fff;
     }
 
     .navbar a i, 
@@ -142,6 +182,7 @@
         line-height: 0;
         margin-left: 5px;
     }
+
 
     .navbar a:hover,
     .navbar a:hover i {
@@ -170,6 +211,7 @@
     .navbar .dropdown ul a {
         padding: 10px 15px 5px;
         text-transform: none;
+        font-weight: normal;
     }
 
     .navbar .dropdown ul a {
@@ -186,47 +228,50 @@
         top: 100%;
     }
 
-    .nav1 {
-        height: 25px;
-        padding:10px 6.7% 0px;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-    .nav1 p {
-        font-size: 13px;
-        color: #f2ca2f;
-    }
-
-    .email i, .phone i {
-        color: #f2ca2f;
-    }
+    
 
     .header{
-        position: sticky;
-        top: 0;
         width: 100%;
-        height: 45px;
-        padding: 1.9rem 7.8%;
+        height:75px;
+        padding: 1.9rem 15%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 100;
-        background-color: #eee !important;
+        background-color: #ffffff !important;
     }
 
+    header.stick {
+        position: fixed;
+        top: 0;
+    }
 
+    .header .brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
     .header img {
-        width: 35px;
-        height: 35px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
+    }
+
+    .header p{
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .header span{
+        font-size: 20px;
     }
     .router-link-active {
         color: rgb(238,185,36) !important;
     }
 
     .active {
-        color: rgb(238,185,36) !important;
+        color: #e79f19 !important;
     }
 
     #menu-icon {
@@ -235,13 +280,78 @@
         display: none;
     }
 
+    @media (max-width: 1500px) {
+        .nav1 {
+            height: 25px;
+            padding:10px 7% 0px;
+        }
+
+        .nav1 p {
+            font-size: 12px;
+        }
+
+        .email i, .phone i {
+            font-size: 15px !important;
+            padding-top: 2px;
+        }
+
+        .header{
+            width: 100%;
+            height: 60px;
+            padding: 1.5rem 8.5%;
+        }
+
+        .header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .header p{
+            font-size: 15px;
+        }
+    
+        .header span{
+            font-size: 18px;
+        }
+
+        .navbar a {
+            padding: 10px 0 10px 20px;
+            font-size: 14px;
+        }
+    
+        .navbar .contact a {
+            font-size: 11px;
+        }
+
+        .navbar .dropdown ul li {
+            min-width: 130px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 7px 10px 5px;
+            font-size: 12px;
+        }
+    }
+
     @media (max-width:850px) {
         .nav1 {
             display: none;
         }
         #menu-icon {
             display: block;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .header{
+            width: 100%;
+            height: 70px;
+            padding: 1.9rem 3%;
+        }
+
+        header {
+            position: fixed !important;
+            
         }
 
         .navbar {
@@ -256,7 +366,7 @@
             background: #2b2e4d;
         }
 
-        .navbar.active {
+        .navbar.active_mobile {
             display: block;
         }
 
@@ -300,6 +410,10 @@
         .navbar a, .navbar a:focus {
             display: block;
         }
+        header.stick {
+            position: fixed;
+            top: 0px;
+        }
     }
 
     @media (max-width:450px) {
@@ -318,6 +432,16 @@
         }
         .navbar .dropdown a {
             font-size: 12px;
+        }
+
+        .header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .header .brand p {
+            display: none;
         }
     }
 </style>

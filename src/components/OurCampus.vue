@@ -2,7 +2,7 @@
     <div class="campus-section">
         <div class="section-header text-center mb-5">
             <h2 data-aos="zoom-in">RIHEA CAMPUSES IN MYANMAR</h2>
-            <p data-aos="fade-left" class="mt-4">Currently <span style="color: rgb(238,185,36); font-weight: bold;">6 Campuses in Myanmar</span> including Yangon, Sagaing and Mon</p>
+            <p data-aos="fade-left" class="mt-4">Currently <span style="color: var(--main-text-color); font-weight: bold;">6 Campuses in Myanmar</span> including Yangon, Sagaing and Mon</p>
         </div>
         <div class="campus-location">
             <div data-aos="zoom-in-right" class="campus-card mb-3" v-for="(data, index) in datas" :key="index">
@@ -80,8 +80,8 @@
 
 <style scoped>
     .campus-section{
-        background: #f9f8f8;
-        padding: 50px 15%;
+        background: #e0dcdc;
+        padding: 80px 15%;
     }
     .section-header p{
         color: #2c1d4a;
@@ -124,8 +124,15 @@
         color: var(--main-text-color);
     }
     .campus-state, .campus-state i {
-        color: #bcc26c;
+        color: var(--main-text-color);
         font-size: 14px;
+    }
+
+    @media (max-width: 1600px) {
+        .campus-section{
+            background: #e0dcdc;
+            padding: 50px 12%;
+        }
     }
 
     @media (max-width: 850px) {
