@@ -86,6 +86,7 @@ import { onMounted, ref } from 'vue'
     .history {
         padding: 30px 10%;
         margin-bottom: 10px;
+        background: #fff;
     }
 
     i {

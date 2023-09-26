@@ -22,7 +22,7 @@
 
 <style scoped>
     .greeting-video {
-        background: #fffefe;
+        background: #f9f8f8;
         padding: 80px 10px;
     }
 

@@ -121,7 +121,7 @@ import { onMounted } from 'vue'
     }
     .class-info {
         font-size: 14px;
-        color: rgb(69, 69, 119);
+        
     }
     .rating i {
         color: #f2ca2f;
@@ -136,12 +136,12 @@ import { onMounted } from 'vue'
     .course-description p {
         font-size: 14px;
         line-height: 30px;
-        color: rgb(69, 69, 119);
+        
         text-align: justify;
     }
     .what-will-learn ol>li {
         list-style: circle;
-        color: rgb(69, 69, 119);
+        
         font-size: 14px;
         line-height: 30px;
         margin-bottom: 10px;
@@ -162,7 +162,7 @@ import { onMounted } from 'vue'
     @media (max-width: 1500px) {
         .class-info {
             font-size: 12px;
-            color: rgb(69, 69, 119);
+            
         }
 
         .course-detail-section {

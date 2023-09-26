@@ -56,12 +56,16 @@ import api from '@/api/api'
 <style scoped>
     .latest-news-container {
         padding: 50px 9%;
-        background: #fff;
+        background: #E8EAF6;
     }
 
     .section-header {
         text-align: center;
         font-size: 20px;
+    }
+
+    .section-header p {
+        color: goldenrod;
     }
 
     .img-card {

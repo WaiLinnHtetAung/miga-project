@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-sm-0">
                 <div class="course-description">
-                    <h6>Description</h6>
+                    <h6>IGCSE</h6>
                     <p>
                         Pre-IGCSE, also known as Pre-International General Certificate of Secondary Education, is an educational program that serves as a preparatory stage for students before they undertake the IGCSE examinations. It is typically offered to students in grades 7 to 9 or years 8 to 10, depending on the educational system. During the Pre-IGCSE phase, students engage in a comprehensive curriculum that covers various subjects, including Mathematics, English, Science, Social Sciences, Languages, and Humanities. The curriculum aims to provide students with a solid foundation of knowledge and skills necessary for their further studies.
                     </p>
@@ -121,7 +121,7 @@ import { onMounted } from 'vue'
     }
     .class-info {
         font-size: 14px;
-        color: rgb(69, 69, 119);
+        
     }
     .rating i {
         color: #f2ca2f;
@@ -136,12 +136,12 @@ import { onMounted } from 'vue'
     .course-description p {
         font-size: 14px;
         line-height: 30px;
-        color: rgb(69, 69, 119);
+        
         text-align: justify;
     }
     .what-will-learn ol>li {
         list-style: circle;
-        color: rgb(69, 69, 119);
+        
         font-size: 14px;
         line-height: 30px;
         margin-bottom: 10px;
@@ -162,7 +162,7 @@ import { onMounted } from 'vue'
     @media (max-width: 1500px) {
         .class-info {
             font-size: 12px;
-            color: rgb(69, 69, 119);
+            
         }
 
         .course-detail-section {

@@ -5,7 +5,7 @@
                 <img src="../assets/images/miga/7.jpg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 ">
-                <h2 data-aos="fade-left"><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
+                <h2 data-aos="fade-left" class="text-dark"><span>RIHEA </span>Gives You Guaranteed Facilities</h2>
                 <div data-aos="zoom-in-left" class="info-content">
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>A Flexible schedule to fit your needs</p></div>
                     <div class="d-flex"><i class='bx bxs-bookmark me-2'></i><p>Small class sizes for personalized attention</p></div>
@@ -66,11 +66,12 @@
     .info-content div p {
         font-size: 17px;
         line-height: 28px;
+        color: #000;
     }
 
     .info-text {
         font-size: 16px;
-        color: #5d3e89;
+        color: #000000;
     }
 
     .contact-btn {
@@ -133,7 +134,6 @@
     
         .info-text {
             font-size: 13px;
-            color: #5d3e89;
             margin-bottom: 15px !important;
         }
 
@@ -147,7 +147,6 @@
 
         button {
             display: inline-block;
-            color: #3a2d7c;
             padding: 2px 7px;
             border: none;
             font-size: 12px;
@@ -157,7 +156,6 @@
 
         .contact-btn i{
             font-size: 1rem;
-            color: #3a2d7c;
             padding: .3rem 10px 0 5px;
     
         }

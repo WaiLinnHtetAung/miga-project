@@ -53,7 +53,7 @@
 <style scoped>
     .activities {
         padding: 30px 10% 40px;
-        background: #fff;
+        background: #E8EAF6;
     }
     .images {
         padding: 40px 5% 30px;

@@ -18,7 +18,7 @@
 <style>
 :root {
   --main-text-color : #e79f19;
-  --main-color: #23085a;
+  --main-color: #000000;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -31,16 +31,21 @@
 
 body {
   position: relative;
-  background: #eee;
+  background: #fff;
 } 
+
+.section-header {
+  margin: 20px auto;
+}
 
 
 .section-header h2{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #23085a;
     font-weight: bolder;
     text-transform: uppercase;
+    margin-bottom: 20px;
   }
 
   .btn {

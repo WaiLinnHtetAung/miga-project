@@ -4,7 +4,7 @@
             <h2>OUR HISTORY</h2>
         </div>
         <div class="our-history-image text-center mt-5">
-            <img src="../assets/images/aboutus.jpg" alt="">
+            <img src="../assets/images/cover.jpg" alt="">
         </div>
         <div class="our-history-content d-flex justify-content-center">
             <div class="row mt-3 m-0 p-0">
@@ -44,7 +44,7 @@
                         <hr>
                     </div>
                     <h3>MISSION</h3>
-                    <p>
+                    <p style="text-align: justify; text-indent: 50px;">
                         Our mission is to create a learning environment that fosters academic excellence, social responsibility, and a passion for lifelong learning. We strive to inspire our students to become curious, creative, and critical thinkers who are confident, independent, and respectful of diversity. Our goal is to cultivate in our students the knowledge, skills, and values necessary to thrive in a rapidly changing and interconnected world. We are committed to providing a safe, inclusive, and supportive community that encourages each student to reach their full potential.
                     </p>
                 </div>
@@ -61,7 +61,7 @@
             <h2>ABOUT US</h2>
         </div>
         <div class="about-us-img  text-center">
-            <img src="../assets/images/about-us.jpg" alt="">
+            <img src="../assets/images/cover.jpg" alt="">
         </div>
         <div class="about-us-content mt-5 ">
             <ul class="mb-5">
@@ -112,7 +112,6 @@ import { onMounted } from 'vue'
     .our-history-content .row .history-content {
         text-align: justify;
         font-size: 14px;
-        color: #3a2d7c;
         line-height: 1.4rem;
         margin: 30px auto;
     }
@@ -163,8 +162,7 @@ import { onMounted } from 'vue'
         padding: 50px 10% 30px;
     }
     .about-us-img img {
-        width: 100%;
-        height: 500px;
+        width: 80%;
         object-fit: contain;
     }
     .about-us-content {
@@ -206,12 +204,30 @@ import { onMounted } from 'vue'
         .vision p , .mission p {
             font-size: 12px;
         }
+
+        .about-us-section {
+            padding: 50px 3% 30px;
+        }
         .about-us-img img {
-            width: 75%;
-            height: 300px;
+            width: 90%;
+        }
+
+        .about-us-content {
+            padding: 0 11% 20px;        
         }
         .about-us-content ul li{
             font-size: 12px;
+        }
+        
+    }
+
+    @media (max-width: 768px) {
+        .about-us-section {
+            padding: 50px 1% 30px;
+        }
+
+        .about-us-content {
+            padding: 0 3% 20px;        
         }
     }
 
@@ -245,7 +261,6 @@ import { onMounted } from 'vue'
         }
         .about-us-img img {
             width: 80%;
-            height: 200px;
         }
         .about-us-content {
             padding: 0 4% 40px;        

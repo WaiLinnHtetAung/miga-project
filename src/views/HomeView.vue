@@ -3,7 +3,7 @@
     <Carousel></Carousel>
     <SchoolInfo></SchoolInfo>
     <ExploreTopCourse></ExploreTopCourse>
-    <WhatIsGED></WhatIsGED>
+    <!-- <WhatIsGED></WhatIsGED> -->
     <SchoolHistory></SchoolHistory>
     <GreetingVideo></GreetingVideo>
     <Slider></Slider>

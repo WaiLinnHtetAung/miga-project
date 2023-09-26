@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="ourservice-img">
-            <img src="../assets/images/ourservice.jpg" alt="">
+            <img src="../assets/images/miga/5.jpg" alt="">
             <div class="service-header text-center">
                 <p class="m-0 p-0">RIHEA</p>
                 <h4 class="my-2 p-0">OUR SERVICES</h4>
@@ -13,20 +13,21 @@
         </div>
         <div class="services container mt-5 pb-5">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('pre-ged')">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 offset-lg-2 service-card" @click="goService('pre-ged')">
                     <div class="text-center">
                         <img src="../assets/images/usa-flag.svg.png" alt="">
                         <button class="btn my-4">Service 01</button>
                         <h4 class="my-3">PRE GED (ONLINE, CAMPUS)</h4>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('ged')">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12  service-card" @click="goService('ged')">
                     <div class="text-center">
                         <img src="../assets/images/usa-flag.svg.png" alt="">
                         <button class="btn my-4">Service 02</button>
                         <h4 class="my-3">GED (ONLINE, CAMPUS)</h4>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('pre-igcse')">
                     <div class="text-center">
                         <img src="../assets/images/uk-flag.svg.png" alt="">
@@ -41,38 +42,62 @@
                         <h4 class="my-3">O LEVEL IGCSE (ONLINE, CAMPUS)</h4>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
+                    <div class="text-center">
+                        <img src="../assets/images/uk-flag.svg.png" alt="">
+                        <button class="btn my-4">Service 05</button>
+                        <h4 class="my-3">A LEVEL IGCSE (ONLINE, CAMPUS)</h4>
+                    </div>
+                </div>
+    
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card" @click="goService('eng-4-skills')">
                     <div class="text-center">
-                        <img src="../assets/images/eng-skills.svg" alt="">
-                        <button class="btn my-4">Service 05</button>
+                        <img src="../assets/images/eng-skills.png" alt="">
+                        <button class="btn my-4">Service 06</button>
                         <h4 class="my-3">ACADEMIC ENGLISH 4 SKILLS</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
                     <div class="text-center">
+                        <img src="../assets/images/ielts.png" alt="">
+                        <button class="btn my-4">Service 07</button>
+                        <h4 class="my-3">IELTS Course</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
+                    <div class="text-center">
+                        <img src="../assets/images/dulingo.png" alt="">
+                        <button class="btn my-4">Service 08</button>
+                        <h4 class="my-3">Duolingo Class</h4>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
+                    <div class="text-center">
                         <img src="../assets/images/counselling.png" alt="">
-                        <button class="btn my-4">Service 06</button>
+                        <button class="btn my-4">Service 09</button>
                         <h4 class="my-3">ADMISSION COUNSELING</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
                     <div class="text-center">
                         <img src="../assets/images/visa.png" alt="">
-                        <button class="btn my-4">Service 07</button>
+                        <button class="btn my-4">Service 10</button>
                         <h4 class="my-3">VISA ASSISTANCE</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
                     <div class="text-center">
                         <img src="../assets/images/notary.png" alt="">
-                        <button class="btn my-4">Service 07</button>
+                        <button class="btn my-4">Service 11</button>
                         <h4 class="my-3">NOTARY SERVICES</h4>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12 service-card">
+    
+                <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-12 col-12 service-card">
                     <div class="text-center">
                         <img src="../assets/images/scholarship.png" alt="">
-                        <button class="btn my-4">Service 08</button>
+                        <button class="btn my-4">Service 12</button>
                         <h4 class="my-3">SCHOLARSHIP APPLICATION ASSESSMENT</h4>
                     </div>
                 </div>
@@ -101,7 +126,7 @@ import { onMounted } from 'vue';
 <style scoped>
     .ourservice-img {
         width: 100%;
-        height: 500px;
+        height: 600px;
         position: relative;
         padding-bottom: 30px;
     }
@@ -175,6 +200,10 @@ import { onMounted } from 'vue';
         }
         .service-card {
             margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 

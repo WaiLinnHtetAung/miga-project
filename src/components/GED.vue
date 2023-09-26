@@ -149,7 +149,7 @@ import { onMounted } from 'vue'
     }
     .class-info {
         font-size: 14px;
-        color: rgb(69, 69, 119);
+        
     }
     .rating i {
         color: #f2ca2f;
@@ -164,18 +164,18 @@ import { onMounted } from 'vue'
     .course-description p {
         font-size: 14px;
         line-height: 30px;
-        color: rgb(69, 69, 119);
+        
         text-align: justify;
     }
     .what-will-learn ol>li, table ol>li{
         list-style: decimal;
-        color: rgb(69, 69, 119);
+        
         font-size: 14px;
         line-height: 30px;
     }
     .what-will-learn ul>li {
         list-style: circle;
-        color: rgb(69, 69, 119);
+        
         font-size: 14px;
     }
     table td, table ol>li, .table-responsive p {
@@ -194,7 +194,7 @@ import { onMounted } from 'vue'
     @media (max-width: 1500px) {
         .class-info {
             font-size: 12px;
-            color: rgb(69, 69, 119);
+            
         }
 
         .course-detail-section {

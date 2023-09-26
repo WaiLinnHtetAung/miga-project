@@ -8,7 +8,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
         </div>
-        <img src="../assets/images/eng-skills.svg" alt="">
+        <img src="../assets/images/eng-skills.png" alt="">
         <div class="d-flex justify-content-center align-items-center gap-5" >
             <div class="class-info"><i class="fa-solid fa-clock me-2"></i>4 months</div>
             <div class="class-info"><i class="fa-solid fa-users"></i> 500 students enrolled</div>
@@ -106,7 +106,7 @@ import { onMounted } from 'vue'
     }
     .class-info {
         font-size: 14px;
-        color: rgb(69, 69, 119);
+        
     }
     .rating i {
         color: #f2ca2f;
@@ -120,12 +120,12 @@ import { onMounted } from 'vue'
     .course-description p {
         font-size: 14px;
         line-height: 30px;
-        color: rgb(69, 69, 119);
+        
         text-align: justify;
     }
     .what-will-learn ol>li {
         list-style: circle;
-        color: rgb(69, 69, 119);
+        
         font-size: 14px;
         line-height: 30px;
         margin-bottom: 10px;
@@ -146,7 +146,7 @@ import { onMounted } from 'vue'
     @media (max-width: 1500px) {
         .class-info {
             font-size: 12px;
-            color: rgb(69, 69, 119);
+            
         }
 
         .course-detail-section {

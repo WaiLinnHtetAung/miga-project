@@ -30,6 +30,7 @@
                         <li><router-link to="/about-us">About Us</router-link></li>
                         <!-- <li><router-link to="/contact-us">Contact Us</router-link></li> -->
                         <li><router-link to="/our-services">Our Services</router-link></li>
+                        <li><router-link to="/students-activities">Our Activities</router-link></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -42,7 +43,7 @@
                         <li><router-link to="/course-detail/eng-4-skills">Eng 4 Skills</router-link></li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a class="pointer" @click="isCampus = !isCampus" :class="{active: currentRoute.substring(0,7) == '/campus'}">Campuses <i class='bx bx-chevron-down'></i></a>
                     <ul v-if="isCampus">
                         <li><router-link to="/campus/campus1">Campus 1</router-link></li>
@@ -52,9 +53,10 @@
                         <li><router-link to="/campus/campus5">Campus 5</router-link></li>
                         <li><router-link to="/campus/campus6">Campus 6</router-link></li>
                     </ul>
-                </li>
+                </li> -->
+                <li><router-link to="/partners">Partners</router-link></li>
                 <li><router-link to="/all-blogs">Blog</router-link></li>
-                <li><router-link to="/videos">Video</router-link></li>
+                <li><router-link to="/videos">Vlog</router-link></li>
                 <li class="contact"><a href="/contact-us">Contact Us</a></li>
             </ul>
             
