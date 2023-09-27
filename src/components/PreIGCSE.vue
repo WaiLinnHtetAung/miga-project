@@ -21,32 +21,62 @@
                 <div class="course-description">
                     <h6>IGCSE</h6>
                     <p>
-                        Pre-IGCSE, also known as Pre-International General Certificate of Secondary Education, is an educational program that serves as a preparatory stage for students before they undertake the IGCSE examinations. It is typically offered to students in grades 7 to 9 or years 8 to 10, depending on the educational system. During the Pre-IGCSE phase, students engage in a comprehensive curriculum that covers various subjects, including Mathematics, English, Science, Social Sciences, Languages, and Humanities. The curriculum aims to provide students with a solid foundation of knowledge and skills necessary for their further studies.
+                        IGCSE ဆိုတာ UK နိုင်ငံရဲ့ Education System ကိုအခြေပြုရေးဆွဲထားတဲ့ သင်ရိုးတစ်ခုဖြစ်ပြီး နိုင်ငံတကာ အသိမှတ်ပြု အထက်တန်း‌အောင်လက်မှတ်တစ်ခုဖြစ်ပါတယ်။ International General Certificate of Secondary ရဲ့ အတိုကောက် အသုံးနှုန်းဖြစ်ပါတယ်။ General Certificate ဆိုတဲ့အတိုင်း ဘာသာရပ်အားလုံး ကို အခြေခံသဘောတရားမှ စတင်သင်ကြားရပါတယ်။
+                    </p>
+                    <p>
+                        IGCSE မှာ "O" level နှင့် "A" level ဆိုပြီး အပိုင်းနှစ်ပိုင်း ရှိပါတယ်။ "O" level ကတော့ UK နိုင်ငံမှာဆိုရင် အလယ်တန်းအောင်မြင် ပြီးဆုံးတဲ့ ကျောင်းသား၊ ကျောင်းသူတွေ ဆက်လက်တက်ရောက်ရတာဖြစ်ပြီး မြန်မာနိုင်ငံပညာရေးအရဆို တက္ကသိုလ်ဝင်တန်း (၁၀) တန်းနဲ့ညီပါတယ်။ "O" level ပြီးဆုံးမှသာ ကျောင်းသား၊ကျောင်းသူမှား စိတ်ပါဝင်စားသည့်အတိုင်း "A" level (သို့) Foundation course တွေ၊ Diploma Course (၁၂) တန်းပညာ‌ရေးတွေကို ရွေးချယ်ပြီး ဆက်လက်လေ့လာသင်ယူနိုင်ပါတယ်။
+                    </p>
+                    <p>
+                        IGCSE ရဲ့ "O" level နဲ့ "A" level ကိုအောင်မြင်ပြီးသွားရင်တော့ ပြည်ပက IGCSE certificate ကိုလက်ခံတဲ့ နိုင်ငံတွေမှာ University ဆက်လက်တက်ရောက်ဖို့အတွက် လွယ်ကူသွားမှာပဲဖြစ်ပါတယ်။ Cambridge Assessment International Education (CIE) နဲ့ Pearson Edexcel ဆိုပြီးစာစစ်ဌာနနှစ်ခုရှိပါတယ်၊ နှစ်ခုလုံးက နိုင်ငံတကာ အသိအမှတ်ပြုတာတွေဖြစ်တဲ့အတွက် စိုးရိမ်စရာမလိုပါဘူးရှင့်။ CIE နဲ့ edexcel နဲ့ ဘာကွာလဲဆိုရင်တော့ Exam fees နဲ့ Questionnaires တွေမှာ ကွဲသွားနိုင်တယ်။
+                    </p>
+                    <p>
+                        IGCSE မှာ "O" level အနေနဲ့ အနည်းဆုံးဘာသာရပ် (၅) ခုယူကိုယူပေးရပီးတော့ ကျောင်းသား၊ကျောင်းသူ တွေအနေနဲ့ မိမိရဲ့ Education Pathway မှာ လေ့လာမယ့် Specialized Major တွေပေါ်မူတည်ပြီး ဘာသာရပ်တွေ ထပ်မံတိုးပြီး သင်ယူလေ့လာရပါတယ်။
+                    </p>
+                    <p>
+                        IGCSE မှာ သင်ကြားရမယ့် ဘာသာရပ်ပေါင်းအခု (၄၀) ကျော်ရှိပါတယ်။ အပေါ်မှာပြောထားသလို ကျောင်းသား၊ကျောင်းသူတွေ ရွေးချယ်မယ့် Major ပေါ်လိုက်ပြီး အဓိကသင်ကြားရမယ့်ဘာသာရပ်တွေကတော့
                     </p>
                 </div>
                 <div class="what-will-learn">
                     <h6>You'll Learn About</h6>
                     <ol>
                         <li>
-                            Mathematics: Pre-IGCSE mathematics focuses on building fundamental mathematical skills, including number operations, algebra, geometry, and basic statistical analysis.
-                        </li>
-                        <li>English Language: The English curriculum emphasizes reading, writing, listening, and speaking skills. Students learn to analyze literature, develop writing techniques, improve comprehension, and enhance their communication abilities.
-
+                            First Language English
                         </li>
                         <li>
-                            Science: Pre-IGCSE science introduces students to the basic principles of physics, chemistry, and biology. They explore scientific concepts, perform experiments, develop critical thinking skills, and understand the natural world.
+                            English as a Second Language
                         </li>
                         <li>
-                            Social Sciences: This subject covers a range of disciplines such as history, geography, economics, and civics. Students learn about different cultures, historical events, geographical features, economic systems, and political structures.
+                            French as a Second Language
                         </li>
                         <li>
-                            Languages: Pre-IGCSE often includes the study of one or more foreign languages. Students develop reading, writing, listening, and speaking skills in these languages, enabling them to communicate effectively and appreciate diverse cultures.
+                           Mathematics
                         </li>
                         <li>
-                            Humanities: This subject encompasses areas such as sociology, psychology, and philosophy. Students explore human behavior, societal structures, ethical considerations, and philosophical concepts.
+                           Additional Mathematics
                         </li>
                         <li>
-                            Information and Communication Technology (ICT): ICT education focuses on developing computer literacy, digital skills, and proficiency in using various software applications.
+                            Business Studies
+                        </li>
+                        <li>
+                           Economics
+                        </li>
+                        <li>
+                            Accounting
+                        </li>
+                        <li>
+                            Physics
+                        </li>
+                        <li>
+                            Chemistry
+                        </li>
+                        <li>
+                            Biology
+                        </li>
+                        <li>
+                            Global Perspectives
+                        </li>
+                        <li>
+                            Information and Communication Technology တွေပဲဖြစ်ပါတယ်။
                         </li>
                     </ol>
                 </div>
@@ -140,7 +170,7 @@ import { onMounted } from 'vue'
         text-align: justify;
     }
     .what-will-learn ol>li {
-        list-style: circle;
+        list-style: numbers;
         
         font-size: 14px;
         line-height: 30px;

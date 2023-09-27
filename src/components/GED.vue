@@ -20,57 +20,53 @@
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-sm-0">
                     <div class="course-description">
-                        <h6>Description</h6>
+                        <h6>GED</h6>
                         <p>
-                            Our GED class is a comprehensive program designed to help individuals earn their General Education Development (GED) credential. Whether you didn't finish high school or want to enhance your educational qualifications, our class offers the support and resources you need to succeed. In our GED class, you will cover the four main subject areas of the GED test: Language Arts (Reading and Writing), Mathematics, Science, and Social Studies. Our experienced instructors will guide you through the curriculum, providing engaging lessons, practice exercises, and valuable test-taking strategies.
+                          GED ပညာရေးဟာ အမေရိကားနိုင်ငံရဲ့ အထက်တန်းဖြစ်တဲ့ ၁၂ တန်းပညာရေးနှင့် ညီမျှပြီး ထိုစာမေးပွဲအောင်ထားတဲ့ ကျောင်းသား/သူများသည် GED ပြီးဆုံးအောင်မြင်ကြောင်း အသိအမှတ်ပြုဝင်ရောက်လျှောက်ထားကာ တက်ရောက်နိုင်ပါတယ်။
                         </p>
-                    </div>
-                    <div class="what-will-learn">
-                        <h6>You'll Learn About</h6>
-                        <ol>
-                            <li>Language Arts (Reading and Writing):
-                                <ul>
-                                    <li>Improve reading comprehension by analyzing and interpreting various texts, including fiction and non-fiction.</li>
-                                    <li>Enhance vocabulary development and understanding of word usage.</li>
-                                    <li>Strengthen writing skills, including grammar, sentence structure, and essay writing.</li>
-                                </ul>
-                            </li>
-                            <li>Mathematics
-                                <ul>
-                                    <li>Review and apply fundamental mathematical concepts, including arithmetic, algebra, and geometry.</li>
-                                    <li>Develop problem-solving strategies for mathematical equations and word problems.</li>
-                                    <li>Interpret and analyze data, graphs, and charts.</li>
-                                </ul>
-                            </li>
-                            <li>Science:
-                                <ul>
-                                    <li>Understand scientific concepts and principles in areas such as biology, chemistry, and physics.</li>
-                                    <li>Analyze and interpret scientific data, experiments, and research findings.</li>
-                                    <li>Develop critical thinking skills by evaluating scientific arguments and hypotheses.</li>
-                                </ul>
-                            </li>
-                            <li>Social Studies:
-                                <ul>
-                                    <li>Explore various topics in history, geography, civics, and economics.</li>
-                                    <li>Gain knowledge of significant historical events, influential figures, and their impact on society.</li>
-                                    <li>Analyze primary and secondary sources to develop a deeper understanding of social studies concepts.</li>
-                                </ul>
-                            </li>
-                            <li>Test-Taking Strategies:
-                                <ul>
-                                    <li>Learn effective strategies for approaching different question types in the GED test.</li>
-                                    <li>Practice time management techniques to ensure you complete the test within the allotted time.</li>
-                                    <li>Enhance your ability to identify key information and eliminate incorrect answer choices.</li>
-                                </ul>
-                            </li>
-                            <li>Study Skills and Test Preparation:
-                                <ul>
-                                    <li>Develop effective study habits and techniques to maximize your learning potential.</li>
-                                    <li>Learn how to organize study materials, create study schedules, and set achievable goals.</li>
-                                    <li>Practice with sample GED test questions and full-length practice exams to familiarize yourself with the test format and assess your progress.</li>
-                                </ul>
-                            </li>
-                        </ol>
+                        <p>
+                            GED စာမေးပွဲကို မြန်မာပညာရေး ၈ တန်း ၉ တန်းအောင် ကျောင်းသား/သူတွေတက်ရောက်နိုင်ပြီး၊အသက် ၁၆ နှစ်ပြည့်ပြီးသော ကျောင်းသား/သူများဖြေဆိုနိုင်ပါတယ်။ အချိန်တိုတိုနှင့် အကုန်အကျသက်သာလိုသူမာျး၊နိုင်ငံရပ်ခြားတွင် ပညာသင်ကြားလိုသူတွေ အနေနဲ့ဆိုရင်တော့ US၊ Canada၊ Thailand နဲ့ အာရှနိုင်ငံက ကျောင်းတွေမှာ တက်ရောက်လိုသူတွေအနေနဲ့ GED ကိုရွေးချယ်တက်ရောက်နိုင်ပါတယ်။
+                        </p>
+                        <p>
+                            ကျောင်းသား/သူတွေရဲ့ စာမေးပွဲဖြေဆိုမှုရလာဒ်မြင့်မားတဲ့ အလျောက်ပြည်တွင်းပြည်ပတက္ကသိုလ်တွေကို ပညာသင်ဆုတွေ လျှောက်ထားနိုင်ပါတယ်။
+                        </p>
+                        <p>
+                            GED မှာ စုစုပေါင်း ဘာသာရပ် ၄ ခုရှိပါတယ်။ အခြေခံ subject တွေအားလုံးသင်ယူရတာဖြစ်လို့ university မှာစိတ်ဝင်စားရာ major ကိုရွေးချယ် သင်ယူနိုင်ပါတယ်။
+                            <ul>
+                                <li>
+                                    Reasoning Through Language Arts
+                                </li>
+                                <li>
+                                    Mathematics
+                                </li>
+                                <li>
+                                    Science
+                                </li>
+                                <li>
+                                    Social Studies
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            ပြင်ဆင်ချိန်က ပျမ်းမျှ ၅ လမှ ၁၀ လ ကြာပါတယ်။ စာမေးပွဲကြေးက တစ်ဘာသာကို ‌ဒေါ်လာ ၈၀ ဖြစ်ပြီး၊လေးဘာသာကို ‌ဒေါ်လာ ၃၂၀ ဖြစ်ပါတယ်။ US, Thailand, Canada, Japan နဲ့ Europe နိုင်ငံတစ်ချို့ကကျောင်းတွေကလက်ခံကြပါတယ်။
+                        </p>
+                        <p>
+                            R.I.H.E.A တွင်ဖွင့်လှစ်လျက်ရှိသော GED အတန်းလေးတွေကတော့ ....
+                            <ul>
+                                <li>
+                                    GED အခြေခံအတန်း။
+                                    <p>GED စာမေးပွဲဖြေဆိုရန် အသက်မပြည့်သေးသောကျောင်းသား/သူများအတွက် အခြေခံပိုမိုပိုင်နိုင်စွာတတ်မြောက်စေရန် တက်ရောက်သင်ကြားသင့်သောအတန်းလေးဖြစ်ပါတယ်။</p>
+                                </li>
+                                <li>
+                                    GED စာမေးပွဲဖြေဆိုရန်ပြင်ဆင်မှုအတန်း။
+                                    <p>GED စာမေးပွဲကြီးဖြေဆိုရန် အဓိကကျသောဘာသာရပ်များအားကျွမ်းကျင်တတ်မြောက်စေရန် တက်ရောက်ရသည့်စာမေးပွဲဖြေဆိုရန်ပြင်ဆင်မှုအတန်းလေးဖြစ်ပါတယ်။</p>
+                                </li>
+                                <li>
+                                    GED လေ့ကျင့်ရေးအတန်း။
+                                    <p>စာမေးပွဲမဖြေမီ ဖြေဆိုရမည့်ဘာသာရပ်များအားလေ့ကျင့်ရန်သီးသန့်အတန်းလေးတိုပဲဖြစ်ပါတယ်။</p>
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 col-12  ps-5 table-header">
@@ -166,6 +162,10 @@ import { onMounted } from 'vue'
         line-height: 30px;
         
         text-align: justify;
+    }
+    .course-description ul li{
+        list-style: circle;
+        font-size: 14px;
     }
     .what-will-learn ol>li, table ol>li{
         list-style: decimal;
