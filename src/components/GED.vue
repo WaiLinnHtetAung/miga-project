@@ -156,9 +156,11 @@ import { onMounted } from 'vue'
 
     .course-description h6 {
         margin: 40px auto 10px;
+        font-weight: bold;
+        font-size: 20px;
     }
     .course-description p {
-        font-size: 14px;
+        font-size: 17px;
         line-height: 30px;
         
         text-align: justify;

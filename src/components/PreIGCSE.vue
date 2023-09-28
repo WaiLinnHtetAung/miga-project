@@ -162,9 +162,11 @@ import { onMounted } from 'vue'
 
     .course-description h6 {
         margin: 40px auto 10px;
+        font-size: 20px;
+        font-weight: bold;
     }
     .course-description p {
-        font-size: 14px;
+        font-size: 17px;
         line-height: 30px;
         
         text-align: justify;
@@ -172,7 +174,7 @@ import { onMounted } from 'vue'
     .what-will-learn ol>li {
         list-style: numbers;
         
-        font-size: 14px;
+        font-size: 17px;
         line-height: 30px;
         margin-bottom: 10px;
     }
