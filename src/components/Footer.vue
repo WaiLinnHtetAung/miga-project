@@ -22,8 +22,8 @@
                     <div class="social-media">
                         <a href="https://www.facebook.com/profile.php?id=100069139800062" target="_blink"><i class="fa-brands fa-facebook" style="color: #0165E1;"></i></a>
                         <a href=""><i class="fa-brands fa-instagram" style="color: #F56040 ;"></i></a>
-                        <a href=""><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok" style="color: #ff0050;"></i></a>
+                        <a href="https://www.youtube.com/@MIGARIHEA" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                        <a href="https://www.tiktok.com/@riheaians" target="_blink"><i class="fa-brands fa-tiktok" style="color: #ff0050;"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12">

@@ -5,11 +5,7 @@
         </div>
         
         <div class="video">
-            <video controls autoplay muted>
-                <source src="@/assets/videos/greeting.mp4" type="video/mp4">
-                <source src="@/assets/videos/greeting.mp4" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
+            <iframe class="vid" src="https://www.youtube.com/embed/rTSje6ej5ow?si=L4ofkAruUQ4jD3h5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </template>
@@ -33,19 +29,60 @@
         text-align: center;
     }
 
-    video {
+    .vid {
         width: 60%;
-        height: 50%;
+        height: 600px;
     }
 
-    @media (max-width: 490px) {
+    @media (max-width: 1600px) {
+        .vid {
+            width: 70%;
+            height: 600px;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .vid {
+            width: 70%;
+            height: 500px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .vid {
+            width: 80%;
+            height: 500px;
+        }
+    }
+
+    @media (max-width: 1080px) {
+        .vid {
+            width: 85%;
+            height: 450px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .vid {
+            width: 100%;
+            height: 450px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .vid {
+            width: 100%;
+            height: 350px;
+        }
+    }
+
+    @media (max-width: 500px) {
         .section-header h2 {
             font-size: 20px;
         }
-
-        video {
-            width: 90%;
-            height: 100%;
+        .vid {
+            width: 100%;
+            height: 300px;
         }
     }
 

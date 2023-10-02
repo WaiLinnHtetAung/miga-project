@@ -4,78 +4,32 @@
             <h2>Our Activities</h2>
         </div>
         <div class="container pb-5">
-            <div class="activity">
-
-                <div class="title">
-                    <h2>Presentation Time</h2>
-                </div>
-        
-                <div class="photo">
-                    <div id="carousel1" class="carousel slide"  data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active w-100">
-                                <img src="@/assets/images/miga/miga23.jpg"  alt="">
-                            </div>
-                            <div class="carousel-item w-100">
-                                <img src="@/assets/images/miga/miga24.jpg" alt="">
-                            </div>
-                            <div class="carousel-item w-100">
-                                <img src="@/assets/images/miga/miga25.jpg" alt="">
-                            </div>
-                            <div class="carousel-item w-100">
-                                <img src="@/assets/images/miga/miga26.jpg" alt="">
-                            </div>
-                            <div class="carousel-item w-100">
-                                <img src="@/assets/images/miga/miga27.jpg" alt="">
-                            </div>
-                            <div class="carousel-item w-100">
-                                <img src="@/assets/images/miga/miga18.jpg" alt="">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <Roleplay />
-            <Fieldtrip></Fieldtrip>
-            <Sharing></Sharing>
-            <FunTime></FunTime>
+            <Classroom></Classroom> 
+            <Gathering></Gathering>  
+            <Trip></Trip>     
+            <Sport></Sport>    
         </div>
     </div>
 </template>
 
 <script>
-import FunTime from '../components/activity/FunTime'
-import Sharing from '../components/activity/Sharing'
-import Fieldtrip from '../components/activity/Fieldtrip'
-import Presentation from '../components/activity/Presentation'
-import Roleplay from '../components/activity/Roleplay'
+import Sport from '../components/activity/Sport'
+import Trip from '../components/activity/Trip'
+import Gathering from '../components/activity/Gathering'
+import Classroom from '../components/activity/Classroom'
 import { onMounted } from 'vue'
     export default {
   components: {
-    FunTime,
-    Sharing,
-    Fieldtrip,
-    Presentation, Roleplay },
+    Sport,
+    Trip,
+    Gathering,
+    Classroom},
         setup() {
+            let count = 0;
             onMounted(() => {
                 window.scrollTo(0,0);
-                const myCarousel1 = new bootstrap.Carousel(document.querySelector('#carousel1'));
+                // const myCarousel1 = new bootstrap.Carousel(document.querySelector('#carousel1'));
+              
             })
         }
     }

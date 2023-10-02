@@ -27,19 +27,32 @@
             </div>
         </div>
         <div class="video-wraper" v-else >
-            <div class="video-card" v-for="(video,i) in stu_videos" :key="i">
+            <div class="video-card" >
                 <div class="video">
-                    <video controls >
-                        <source :src="video.src">
-                    </video>
+                    <iframe class="vid" src="https://www.youtube.com/embed/rTSje6ej5ow?si=L4ofkAruUQ4jD3h5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="content">
                     <div class="logo">
                         <img src="@/assets/images/logo.png" alt="">
                     </div>
                     <div class="title">
-                        <h2>{{video.title}}</h2>
-                        <p>{{video.intro}}</p>
+                        <h2>𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐚𝐛𝐥𝐞 𝐑𝐈𝐇𝐄𝐀𝐢𝐚𝐧𝐬 💎</h2>
+                        <p>𝖫𝖾𝖺𝗋𝗇𝗂𝗇𝗀 𝗐𝗂𝗍𝗁 𝗎𝗌，𝗆𝗈𝗏𝗂𝗇𝗀 𝗍𝗈 𝖺 𝖻𝗋𝗂𝗀𝗁𝗍𝖾𝗋 𝖿𝗎𝗍𝗎𝗋𝖾！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card" >
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/Tk5GldVoJKw?si=XqRIjr6ZBFs3HzSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <div class="logo">
+                        <img src="@/assets/images/logo.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h2>𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐚𝐛𝐥𝐞 𝐑𝐈𝐇𝐄𝐀𝐢𝐚𝐧𝐬 💎</h2>
+                        <p>𝖫𝖾𝖺𝗋𝗇𝗂𝗇𝗀 𝗐𝗂𝗍𝗁 𝗎𝗌，𝗆𝗈𝗏𝗂𝗇𝗀 𝗍𝗈 𝖺 𝖻𝗋𝗂𝗀𝗁𝗍𝖾𝗋 𝖿𝗎𝗍𝗎𝗋𝖾！</p>
                     </div>
                 </div>
             </div>
@@ -52,14 +65,6 @@ import { ref } from 'vue';
     export default {
         setup() {
             let current_tab = ref('school');
-
-            let stu_videos = [
-                {
-                    src: require("@/assets/videos/greeting.mp4"),
-                    title: "𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐚𝐛𝐥𝐞 𝐑𝐈𝐇𝐄𝐀𝐢𝐚𝐧𝐬 💎",
-                    intro: "𝖫𝖾𝖺𝗋𝗇𝗂𝗇𝗀 𝗐𝗂𝗍𝗁 𝗎𝗌，𝗆𝗈𝗏𝗂𝗇𝗀 𝗍𝗈 𝖺 𝖻𝗋𝗂𝗀𝗁𝗍𝖾𝗋 𝖿𝗎𝗍𝗎𝗋𝖾！"
-                },
-            ];
 
             let school_videos = [
                 {
@@ -74,7 +79,7 @@ import { ref } from 'vue';
                 },
             ];
 
-            return {stu_videos, school_videos, current_tab}
+            return {school_videos, current_tab}
         }
     }
 </script>
@@ -118,22 +123,25 @@ import { ref } from 'vue';
 
     .video-wraper {
         display: flex;
-        gap: 10px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: left;
-        padding-left: 10px;
     }
 
-    .video-card {
-        width: 24%;
-        margin-bottom: 30px;
+    .video-wraper .video-card {
+        width: 400px;
     }
 
-    .video-card video {
+    #app > div.videos > div.video-wraper > div > div.video > video {
         width: 100%;
-        margin-bottom: 10px;
-        border-radius: 10px;
+        height: 220px;
     }
+
+    .video-wraper .video-card .video iframe {
+        width: 400px;
+        height: 220px;
+    }
+
 
     .video-card .content {
         display: flex;
@@ -164,28 +172,39 @@ import { ref } from 'vue';
         }
     }
 
-    @media (max-width: 1200px) {
-        .video-card {
-            width: 32%;
-            margin-bottom: 30px;
-        }
-    }
 
-    @media (max-width: 990px) {
-        .video-card {
-            width: 48%;
-            margin-bottom: 30px;
-        }
-    }
-
-    @media (max-width: 850px) {
+    @media (max-width: 999px) {
         .videos {
             padding: 30px 3%;
         }
-        .video-header {
-            text-align: center;
-            padding: 30px 0 50px;
-            margin-top: 40px;
+        .video-wraper .video-card {
+            width: 350px;
+        }
+    
+        #app > div.videos > div.video-wraper > div > div.video > video {
+            width: 100%;
+            height: 220px;
+        }
+    
+        .video-wraper .video-card .video iframe {
+            width: 350px;
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 770px) {
+        .video-wraper .video-card {
+            width: 300px;
+        }
+    
+        #app > div.videos > div.video-wraper > div > div.video > video {
+            width: 100%;
+            height: 190px;
+        }
+    
+        .video-wraper .video-card .video iframe {
+            width: 300px;
+            height: 190px;
         }
 
         .video-header h2 {
@@ -193,7 +212,7 @@ import { ref } from 'vue';
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 660px) {
         .video-header span {
             font-size: 12px;
         }
@@ -202,7 +221,7 @@ import { ref } from 'vue';
         }
 
         .videos .tab {
-            margin: 20px 0;
+            margin: 20px 0 50px;
         }
     
         .videos .tab div {
@@ -213,16 +232,61 @@ import { ref } from 'vue';
             border-radius: 100px;
             font-size: 12px;
         }
+
+        .video-wraper {
+            justify-content: center;
+        }
     
-        .video-card {
-            width: 95%;
-            margin-bottom: 30px;
+        .video-wraper .video-card {
+            width: 450px;
+        }
+    
+        #app > div.videos > div.video-wraper > div > div.video > video {
+            width: 100%;
+            height: 190px;
+        }
+    
+        .video-wraper .video-card .video iframe {
+            width: 450px;
+            height: 190px;
+        }
+
+        .video-header h2 {
+            font-size: 23px;
         }
     }
 
-    @media (max-width: 400px) {
-        .video-header h2 {
-            font-size: 16px;
+    @media (max-width: 490px) {
+        .video-wraper .video-card {
+            width: 390px;
+        }
+    
+        #app > div.videos > div.video-wraper > div > div.video > video {
+            width: 100%;
+            height: 190px;
+        }
+    
+        .video-wraper .video-card .video iframe {
+            width: 390px;
+            height: 190px;
         }
     }
+
+    @media (max-width: 420px) {
+        .video-wraper .video-card {
+            width: 330px;
+        }
+    
+        #app > div.videos > div.video-wraper > div > div.video > video {
+            width: 100%;
+            height: 190px;
+        }
+    
+        .video-wraper .video-card .video iframe {
+            width: 330px;
+            height: 190px;
+        }
+    }
+
+    
 </style>
