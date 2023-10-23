@@ -167,12 +167,12 @@ import { onMounted } from 'vue'
     }
     .course-description ul li{
         list-style: circle;
-        font-size: 14px;
+        font-size: 16px;
     }
     .what-will-learn ol>li, table ol>li{
         list-style: decimal;
         
-        font-size: 14px;
+        font-size: 16px;
         line-height: 30px;
     }
     .what-will-learn ul>li {
@@ -181,7 +181,7 @@ import { onMounted } from 'vue'
         font-size: 14px;
     }
     table td, table ol>li, .table-responsive p {
-        font-size: 14px;
+        font-size: 16px;
     }
     table td {
         line-height: 30px;
