@@ -197,7 +197,7 @@ table td {
 
 @media (max-width: 1500px) {
   .class-info {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .course-detail-section {
@@ -205,22 +205,22 @@ table td {
   }
 
   .course-description p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   .what-will-learn ol > li,
   table ol > li {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 30px;
   }
   .what-will-learn ul > li {
-    font-size: 12px;
+    font-size: 16px;
   }
   table td,
   table ol > li,
   .table-responsive p {
-    font-size: 17px;
+    font-size: 15px;
   }
   table td {
     line-height: 20px;
