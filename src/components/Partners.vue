@@ -4,26 +4,22 @@
       <h2>OUR PARTNERS</h2>
     </div>
     <div class="partner-content">
-      <div class="partner-card" v-for="i in 7" :key="i">
-        <img
-          :src="require('@/assets/images/partners/' + i + '.png')"
-          :class="{ dbu: i == 6 }"
-          alt=""
-        />
+      <div class="partner-card" v-for="(partner, i) in partners" :key="i">
+        <img :src="partner.img" :class="partner.logo" alt="" />
         <div class="site-link">
           <div class="social">
-            <router-link to="#"
+            <a :href="partner.fb" target="_blank"
               ><i class="fa-brands fa-facebook" style="color: #3b5998"></i
-            ></router-link>
-            <router-link to="#"
+            ></a>
+            <a target="_blank"
               ><i class="fa-brands fa-instagram" style="color: #e95950"></i
-            ></router-link>
-            <router-link to="#"
+            ></a>
+            <a target="_blank"
               ><i class="fa-brands fa-youtube" style="color: #c4302b"></i
-            ></router-link>
-            <router-link to="#"
+            ></a>
+            <a target="_blank"
               ><i class="fa-brands fa-twitter" style="color: #00aecc"></i
-            ></router-link>
+            ></a>
           </div>
           <a href="#" class="view-profile-btn">View Profile</a>
         </div>
@@ -33,7 +29,39 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    const partners = [
+      {
+        img: require("@/assets/images/partners/1.png"),
+      },
+      {
+        img: require("@/assets/images/partners/2.png"),
+      },
+      {
+        img: require("@/assets/images/partners/3.png"),
+      },
+      {
+        img: require("@/assets/images/partners/4.png"),
+      },
+      {
+        img: require("@/assets/images/partners/5.png"),
+        fb: "https://www.facebook.com/pmcedu?mibextid=ZbWKwL",
+      },
+      {
+        img: require("@/assets/images/partners/6.png"),
+        logo: "dbu",
+        fb: "https://www.facebook.com/devicebusinessuniversity?mibextid=ZbWKwL",
+      },
+      {
+        img: require("@/assets/images/partners/7.png"),
+        fb: "https://www.facebook.com/universityoftaxila?mibextid=ZbWKwL",
+      },
+    ];
+
+    return { partners };
+  },
+};
 </script>
 
 <style scoped>
@@ -85,6 +113,7 @@ export default {};
 
 .partner-card .social a {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .partner-card .site-link {

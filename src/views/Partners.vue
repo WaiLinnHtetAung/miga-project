@@ -101,9 +101,11 @@
           <div class="text">
             <h3>Princeton Management College</h3>
             <div class="social">
-              <router-link to="#"
+              <a
+                href="https://www.facebook.com/pmcedu?mibextid=ZbWKwL"
+                target="_blank"
                 ><i class="fa-brands fa-facebook" style="color: #3b5998"></i
-              ></router-link>
+              ></a>
               <router-link to="#"
                 ><i class="fa-brands fa-instagram" style="color: #e95950"></i
               ></router-link>
@@ -125,9 +127,11 @@
           <div class="text">
             <h3>Device Business University</h3>
             <div class="social">
-              <router-link to="#"
+              <a
+                href="https://www.facebook.com/devicebusinessuniversity?mibextid=ZbWKwL"
+                target="_blank"
                 ><i class="fa-brands fa-facebook" style="color: #3b5998"></i
-              ></router-link>
+              ></a>
               <router-link to="#"
                 ><i class="fa-brands fa-instagram" style="color: #e95950"></i
               ></router-link>
@@ -145,9 +149,11 @@
           <div class="text">
             <h3>University of Taxila</h3>
             <div class="social">
-              <router-link to="#"
+              <a
+                href="https://www.facebook.com/universityoftaxila?mibextid=ZbWKwL"
+                target="_blank"
                 ><i class="fa-brands fa-facebook" style="color: #3b5998"></i
-              ></router-link>
+              ></a>
               <router-link to="#"
                 ><i class="fa-brands fa-instagram" style="color: #e95950"></i
               ></router-link>
